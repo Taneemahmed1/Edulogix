@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EdulogiX – Australia's leading platform for international nurses' education and career support. Prepare for NCLEX, OSCE, and secure nursing jobs in Australia, Canada, and New Zealand.">
+    <meta name="keywords" content="NCLEX preparation, nursing registration Australia, nursing courses Canada, nursing education, international nurses support">
+    <meta name="author" content="EdulogiX">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.edulogix.com.au/">
+    <meta property="og:title" content="EdulogiX | International Nursing Career & Education Support">
+    <meta property="og:description" content="Pass NCLEX-RN with confidence. Choose your perfect learning path with EdulogiX.">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.edulogix.com.au/">
+    <meta property="twitter:title" content="EdulogiX | International Nursing Career & Education Support">
+    <meta property="twitter:description" content="Pass NCLEX-RN with confidence. Choose your perfect learning path with EdulogiX.">
+    <meta property="twitter:image" content="assets/images/og-image.jpg">
+
+    <title>EdulogiX | Find Your Nursing Course in Australia</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo edu.png">
+
+    <!-- Google Fonts: Satoshi (headings) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inter from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Satoshi from Fontshare (free, premium quality) -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet (imports all modules) -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- ============================================================
+         PAGE SWITCHER BANNER
+    ============================================================ -->
+    <div id="page-switcher-bar" style="
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        background: linear-gradient(90deg, #003580 0%, #004a99 50%, #E87722 100%);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.55rem 1.5rem;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+    ">
+        <span>✨ New Design Preview Available</span>
+        <a href="redesign.html" style="
+            background: #fff;
+            color: #003580;
+            font-weight: 700;
+            font-size: 0.78rem;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            letter-spacing: 0.04em;
+            transition: background 0.2s;
+            white-space: nowrap;
+        ">View New Design ↗</a>
+        <button onclick="document.getElementById('page-switcher-bar').style.display='none'" style="
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0 0.25rem;
+            margin-left: 0.5rem;
+        " title="Dismiss">✕</button>
+    </div>
+
+    <!-- ============================================================
+         SECTION 1: NAVIGATION
+    ============================================================ -->
+    <header class="navbar" id="navbar">
+        <div class="navbar__container">
+
+            <!-- LEFT: Nav Links -->
+            <nav class="navbar__links" aria-label="Primary Navigation">
+                <a href="#about" class="navbar__link has-dropdown">About Us <span class="chevron">&#9662;</span></a>
+                <a href="#courses" class="navbar__link has-dropdown">Courses <span class="chevron">&#9662;</span></a>
+                <a href="#services" class="navbar__link has-dropdown">Services <span class="chevron">&#9662;</span></a>
+                <a href="#blog" class="navbar__link">Blog</a>
+                <a href="#contact" class="navbar__link">Contact Us</a>
+            </nav>
+
+            <!-- CENTER: Logo -->
+            <a href="/" class="navbar__logo" aria-label="EdulogiX Home">
+                <img src="assets/images/logo edu.png" alt="EdulogiX Logo" class="navbar__logo-img">
+            </a>
+
+            <!-- RIGHT: Actions -->
+            <div class="navbar__actions">
+                <!-- Portal -->
+                <a href="#portal" class="navbar__icon-link" title="Portal" id="nav-portal-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8">
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                    </svg>
+                    <span>Portal</span>
+                </a>
+                <!-- Cart -->
+                <a href="#cart" class="navbar__icon-link" title="Cart" id="nav-cart-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8">
+                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 01-8 0" />
+                    </svg>
+                    <span>Cart</span>
+                </a>
+                <!-- Currency -->
+                <button class="navbar__currency" id="currency-btn" aria-label="Select Currency">
+                    &#x1F1E6;&#x1F1FA; AUD &#9662;
+                </button>
+                <!-- Immigration CTA with Airplane -->
+                <a href="#enquire" class="navbar__enquire navbar__immigration-btn" id="nav-enquire-btn" aria-label="Immigration Services">
+                    <span class="nav-plane-track" aria-hidden="true">
+                        <svg class="nav-plane-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                        </svg>
+                        <span class="nav-plane-trail"></span>
+                    </span>
+                    <span class="nav-immigration-text">IMMIGRATION</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open Mobile Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div class="navbar__mobile-drawer" id="mobile-drawer" aria-hidden="true">
+            <a href="#about" class="navbar__mobile-link">About Us</a>
+            <a href="#courses" class="navbar__mobile-link">Courses</a>
+            <a href="#services" class="navbar__mobile-link">Services</a>
+            <a href="#blog" class="navbar__mobile-link">Blog</a>
+            <a href="#contact" class="navbar__mobile-link">Contact Us</a>
+            <a href="#enquire" class="navbar__enquire navbar__immigration-btn">
+                <span class="nav-plane-track" aria-hidden="true">
+                    <svg class="nav-plane-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                    </svg>
+                    <span class="nav-plane-trail"></span>
+                </span>
+                <span class="nav-immigration-text">IMMIGRATION</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============================================================
+             SECTION 2: HERO
+        ============================================================ -->
+        <section class="hero" id="hero" aria-label="Hero Banner">
+
+            <!-- ░░ VIDEO BACKGROUND ░░ -->
+            <video class="hero__video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+                <source src="assets/video/Cinematic_Healthcare_Education_Background_Video.mp4" type="video/mp4">
+            </video>
+            <!-- Layered overlays -->
+            <div class="hero__overlay" aria-hidden="true"></div>
+
+            <!-- ░░ FLOATING SOCIAL PROOF BADGE (top-right like reference) ░░ -->
+            <div class="hero__badge" aria-label="Social proof">
+                <div class="hero__badge-avatars" aria-hidden="true">
+                    <img src="assets/images/hero-nurse.png" alt="" class="hero__badge-avatar">
+                    <img src="assets/images/hero-nurse.png" alt="" class="hero__badge-avatar">
+                    <img src="assets/images/hero-nurse.png" alt="" class="hero__badge-avatar">
+                </div>
+                <div class="hero__badge-text">
+                    <strong>1,000+</strong>
+                    <span>Nurses Trained</span>
+                </div>
+                <div class="hero__badge-check" aria-hidden="true">✓</div>
+            </div>
+
+            <!-- ░░ MAIN CONTENT ░░ -->
+            <div class="hero__body container">
+
+                <!-- Headline block -->
+                <h1 class="hero__headline">
+                    Pass NCLEX-RN with Confidence —<br>
+                    <span class="hero__hl-thin">Choose Your Perfect Learning Path</span>
+                </h1>
+
+                <!-- 2-col descriptor row (mirrors reference) -->
+                <div class="hero__descriptor">
+                    <div class="hero__descriptor-brand">EdulogiX</div>
+                    <p class="hero__descriptor-text">
+                        Flexible. Structured. Result-Oriented.<br>
+                        3 Programs. One Goal — Your NCLEX Success.
+                    </p>
+                </div>
+
+                <!-- Primary CTA -->
+                <a href="#enquire" class="hero__cta-primary" id="hero-counselling-btn">
+                    Book Free Counselling
+                </a>
+
+            </div>
+
+            <!-- ░░ BOTTOM STATS BAR ░░ -->
+            <div class="hero__stats" aria-label="Key statistics">
+                <div class="hero__stat" id="stat-nurses">
+                    <strong data-counter="true" data-target="1000" data-suffix="+">1,000+</strong>
+                    <span>Nurses Trained</span>
+                </div>
+                <div class="hero__stat-divider" aria-hidden="true"></div>
+                <div class="hero__stat" id="stat-rate">
+                    <strong data-counter="true" data-target="90" data-suffix="%+">90%+</strong>
+                    <span>NCLEX Pass Rate</span>
+                </div>
+                <div class="hero__stat-divider" aria-hidden="true"></div>
+                <div class="hero__stat" id="stat-countries">
+                    <strong data-counter="true" data-target="3" data-suffix="">3</strong>
+                    <span>Countries Covered</span>
+                </div>
+                <div class="hero__stat-divider" aria-hidden="true"></div>
+                <div class="hero__stat" id="stat-support">
+                    <strong>End-to-End</strong>
+                    <span>Career Support</span>
+                </div>
+            </div>
+
+            <!-- Floating Social -->
+            <div class="hero__social-float" aria-label="Quick Social Links">
+                <a href="https://youtube.com" target="_blank" rel="noopener" class="social-float social-float--yt"
+                    aria-label="YouTube">
+                    <img src="assets/icons/youtube.svg" alt="YouTube">
+                </a>
+                <a href="https://wa.me/" target="_blank" rel="noopener" class="social-float social-float--wa"
+                    aria-label="WhatsApp">
+                    <img src="assets/icons/whatsapp.svg" alt="WhatsApp">
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- ============================================================
+             SECTION 3: SPECIALIST COURSES
+        ============================================================ -->
+        <section class="courses" id="courses" aria-labelledby="courses-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="courses-heading">Our NCLEX-RN Preparation Courses</h2>
+                    <p class="section-subtitle">
+                        At Edulogix, we don’t just teach — we guide you step-by-step until you are fully prepared for
+                        the NCLEX-RN exam. Whether you want flexibility, expert-led classes, or complete accountability,
+                        we have the right program for you.
+                    </p>
+                </div>
+
+                <div class="courses__grid courses__grid--three" id="courses-grid">
+
+                    <!-- Course Card 1: NCLEX Self Paced -->
+                    <article class="course-card theme--green" id="course-nclex-self">
+                        <div class="course-card__header">
+                            <h3 class="course-card__title">NCLEX-RN Self-Paced Course</h3>
+                        </div>
+                        <div class="course-card__img-wrap">
+                            <img src="assets/images/course-self.jpg" alt="NCLEX Self Paced" class="course-card__img">
+                        </div>
+                        <p class="course-card__tagline">Perfect for independent learners who want complete flexibility
+                            without compromising on quality.</p>
+                        <ul class="course-card__features">
+                            <li>Unlimited Access for 1 Year</li>
+                            <li>77 Modules</li>
+                            <li>60 hrs of Pre-recorded concept-based classes</li>
+                            <li>15,000+ Practice questions</li>
+                            <li>4 mock exams with personal tutorial</li>
+                            <li>Ideal for working nurses</li>
+                        </ul>
+                        <div class="course-card__footer">
+                            <div class="course-card__price">
+                                <span class="price__from">Fees:</span>
+                                <span class="price__amount">AUD 499</span>
+                            </div>
+                            <a href="#enquire" class="course-card__btn">Join Now &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Course Card 2: NCLEX Instructor Led -->
+                    <article class="course-card theme--blue" id="course-nclex-instructor">
+                        <div class="course-card__header">
+                            <h3 class="course-card__title">NCLEX-RN Instructor Led</h3>
+                        </div>
+                        <div class="course-card__img-wrap">
+                            <img src="assets/images/course-instructor.jpg" alt="NCLEX Instructor Led"
+                                class="course-card__img">
+                        </div>
+                        <p class="course-card__tagline">Learn with expert trainers through live classes and stay
+                            consistent with guided preparation.</p>
+                        <ul class="course-card__features">
+                            <li>Unlimited Access for 1 Year</li>
+                            <li>77 Modules</li>
+                            <li>60 hrs of Pre-recorded concept-based classes</li>
+                            <li>15,000+ Practice questions</li>
+                            <li>6 mock exams with personal tutorial</li>
+                            <li>50 hrs of live interactive classes</li>
+                            <li>Course Duration: 10 weeks</li>
+                            <li>Weekly structured plan</li>
+                            <li>Trainer guidance throughout</li>
+                        </ul>
+                        <div class="course-card__footer">
+                            <div class="course-card__price">
+                                <span class="price__from">Fees:</span>
+                                <span class="price__amount">AUD 699</span>
+                            </div>
+                            <a href="#enquire" class="course-card__btn">Join Now &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Course Card 3: NCLEX Assured -->
+                    <article class="course-card theme--orange course-card--featured" id="course-nclex-assured">
+                        <div class="course-card__header">
+                            <h3 class="course-card__title">NCLEX-RN Assured Program</h3>
+                        </div>
+                        <div class="course-card__img-wrap">
+                            <img src="assets/images/course-assured.jpg" alt="NCLEX Assured" class="course-card__img">
+                        </div>
+                        <p class="course-card__tagline">NCLEX ASSURED is our premium NCLEX RN preparation program
+                            designed uniquely for serious candidates who want structure, discipline, accountability —
+                            and a risk-reversal option with a 50% refund (T&C apply).</p>
+                        <ul class="course-card__features">
+                            <li>Unlimited Access for 1.5 Year</li>
+                            <li>77 Modules</li>
+                            <li>60 hrs of Pre-recorded concept-based classes</li>
+                            <li>15,000+ Practice questions</li>
+                            <li>6 mock exams with personal tutorial</li>
+                            <li>50 hrs of live interactive classes</li>
+                            <li>Course Duration: 10 weeks</li>
+                            <li>Weekly structured plan</li>
+                            <li>Trainer guidance throughout</li>
+                            <li>8 Predictors</li>
+                            <li>3 Review Meetings with Coordinator</li>
+                            <li>30 Days Access to Archer NCLEX Learning Platform</li>
+                            <li>8 Personal feedback sessions</li>
+                            <li>50% Refund option if you don’t pass (conditions apply*)</li>
+                        </ul>
+                        <div class="course-card__footer">
+                            <div class="course-card__price">
+                                <span class="price__from">Fees:</span>
+                                <span class="price__amount">AUD 899</span>
+                            </div>
+                            <a href="#enquire" class="course-card__btn">Join Now &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 4: WHY CHOOSE US
+        ============================================================ -->
+        <section class="promise" id="why-us" aria-labelledby="promise-heading">
+            <div class="container">
+
+                <!-- Header -->
+                <div class="promise__header">
+                    <h2 class="promise__title" id="promise-heading">Everything You Need to <span
+                            class="promise__title--orange">Crack NCLEX-RN</span></h2>
+                    <p class="promise__sub">We provide the right training, strategy, and support system to help you pass
+                        NCLEX-RN and start your nursing career abroad with confidence.</p>
+                    <div class="promise__divider" aria-hidden="true">
+                        <span></span><span class="promise__divider-dot"></span><span></span>
+                    </div>
+                </div>
+
+                <!-- 4 Photo Cards -->
+                <div class="promise__grid">
+
+                    <article class="promise-card" id="pillar-expert">
+                        <div class="promise-card__photo">
+                            <img src="assets/images/card-expert.jpg" alt="Expert-Led Training">
+                        </div>
+                        <div class="promise-card__icon theme--green" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24"
+                                height="24">
+                                <circle cx="12" cy="8" r="4" />
+                                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                            </svg>
+                        </div>
+                        <h3 class="promise-card__title">Expert-Led Training</h3>
+                        <p class="promise-card__desc">Learn from experienced NCLEX trainers and internationally working
+                            nurses who understand the real exam pattern and strategies.</p>
+                    </article>
+
+                    <article class="promise-card" id="pillar-flexible">
+                        <div class="promise-card__photo">
+                            <img src="assets/images/card-flexible.jpg" alt="Flexible Learning">
+                        </div>
+                        <div class="promise-card__icon theme--blue" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24"
+                                height="24">
+                                <rect x="3" y="3" width="18" height="14" rx="2" />
+                                <path d="M8 21h8M12 17v4" />
+                            </svg>
+                        </div>
+                        <h3 class="promise-card__title">Flexible Learning Options</h3>
+                        <p class="promise-card__desc">Choose between self-paced learning or live instructor-led classes
+                            based on your schedule and learning style.</p>
+                    </article>
+
+                    <article class="promise-card" id="pillar-success">
+                        <div class="promise-card__photo">
+                            <img src="assets/images/card-success.jpg" alt="Proven Success Rate">
+                        </div>
+                        <div class="promise-card__icon theme--orange" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24"
+                                height="24">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                            </svg>
+                        </div>
+                        <h3 class="promise-card__title">Proven NCLEX Success System</h3>
+                        <p class="promise-card__desc">Our structured approach focuses on exam readiness, practice, and
+                            performance tracking.</p>
+                    </article>
+
+                    <article class="promise-card" id="pillar-support">
+                        <div class="promise-card__photo">
+                            <img src="assets/images/card-support.jpg" alt="End-to-End Support">
+                        </div>
+                        <div class="promise-card__icon theme--purple" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24"
+                                height="24">
+                                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="promise-card__title">Complete Support Till Exam</h3>
+                        <p class="promise-card__desc">From starting your preparation to exam day — we guide you at every
+                            stage.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 5: EXPLORE OUR SERVICES
+        ============================================================ -->
+        <section class="registration-service" id="services">
+            <div class="container">
+                <div class="registration-service__layout">
+                    <!-- Image Column -->
+                    <div class="registration-service__img-col">
+                        <img src="assets/images/nursing-registration.png" alt="Registered Nurse Professional Support"
+                            class="registration-service__img">
+                        <div class="registration-service__experience">
+                            <strong>10+</strong>
+                            <span>Years of Expertise</span>
+                        </div>
+                    </div>
+
+                    <!-- Content Column -->
+                    <div class="registration-service__content-col">
+                        <span class="services__label" style="margin-inline: 0;">Our Specialty</span>
+                        <h2 class="registration-service__title">Nursing Registration Assistance</h2>
+                        <p class="registration-service__desc">Complete end-to-end support for your nursing registration
+                            process in Australia, New Zealand, UK, and more. We guide you through every step — from
+                            eligibility assessment, document preparation, application submission, to final registration
+                            — making your journey smooth and stress-free.</p>
+
+                        <div class="registration-service__features">
+                            <div class="reg-feature">
+                                <span class="reg-feature__icon">🌍</span>
+                                <span class="reg-feature__text">Australia, New Zealand, & UK Experts</span>
+                            </div>
+                            <div class="reg-feature">
+                                <span class="reg-feature__icon">⚖️</span>
+                                <span class="reg-feature__text">Hassle-Free Documentation</span>
+                            </div>
+                        </div>
+
+                        <a href="#enquire" class="btn btn--primary">Inquire About Registration &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 6: COMMUNITY BANNER
+        ============================================================ -->
+        <section class="community" id="community" aria-labelledby="community-heading">
+            <div class="community__img-col" aria-hidden="true">
+                <img src="assets/images/image.png" alt="Edulogix Community" class="community__img">
+            </div>
+            <div class="community__content-col">
+                <h2 class="community__title" id="community-heading">A Community of Nurses, Learning and Growth</h2>
+                <p class="community__desc">
+                    At Edulogix, we’ve built a strong global community of aspiring and experienced nurses who are
+                    working towards building successful careers abroad.
+                    Through our active presence on platforms like YouTube, Facebook, and Instagram, we share valuable
+                    insights, exam strategies, career guidance, and real-world updates that truly matter to
+                    international nursing professionals.
+                    This community is more than just content — it’s a support system designed to keep you informed,
+                    motivated, and confident throughout your journey.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 7: TESTIMONIALS
+        ============================================================ -->
+        <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+
+                <!-- Top row: left heading + Google badge -->
+                <div class="testimonials__top">
+                    <div class="testimonials__left">
+                        <h2 class="testimonials__title" id="testimonials-heading">
+                            What our<br>
+                            <span class="testimonials__title--orange">Students Say About</span><br>
+                            EdulogiX
+                        </h2>
+                        <a href="https://www.google.com/search?hl=en-IN&gl=in&q=Edulogix,+level+49/10+Darcy+St,+Parramatta+NSW+2150,+Australia&ludocid=3501347073362049824&lsig=AB86z5VpdF7JBBuZHnpf7g22QGw6#lrd=0x6b129b95cdcc78bb:0x3097489cbf193b20,1"
+                            target="_blank" rel="noopener" class="testimonials__google-badge" id="google-rating">
+                            <div class="google-badge__icon">
+                                <svg width="24" height="24" viewBox="0 0 48 48">
+                                    <path fill="#4285F4"
+                                        d="M24 9.5c3.2 0 5.9 1.1 8.1 3.2l6-6C34.3 3.2 29.5 1 24 1 15 1 7.4 6.3 4 13.8l7 5.4C12.9 13.4 18 9.5 24 9.5z" />
+                                    <path fill="#34A853"
+                                        d="M46.1 24.6c0-1.6-.1-2.7-.4-3.9H24v7.4h12.5c-.5 2.7-2.1 5-4.5 6.5l7 5.4c4.1-3.8 6.5-9.4 6.5-15.4z" />
+                                    <path fill="#FBBC05"
+                                        d="M11 28.2c-.5-1.5-.8-3-.8-4.7s.3-3.2.8-4.7L4 13.8C2.3 17.2 1.4 20.9 1.4 24.7s.9 7.5 2.6 10.9l7-7.4z" />
+                                    <path fill="#EA4335"
+                                        d="M24 47c5.5 0 10.2-1.8 13.6-4.9l-7-5.4c-1.8 1.2-4.1 2-6.6 2-5.9 0-10.9-4-12.7-9.5l-7 7.4C7.4 41.7 15 47 24 47z" />
+                                </svg>
+                            </div>
+                            <div class="google-badge__content">
+                                <div class="google-badge__score">4.9 <span class="stars">★★★★★</span></div>
+                                <div class="google-badge__label">Google Reviews</div>
+                                <div class="google-badge__count">169 Reviews</div>
+                            </div>
+                        </a>
+                        <!-- Nav arrows -->
+                        <div class="testimonials__nav">
+                            <button class="tcard-btn" id="testimonial-prev" aria-label="Previous">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button class="tcard-btn" id="testimonial-next" aria-label="Next">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cards -->
+                    <div class="testimonials__cards-wrapper">
+                        <div class="testimonials__cards" id="testimonials-track" role="region"
+                            aria-label="Student testimonials">
+
+                            <blockquote class="tcard" id="testimonial-1">
+                                <div class="tcard__quote-mark" aria-hidden="true">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H15.017C15.5693 5 16.017 4.55228 16.017 4C16.017 3.44772 15.5693 3 15.017 3H14.017C10.7033 3 8.01697 5.68629 8.01697 9V15C8.01697 18.3137 10.7033 21 14.017 21ZM6.01697 21L6.01697 18C6.01697 16.8954 6.91241 16 8.01697 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.01697C6.46468 8 6.01697 8.44772 6.01697 9V12C6.01697 12.5523 5.56926 13 5.01697 13H3.01697C2.46468 13 2.01697 12.5523 2.01697 12V9C2.01697 6.79086 3.80783 5 6.01697 5H7.01697C7.56926 5 8.01697 4.55228 8.01697 4C8.01697 3.44772 7.56926 3 7.01697 3H6.01697C2.70327 3 0.0169678 5.68629 0.0169678 9V15C0.0169678 18.3137 2.70327 21 6.01697 21Z" />
+                                    </svg>
+                                </div>
+                                <p class="tcard__text">I came to Australia without a clue on how to start my nursing
+                                    career. Edulogix helped me in getting admission in Master of nursing leading to
+                                    registration. Forever grateful for their guidance and support!</p>
+                                <footer class="tcard__footer">
+                                    <img src="assets/images/testimonial-jasbirkaur.jpg" alt="Jasbir Kaur"
+                                        class="tcard__avatar">
+                                    <div>
+                                        <cite class="tcard__name">Jasbir Kaur</cite>
+                                        <div class="tcard__stars" aria-label="5 stars">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                </footer>
+                            </blockquote>
+
+                            <blockquote class="tcard" id="testimonial-2">
+                                <div class="tcard__quote-mark" aria-hidden="true">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H15.017C15.5693 5 16.017 4.55228 16.017 4C16.017 3.44772 15.5693 3 15.017 3H14.017C10.7033 3 8.01697 5.68629 8.01697 9V15C8.01697 18.3137 10.7033 21 14.017 21ZM6.01697 21L6.01697 18C6.01697 16.8954 6.91241 16 8.01697 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.01697C6.46468 8 6.01697 8.44772 6.01697 9V12C6.01697 12.5523 5.56926 13 5.01697 13H3.01697C2.46468 13 2.01697 12.5523 2.01697 12V9C2.01697 6.79086 3.80783 5 6.01697 5H7.01697C7.56926 5 8.01697 4.55228 8.01697 4C8.01697 3.44772 7.56926 3 7.01697 3H6.01697C2.70327 3 0.0169678 5.68629 0.0169678 9V15C0.0169678 18.3137 2.70327 21 6.01697 21Z" />
+                                    </svg>
+                                </div>
+                                <p class="tcard__text">I passed my NCLEX in 1st attempt. Excellent teaching and
+                                    resources helped me achieve this. The structured approach made everything clear and
+                                    manageable. Highly recommended for all aspiring nurses!</p>
+                                <footer class="tcard__footer">
+                                    <img src="assets/images/hero-nurse.png" alt="Hemangini Patel" class="tcard__avatar">
+                                    <div>
+                                        <cite class="tcard__name">Hemangini Patel</cite>
+                                        <div class="tcard__stars" aria-label="5 stars">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                </footer>
+                            </blockquote>
+
+                            <blockquote class="tcard" id="testimonial-3">
+                                <div class="tcard__quote-mark" aria-hidden="true">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H15.017C15.5693 5 16.017 4.55228 16.017 4C16.017 3.44772 15.5693 3 15.017 3H14.017C10.7033 3 8.01697 5.68629 8.01697 9V15C8.01697 18.3137 10.7033 21 14.017 21ZM6.01697 21L6.01697 18C6.01697 16.8954 6.91241 16 8.01697 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.01697C6.46468 8 6.01697 8.44772 6.01697 9V12C6.01697 12.5523 5.56926 13 5.01697 13H3.01697C2.46468 13 2.01697 12.5523 2.01697 12V9C2.01697 6.79086 3.80783 5 6.01697 5H7.01697C7.56926 5 8.01697 4.55228 8.01697 4C8.01697 3.44772 7.56926 3 7.01697 3H6.01697C2.70327 3 0.0169678 5.68629 0.0169678 9V15C0.0169678 18.3137 2.70327 21 6.01697 21Z" />
+                                    </svg>
+                                </div>
+                                <p class="tcard__text">The NCLEX Assured program is a game changer. The accountability
+                                    and personalized feedback helped me stay on track. If you are serious about passing,
+                                    this is the place to be!</p>
+                                <footer class="tcard__footer">
+                                    <img src="assets/images/testimonial-amandeep.jpg" alt="Amandeep Singh"
+                                        class="tcard__avatar">
+                                    <div>
+                                        <cite class="tcard__name">Amandeep Singh</cite>
+                                        <div class="tcard__stars" aria-label="5 stars">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                </footer>
+                            </blockquote>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================================
+             FAQ SECTION
+        ============================================================ -->
+        <section class="faq" id="faq" aria-labelledby="faq-heading">
+            <div class="container">
+                <div class="faq__layout">
+
+                    <!-- LEFT -->
+                    <div class="faq__left">
+                        <span class="faq__label">FAQ</span>
+                        <h2 class="faq__title" id="faq-heading">Frequently<br><span class="faq__title--orange">Asked
+                                Questions</span></h2>
+                        <p class="faq__sub">Everything you need to know about NCLEX, registration and working abroad as
+                            a nurse.</p>
+                        <a href="#enquire" class="faq__cta">Still have questions? Talk to us &rarr;</a>
+                    </div>
+
+                    <!-- RIGHT: Accordion -->
+                    <div class="faq__accordion">
+
+                        <div class="faq__item">
+                            <button class="faq__question" aria-expanded="false" id="faq-q1">
+                                Which NCLEX-RN program is best for beginners?
+                                <span class="faq__icon" aria-hidden="true">+</span>
+                            </button>
+                            <div class="faq__answer" id="faq-a1">
+                                <p>Our Instructor Led and Assured Programs are ideal for beginners who need structured
+                                    guidance.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question" aria-expanded="false" id="faq-q2">
+                                Can I study while working full-time?
+                                <span class="faq__icon" aria-hidden="true">+</span>
+                            </button>
+                            <div class="faq__answer" id="faq-a2">
+                                <p>Yes. The Self-Paced Program is designed specifically for flexible learning schedules.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question" aria-expanded="false" id="faq-q3">
+                                Do you provide practice tests?
+                                <span class="faq__icon" aria-hidden="true">+</span>
+                            </button>
+                            <div class="faq__answer" id="faq-a3">
+                                <p>Yes. All programs include practice-based learning resources and assessments.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question" aria-expanded="false" id="faq-q4">
+                                Which program provides the highest level of support?
+                                <span class="faq__icon" aria-hidden="true">+</span>
+                            </button>
+                            <div class="faq__answer" id="faq-a4">
+                                <p>The NCLEX-RN Assured Program offers the most comprehensive support and accountability
+                                    system.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question" aria-expanded="false" id="faq-q5">
+                                Do I really get a refund if I fail the Exam?
+                                <span class="faq__icon" aria-hidden="true">+</span>
+                            </button>
+                            <div class="faq__answer" id="faq-a5">
+                                <p>Yes, but only if you choose our NCLEX Assured program and fulfill all eligibility
+                                    criteria — including attendance, predictor completion, and assessments. Conditions
+                                    apply to protect genuine effort and commitment.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer__grid">
+
+                <!-- Col 1: Brand -->
+                <div class="footer__col footer__col--brand">
+                    <img src="assets/images/logo edu.png" alt="EdulogiX" class="footer__logo">
+                    <p class="footer__tagline">Australia's leading platform for international nurses' education and
+                        career support.</p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="#about" class="footer__link">About Us</a></li>
+                        <li><a href="#courses" class="footer__link">Courses</a></li>
+                        <li><a href="#services" class="footer__link">Services</a></li>
+                        <li><a href="#blog" class="footer__link">Blog</a></li>
+                        <li><a href="#contact" class="footer__link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Courses -->
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Our Courses</h4>
+                    <ul class="footer__links">
+                        <li><a href="#course-nclex-self" class="footer__link">NCLEX-RN Self-Paced</a></li>
+                        <li><a href="#course-nclex-instructor" class="footer__link">NCLEX-RN Instructor Led</a></li>
+                        <li><a href="#course-nclex-assured" class="footer__link">NCLEX-RN Assured Program</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Contact</h4>
+                    <ul class="footer__links">
+                        <li><a href="mailto:info@edulogix.com.au" class="footer__link">info@edulogix.com.au</a></li>
+                        <li><a href="tel:+61" class="footer__link">+61 (AU)</a></li>
+                    </ul>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social-icon" aria-label="YouTube">
+                            <img src="assets/icons/youtube.svg" alt="YouTube">
+                        </a>
+                        <a href="#" class="footer__social-icon" aria-label="Facebook">
+                            <img src="assets/icons/facebook.svg" alt="Facebook">
+                        </a>
+                        <a href="#" class="footer__social-icon" aria-label="Instagram">
+                            <img src="assets/icons/instagram.svg" alt="Instagram">
+                        </a>
+                        <a href="#" class="footer__social-icon" aria-label="WhatsApp">
+                            <img src="assets/icons/whatsapp.svg" alt="WhatsApp">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 EdulogiX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+/* ============================================================
+   EDULOGIX — STYLE ENTRY POINT
+   Imports all CSS modules in correct cascade order
+   ============================================================ */
+
+@import url('./style.css?v=17');
+@import url('./animations.css?v=17');
+@import url('./components.css?v=17');

@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edulogix - Nursing Courses, Exam Preparation, and Job Assistance</title>
+    <meta name="description"
+        content="Edulogix provides high-quality nursing courses. Our expertly created courses, including NCLEX and OSCE training, have a high success rate of above 90%.">
+    <meta name="keywords"
+        content="nursing courses, nursing professionals, nursing competitive exams, NCLEX training, OSCE training, education services, visa services, migration services, job assistance, nursing jobs, a community of nurses, social media platforms, well-researched information, nursing career">
+    <meta name="author" content="Edulogix Pty Ltd">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.edulogix.com.au/">
+    <meta property="og:title" content="Edulogix - Nursing Courses, Exam Preparation, and Job Assistance">
+    <meta property="og:description"
+        content="Edulogix provides high-quality nursing courses including NCLEX and OSCE training with a high success rate above 90%.">
+    <meta property="og:image" content="assets/images/nursing-registration.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.edulogix.com.au/">
+    <meta property="twitter:title" content="Edulogix - Nursing Courses, Exam Preparation, and Job Assistance">
+    <meta property="twitter:description"
+        content="Edulogix provides high-quality nursing courses including NCLEX and OSCE training with a high success rate above 90%.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo edu.png">
+
+    <!-- Google Fonts: Inter (Body) + Satoshi (Display Headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/main.css?v=17">
+</head>
+
+<body>
+
+    <!-- ============================================================
+         PAGE SWITCHER BANNER
+    ============================================================ -->
+    <div id="page-switcher-bar" style="
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        background: linear-gradient(90deg, #0f172a 0%, #1e3a5f 100%);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.55rem 1.5rem;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+    ">
+        <span style="opacity:0.7;">You are viewing the</span>
+        <span style="
+            background: #E87722;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 0.15rem 0.6rem;
+            border-radius: 50px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        ">New Design</span>
+        <a href="index.html" style="
+            background: rgba(255,255,255,0.12);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.78rem;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.25);
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+        ">← Back to Original</a>
+        <button onclick="document.getElementById('page-switcher-bar').style.display='none'" style="
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.5);
+            font-size: 1rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0 0.25rem;
+            margin-left: 0.5rem;
+        " title="Dismiss">✕</button>
+    </div>
+
+    <!-- ============================================================
+         SECTION 1: NAVIGATION
+    ============================================================ -->
+    <header class="navbar" id="navbar">
+        <div class="navbar__container">
+
+            <!-- LEFT: Nav Links -->
+            <nav class="navbar__links" aria-label="Primary Navigation">
+                <a href="#about" class="navbar__link has-dropdown">About Us <span class="chevron">&#9662;</span></a>
+                <a href="#courses" class="navbar__link has-dropdown">Courses <span class="chevron">&#9662;</span></a>
+                <a href="#services" class="navbar__link has-dropdown">Services <span class="chevron">&#9662;</span></a>
+                <a href="#blog" class="navbar__link">Blog</a>
+                <a href="#contact" class="navbar__link">Contact Us</a>
+            </nav>
+
+            <!-- CENTER: Logo -->
+            <a href="redesign.html" class="navbar__logo" aria-label="EdulogiX Home">
+                <img src="assets/images/logo edu.png" alt="EdulogiX Logo" class="navbar__logo-img">
+            </a>
+
+            <!-- RIGHT: Actions -->
+            <div class="navbar__actions">
+                <!-- Portal -->
+                <a href="https://www.edulogix.com.au/login/" target="_blank" rel="noopener" class="navbar__icon-link" title="Portal" id="nav-portal-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8">
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                    </svg>
+                    <span>Portal</span>
+                </a>
+                <!-- Cart -->
+                <a href="#courses" class="navbar__icon-link" title="Cart" id="nav-cart-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8">
+                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 01-8 0" />
+                    </svg>
+                    <span>Cart</span>
+                </a>
+                <!-- Currency -->
+                <button class="navbar__currency" id="currency-btn" aria-label="Select Currency">
+                    &#x1F1E6;&#x1F1FA; AUD &#9662;
+                </button>
+                <!-- Enquire / Immigration CTA -->
+                <a href="#contact" class="navbar__enquire navbar__immigration-btn" id="nav-enquire-btn" aria-label="Immigration Services">
+                    <span class="nav-plane-track" aria-hidden="true">
+                        <svg class="nav-plane-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                        </svg>
+                        <span class="nav-plane-trail"></span>
+                    </span>
+                    <span class="nav-immigration-text">IMMIGRATION</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open Mobile Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div class="navbar__mobile-drawer" id="mobile-drawer" aria-hidden="true">
+            <a href="#about" class="navbar__mobile-link">About Us</a>
+            <a href="#courses" class="navbar__mobile-link">Courses</a>
+            <a href="#services" class="navbar__mobile-link">Services</a>
+            <a href="#blog" class="navbar__mobile-link">Blog</a>
+            <a href="#contact" class="navbar__mobile-link">Contact Us</a>
+            <a href="#contact" class="navbar__enquire navbar__immigration-btn">
+                <span class="nav-plane-track" aria-hidden="true">
+                    <svg class="nav-plane-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                    </svg>
+                    <span class="nav-plane-trail"></span>
+                </span>
+                <span class="nav-immigration-text">IMMIGRATION</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============================================================
+             SECTION 1: HERO (ANIMATED VIDEO BG + BEYOND BORDERS)
+        ============================================================ -->
+        <section class="hero hero--redesign" id="hero" aria-label="Hero Banner">
+
+            <!-- Video Background -->
+            <video class="hero__video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+                <source src="Animating_hospital_image_loop_20260917163232.mp4" type="video/mp4">
+                <source src="assets/video/Animating_hospital_image_loop.mp4" type="video/mp4">
+            </video>
+            <div class="hero__overlay" aria-hidden="true"></div>
+
+
+            <!-- Main Centered Content -->
+            <div class="hero__content-wrap">
+                <!-- Eyebrow -->
+                <div class="hero__eyebrow" aria-label="Brand">
+                    <span>E D U L O G I X</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="hero__main-title">
+                    Build Your Nursing Career<br>
+                    <span class="hero__title-cyan">Beyond Borders</span>
+                </h1>
+
+                <!-- Subheading with bullet separators -->
+                <p class="hero__descriptor-p">
+                    Nursing Courses &nbsp;&bull;&nbsp; Exam Preparation &nbsp;&bull;&nbsp; Career Support
+                </p>
+
+                <!-- Primary CTA Button -->
+                <div class="hero__cta-row">
+                    <a href="#courses" class="hero__btn-explore" id="hero-explore-btn">
+                        <span>Explore Courses</span>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.8">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Interactive Course Selector Capsule -->
+                <div class="hero__course-capsule">
+                    <div class="capsule__icon" aria-hidden="true">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                    </div>
+                    <select class="capsule__select" id="course-select" aria-label="Select Your Course">
+                        <option value="" disabled selected>Select Your Course</option>
+                        <option value="course-nclex-assured">NCLEX ASSURED (Premium)</option>
+                        <option value="course-nclex-instructor">NCLEX-RN (Instructor-Led)</option>
+                        <option value="course-nclex-self">NCLEX-RN (Self-Paced)</option>
+                        <option value="course-osce">OSCE Clinical Examination</option>
+                        <option value="course-mcq-nz">MCQ Exam - New Zealand</option>
+                    </select>
+                    <div class="capsule__chevron" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Stats Bar -->
+            <div class="hero__bottom-bar">
+                <div class="hero__stats-row" aria-label="Key statistics">
+                    <!-- Stat 1 -->
+                    <div class="stat-box">
+                        <div class="stat-box__icon" aria-hidden="true">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-box__content">
+                            <span class="stat-box__value" data-counter="true" data-target="1000" data-suffix="+">1,000+</span>
+                            <span class="stat-box__label">Nurses Trained</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-box__divider" aria-hidden="true"></div>
+
+                    <!-- Stat 2 -->
+                    <div class="stat-box">
+                        <div class="stat-box__icon" aria-hidden="true">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
+                                <path d="M18 20V10M12 20V4M6 20v-6"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-box__content">
+                            <span class="stat-box__value" data-counter="true" data-target="90" data-suffix="%+">90%+</span>
+                            <span class="stat-box__label">Pass Rate</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-box__divider" aria-hidden="true"></div>
+
+                    <!-- Stat 3 -->
+                    <div class="stat-box">
+                        <div class="stat-box__icon" aria-hidden="true">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-box__content">
+                            <span class="stat-box__value" data-counter="true" data-target="3" data-suffix="+">3+</span>
+                            <span class="stat-box__label">Countries Supported</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-box__divider" aria-hidden="true"></div>
+
+                    <!-- Stat 4 -->
+                    <div class="stat-box">
+                        <div class="stat-box__icon" aria-hidden="true">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="M9 12l2 2 4-4"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-box__content">
+                            <span class="stat-box__value" data-counter="true" data-target="10" data-suffix="+ Years">10+ Years</span>
+                            <span class="stat-box__label">Industry Experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Scroll Explore Indicator -->
+                <a href="#about" class="hero__scroll-explore" aria-label="Scroll to explore">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <span>SCROLL TO EXPLORE</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 2: OUR SPECIALIST COURSES (3 ON TOP, 2 BELOW - HOVER EXPAND)
+        ============================================================ -->
+        <section class="courses courses--expandable-section" id="courses" aria-labelledby="courses-heading">
+            <div class="container container--wide">
+                <!-- Header matching reference design -->
+                <div class="courses-header-split">
+                    <div class="courses-header-left">
+                        <span class="courses-eyebrow">Our Product</span>
+                        <h2 class="courses-display-title" id="courses-heading">
+                            SPECIALIST COURSES<br>
+                            <span class="courses-title-accent">FOR GLOBAL NURSES</span>
+                        </h2>
+                    </div>
+                    <div class="courses-header-right">
+                        <a href="#contact" class="courses-read-more-link" title="Explore all courses">
+                            <span>READ MORE</span>
+                            <div class="link-circle-arrow" aria-hidden="true">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ROW 1: 3 IN ONE LINE -->
+                <div class="courses-expand-row courses-expand-row--3">
+
+                    <!-- Course 1: NCLEX Assured -->
+                    <article class="course-ref-card course-ref-card--orange" id="course-nclex-assured">
+                        <div class="card-bg-layer">
+                            <img src="assets/images/course-assured.jpg" alt="NCLEX Assured" class="card-bg-photo">
+                            <div class="card-bg-overlay"></div>
+                            <div class="card-bubble-bg" aria-hidden="true">
+                                <span class="bubble b1"></span>
+                                <span class="bubble b2"></span>
+                                <span class="bubble b3"></span>
+                            </div>
+                        </div>
+                        <div class="card-body-col">
+                            <div class="card-text-top">
+                                <span class="card-badge card-badge--orange">★ MOST POPULAR</span>
+                                <h3 class="card-title">NCLEX ASSURED<br><span class="card-title-sub">Premium Coaching Program</span></h3>
+
+                                <!-- Middle Open Space Pricing (Glowing Italic) -->
+                                <div class="card-mid-price">
+                                    <span class="mid-price-lbl">Course Investment</span>
+                                    <div class="mid-price-val price-glow--orange"><em>AUD 899</em></div>
+                                </div>
+
+                                <p class="card-desc">
+                                    Structured NCLEX RN preparation with 1.5 years access, 77 modules, 60h live classes, and a 50% refund pass guarantee option.
+                                </p>
+                                <div class="card-highlight-chips">
+                                    <span class="hl-chip">1.5 Yrs Access</span>
+                                    <span class="hl-chip">77 Modules</span>
+                                    <span class="hl-chip">15,000+ Qs</span>
+                                    <span class="hl-chip hl-chip--orange">50% Refund Guarantee</span>
+                                </div>
+                            </div>
+                            <div class="card-foot-row">
+                                <span class="card-foot-label">Explore Course</span>
+                                <a href="#contact" class="card-arrow-circle" onclick="prefillCourse('NCLEX ASSURED - Premium NCLEX Coaching')" aria-label="Learn more about NCLEX Assured">
+                                    <svg class="icon-up-right" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                    <svg class="icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-media-panel">
+                            <div class="media-frame">
+                                <img src="assets/images/course-assured.jpg" alt="NCLEX Assured Program" class="card-media-img">
+                                <span class="media-badge">Assured Pass</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Course 2: NCLEX Instructor Led -->
+                    <article class="course-ref-card course-ref-card--cyan" id="course-nclex-instructor">
+                        <div class="card-bg-layer">
+                            <img src="assets/images/course-instructor.jpg" alt="NCLEX Instructor Led" class="card-bg-photo">
+                            <div class="card-bg-overlay"></div>
+                            <div class="card-bubble-bg" aria-hidden="true">
+                                <span class="bubble b1"></span>
+                                <span class="bubble b2"></span>
+                                <span class="bubble b3"></span>
+                            </div>
+                        </div>
+                        <div class="card-body-col">
+                            <div class="card-text-top">
+                                <span class="card-badge card-badge--cyan">● LIVE MENTORSHIP</span>
+                                <h3 class="card-title">NCLEX-RN<br><span class="card-title-sub">Instructor Led Coaching</span></h3>
+
+                                <!-- Middle Open Space Pricing (Glowing Italic) -->
+                                <div class="card-mid-price">
+                                    <span class="mid-price-lbl">Course Investment</span>
+                                    <div class="mid-price-val price-glow--cyan"><em>AUD 699</em></div>
+                                </div>
+
+                                <p class="card-desc">
+                                    Prepare under expert instructors with weekly interactive live classes, 15,000+ test questions, and structured personal mentorship.
+                                </p>
+                                <div class="card-highlight-chips">
+                                    <span class="hl-chip">1 Year Access</span>
+                                    <span class="hl-chip">50h Live Classes</span>
+                                    <span class="hl-chip">6 Mock Exams</span>
+                                    <span class="hl-chip hl-chip--cyan">Dedicated RN Mentor</span>
+                                </div>
+                            </div>
+                            <div class="card-foot-row">
+                                <span class="card-foot-label">Explore Course</span>
+                                <a href="#contact" class="card-arrow-circle" onclick="prefillCourse('NCLEX RN (National Council Licensure Examination)- Instructor Led')" aria-label="Learn more about NCLEX Instructor Led">
+                                    <svg class="icon-up-right" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                    <svg class="icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-media-panel">
+                            <div class="media-frame">
+                                <img src="assets/images/course-instructor.jpg" alt="NCLEX Instructor Led" class="card-media-img">
+                                <span class="media-badge">Live Guidance</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Course 3: NCLEX Self Paced -->
+                    <article class="course-ref-card course-ref-card--orange" id="course-nclex-self">
+                        <div class="card-bg-layer">
+                            <img src="assets/images/course-self.jpg" alt="NCLEX Self Paced" class="card-bg-photo">
+                            <div class="card-bg-overlay"></div>
+                            <div class="card-bubble-bg" aria-hidden="true">
+                                <span class="bubble b1"></span>
+                                <span class="bubble b2"></span>
+                                <span class="bubble b3"></span>
+                            </div>
+                        </div>
+                        <div class="card-body-col">
+                            <div class="card-text-top">
+                                <span class="card-badge card-badge--orange">⚡ 100% FLEXIBLE</span>
+                                <h3 class="card-title">NCLEX-RN<br><span class="card-title-sub">Self Paced Study Program</span></h3>
+
+                                <!-- Middle Open Space Pricing (Glowing Italic) -->
+                                <div class="card-mid-price">
+                                    <span class="mid-price-lbl">Course Investment</span>
+                                    <div class="mid-price-val price-glow--orange"><em>AUD 499</em></div>
+                                </div>
+
+                                <p class="card-desc">
+                                    Study at your own schedule with 60h concept video lectures, 77 modules, and simulated Next Generation NCLEX practice questions.
+                                </p>
+                                <div class="card-highlight-chips">
+                                    <span class="hl-chip">1 Year Access</span>
+                                    <span class="hl-chip">60h Recorded</span>
+                                    <span class="hl-chip">77 Modules</span>
+                                    <span class="hl-chip hl-chip--cyan">NGN Question Bank</span>
+                                </div>
+                            </div>
+                            <div class="card-foot-row">
+                                <span class="card-foot-label">Explore Course</span>
+                                <a href="#contact" class="card-arrow-circle" onclick="prefillCourse('NCLEX RN (National Council Licensure Examination)- Self Paced')" aria-label="Learn more about NCLEX Self Paced">
+                                    <svg class="icon-up-right" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                    <svg class="icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-media-panel">
+                            <div class="media-frame">
+                                <img src="assets/images/course-self.jpg" alt="NCLEX Self Paced" class="card-media-img">
+                                <span class="media-badge">Self Paced</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- ROW 2: 2 BELOW -->
+                <div class="courses-expand-row courses-expand-row--2">
+
+                    <!-- Course 4: OSCE Clinical Examination -->
+                    <article class="course-ref-card course-ref-card--cyan" id="course-osce">
+                        <div class="card-bg-layer">
+                            <img src="assets/images/service-nursing.jpg" alt="OSCE Clinical Training" class="card-bg-photo">
+                            <div class="card-bg-overlay"></div>
+                            <div class="card-bubble-bg" aria-hidden="true">
+                                <span class="bubble b1"></span>
+                                <span class="bubble b2"></span>
+                                <span class="bubble b3"></span>
+                            </div>
+                        </div>
+                        <div class="card-body-col">
+                            <div class="card-text-top">
+                                <span class="card-badge card-badge--cyan">🏥 OSCE CLINICAL</span>
+                                <h3 class="card-title">OSCE Training<br><span class="card-title-sub">Clinical Examination Practical</span></h3>
+
+                                <!-- Middle Open Space Pricing (Glowing Italic) -->
+                                <div class="card-mid-price">
+                                    <span class="mid-price-lbl">Course Investment</span>
+                                    <div class="mid-price-val price-glow--cyan"><em>AUD 2,700</em></div>
+                                </div>
+
+                                <p class="card-desc">
+                                    Hands-on clinical skills, communication scenario stations, and mock exams coached by qualified Australian registered nurse mentors with a 90%+ pass rate.
+                                </p>
+                                <div class="card-highlight-chips">
+                                    <span class="hl-chip">Australian RNs</span>
+                                    <span class="hl-chip">Skill Stations</span>
+                                    <span class="hl-chip">Full Mock Exams</span>
+                                    <span class="hl-chip hl-chip--orange">1-on-1 Feedback</span>
+                                </div>
+                            </div>
+                            <div class="card-foot-row">
+                                <span class="card-foot-label">Explore Course</span>
+                                <a href="#contact" class="card-arrow-circle" onclick="prefillCourse('OSCE(Objective Structured Clinical Examination)')" aria-label="Learn more about OSCE Clinical Training">
+                                    <svg class="icon-up-right" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                    <svg class="icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-media-panel">
+                            <div class="media-frame">
+                                <img src="assets/images/service-nursing.jpg" alt="OSCE Clinical Preparation" class="card-media-img">
+                                <span class="media-badge">Clinical Stage</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Course 5: MCQ Exam - New Zealand -->
+                    <article class="course-ref-card course-ref-card--orange" id="course-mcq-nz">
+                        <div class="card-bg-layer">
+                            <img src="assets/images/service-education.jpg" alt="New Zealand MCQ Exam" class="card-bg-photo">
+                            <div class="card-bg-overlay"></div>
+                            <div class="card-bubble-bg" aria-hidden="true">
+                                <span class="bubble b1"></span>
+                                <span class="bubble b2"></span>
+                                <span class="bubble b3"></span>
+                            </div>
+                        </div>
+                        <div class="card-body-col">
+                            <div class="card-text-top">
+                                <span class="card-badge card-badge--orange">🇳🇿 NCNZ PATHWAY</span>
+                                <h3 class="card-title">MCQ Exam - NZ<br><span class="card-title-sub">New Zealand Competence Assessment</span></h3>
+
+                                <!-- Middle Open Space Pricing (Glowing Italic) -->
+                                <div class="card-mid-price">
+                                    <span class="mid-price-lbl">Course Investment</span>
+                                    <div class="mid-price-val price-glow--orange"><em>AUD 499</em></div>
+                                </div>
+
+                                <p class="card-desc">
+                                    Tailored coaching for overseas nurses completing the New Zealand competence assessment with high-yield question banks, ethics, and simulated tests.
+                                </p>
+                                <div class="card-highlight-chips">
+                                    <span class="hl-chip">NCNZ Syllabus</span>
+                                    <span class="hl-chip">Question Banks</span>
+                                    <span class="hl-chip">NZ Culture &amp; Ethics</span>
+                                    <span class="hl-chip hl-chip--cyan">Timed Practice Tests</span>
+                                </div>
+                            </div>
+                            <div class="card-foot-row">
+                                <span class="card-foot-label">Explore Course</span>
+                                <a href="#contact" class="card-arrow-circle" onclick="prefillCourse('MCQ Exam - New Zealand for International Nurses (Self-Paced Program)')" aria-label="Learn more about New Zealand MCQ Exam">
+                                    <svg class="icon-up-right" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                    <svg class="icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-media-panel">
+                            <div class="media-frame">
+                                <img src="assets/images/service-education.jpg" alt="New Zealand MCQ Exam" class="card-media-img">
+                                <span class="media-badge">NCNZ Pathway</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 3: WHY CHOOSE EDULOGIX (INFINITE MOVING SLIDER)
+        ============================================================ -->
+        <section class="promise" id="about" aria-labelledby="promise-heading">
+            <div class="container">
+                <div class="promise__header">
+                    <h2 class="promise__title" id="promise-heading">
+                        Why Choose <span class="promise__title--orange">EdulogiX</span>
+                    </h2>
+                    <p class="promise__sub">
+                        All our courses are created by healthcare educators and veteran registered nurses who have successfully walked the path.
+                    </p>
+                    <div class="promise__divider" aria-hidden="true">
+                        <span></span><span class="promise__divider-dot"></span><span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full-width Always Moving Ticker / Slider Banner -->
+            <div class="why-slider-wrapper" aria-label="Why Choose Edulogix Highlights">
+                <div class="why-slider-track">
+                    <!-- Item 1: Expertly Created -->
+                    <div class="why-slider-item">
+                        <div class="why-icon-box" aria-hidden="true">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="6"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                <polygon points="12 5.5 13.09 7.71 15.53 8.06 13.77 9.77 14.18 12.2 12 11.05 9.82 12.2 10.23 9.77 8.47 8.06 10.91 7.71 12 5.5" fill="currentColor"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="why-item-title">EXPERTLY CREATED</h3>
+                        <p class="why-item-desc">All our courses are created by experts. Our content is made by nurses, for nurses.</p>
+                    </div>
+
+                    <!-- Item 2: Flexible Learning -->
+                    <div class="why-slider-item">
+                        <div class="why-icon-box" aria-hidden="true">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="12" rx="2"></rect>
+                                <line x1="2" y1="20" x2="22" y2="20"></line>
+                                <path d="M7 10h4M7 8h2M13 10h4M13 8h4"></path>
+                                <path d="M12 6v6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="why-item-title">FLEXIBLE LEARNING</h3>
+                        <p class="why-item-desc">We offer you the choice between live online learning and distance courses.</p>
+                    </div>
+
+                    <!-- Item 3: High Success Rate -->
+                    <div class="why-slider-item">
+                        <div class="why-icon-box" aria-hidden="true">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                                <polyline points="6 10 12 4 18 10"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="why-item-title">HIGH SUCCESS RATE</h3>
+                        <p class="why-item-desc">Our NCLEX RN and OSCE success rate is above 90%.</p>
+                    </div>
+
+                    <!-- Item 4: Admission Support -->
+                    <div class="why-slider-item">
+                        <div class="why-icon-box" aria-hidden="true">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                                <circle cx="12" cy="13" r="2"></circle>
+                                <path d="M12 9v2M12 15v2M8 13h2M14 13h2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="why-item-title">ADMISSION SUPPORT</h3>
+                        <p class="why-item-desc">Our qualified education counsellors provides personal support and guidance.</p>
+                    </div>
+
+                    <!-- Cloned Set for Seamless Infinite Moving Loop -->
+                    <div class="why-slider-item" aria-hidden="true">
+                        <div class="why-icon-box">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="6"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                <polygon points="12 5.5 13.09 7.71 15.53 8.06 13.77 9.77 14.18 12.2 12 11.05 9.82 12.2 10.23 9.77 8.47 8.06 10.91 7.71 12 5.5" fill="currentColor"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="why-item-title">EXPERTLY CREATED</h3>
+                        <p class="why-item-desc">All our courses are created by experts. Our content is made by nurses, for nurses.</p>
+                    </div>
+
+                    <div class="why-slider-item" aria-hidden="true">
+                        <div class="why-icon-box">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="12" rx="2"></rect>
+                                <line x1="2" y1="20" x2="22" y2="20"></line>
+                                <path d="M7 10h4M7 8h2M13 10h4M13 8h4"></path>
+                                <path d="M12 6v6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="why-item-title">FLEXIBLE LEARNING</h3>
+                        <p class="why-item-desc">We offer you the choice between live online learning and distance courses.</p>
+                    </div>
+
+                    <div class="why-slider-item" aria-hidden="true">
+                        <div class="why-icon-box">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                                <polyline points="6 10 12 4 18 10"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="why-item-title">HIGH SUCCESS RATE</h3>
+                        <p class="why-item-desc">Our NCLEX RN and OSCE success rate is above 90%.</p>
+                    </div>
+
+                    <div class="why-slider-item" aria-hidden="true">
+                        <div class="why-icon-box">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                                <circle cx="12" cy="13" r="2"></circle>
+                                <path d="M12 9v2M12 15v2M8 13h2M14 13h2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="why-item-title">ADMISSION SUPPORT</h3>
+                        <p class="why-item-desc">Our qualified education counsellors provides personal support and guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================        <!-- ============================================================
+             SECTION 4: EXPLORE OUR SERVICES (MODERN SPLIT SHOWCASE CARD)
+        ============================================================ -->
+        <section class="registration-service" id="services" aria-labelledby="services-heading">
+            <div class="container container--wide">
+                <!-- Section Header -->
+                <div class="services-header-wrap">
+                    <span class="services__eyebrow">Explore Our Services</span>
+                    <h2 class="services__display-title" id="services-heading">
+                        Nursing Registration <span class="services-title-accent">Assistance</span>
+                    </h2>
+                    <p class="services__intro-p">
+                        Your complete, stress-free pathway to practicing as a Registered Nurse in Australia, Canada, and New Zealand.
+                    </p>
+                </div>
+
+                <!-- Modern Split Showcase Card (Matching Reference Design) -->
+                <div class="modern-service-card" id="modernServiceCard">
+                    <!-- Left Column: Navigation & Pathways List -->
+                    <div class="msc-left-col">
+                        <div class="msc-top-meta">
+                            <span class="msc-eyebrow-label">Registration Pathways</span>
+                            <nav class="msc-nav-list" aria-label="Registration Pathways Navigation">
+                                <button class="msc-nav-item is-active" data-pathway="australia" type="button" aria-current="true">
+                                    <span class="msc-item-title">Australia (AHPRA)</span>
+                                </button>
+                                <button class="msc-nav-item" data-pathway="canada" type="button">
+                                    <span class="msc-item-title">Canada (NNAS)</span>
+                                </button>
+                                <button class="msc-nav-item" data-pathway="new-zealand" type="button">
+                                    <span class="msc-item-title">New Zealand (NCNZ)</span>
+                                </button>
+                                <button class="msc-nav-item" data-pathway="streamlined" type="button">
+                                    <span class="msc-item-title">Streamlined Pathway</span>
+                                    <span class="msc-badge-new">New</span>
+                                </button>
+                            </nav>
+                        </div>
+
+                        <div class="msc-bottom-cta">
+                            <a href="#contact" class="msc-btn-explore" onclick="prefillCourse('Nursing Registration Assistance')">
+                                <span>Explore All</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Visual Showcase Preview -->
+                    <div class="msc-right-col" id="mscShowcase">
+                        <!-- Background Image & Overlay -->
+                        <div class="msc-showcase-bg">
+                            <img src="assets/images/nursing-registration.png" alt="Australia AHPRA Registration" class="msc-bg-img" id="mscBgImg">
+                            <div class="msc-bg-overlay"></div>
+                            <div class="msc-bg-ambient-glow" aria-hidden="true"></div>
+                        </div>
+
+                        <!-- Showcase Content -->
+                        <div class="msc-showcase-body">
+                            <div class="msc-body-top">
+                                <span class="msc-showcase-tag" id="mscTag">Primary Healthcare Pathway</span>
+                                <h3 class="msc-showcase-title" id="mscTitle">
+                                    Registration, Made Clear<br>and Simple
+                                </h3>
+                            </div>
+
+                            <div class="msc-body-bottom">
+                                <p class="msc-showcase-desc" id="mscDesc">
+                                    An overview of how intuitive guidance, ANMAC portfolio assessment, and dedicated RN mentorship remove friction from Australian nursing registration.
+                                </p>
+                                <div class="msc-action-row">
+                                    <a href="https://www.edulogix.com.au/services/australia/" target="_blank" rel="noopener" class="msc-link-more" id="mscLink">
+                                        <span id="mscLinkText">View Full Pathway</span>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 5: COMMUNITY BANNER
+        ============================================================ -->
+        <section class="community" id="community" aria-labelledby="community-heading">
+            <div class="community__img-col" aria-hidden="true">
+                <img src="assets/images/community-hero.png" alt="A Community of Faith, Learning and Life" class="community__img">
+            </div>
+            <div class="community__content-col">
+                <h2 class="community__title" id="community-heading">A Community of Faith, Learning and Life</h2>
+                <p class="community__desc">
+                    Edulogix has built a community of thousands of nurses and health professionals across the world through our committed social media platforms such as YouTube, Facebook, and Instagram. This community has been created with a goal of providing well researched information to health professionals to help them in their career.
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                    <a href="https://www.youtube.com/c/edulogix" target="_blank" rel="noopener" class="btn btn--primary" style="background:#cc0000;">
+                        Join Our YouTube Channel
+                    </a>
+                    <a href="https://www.facebook.com/edulogix.au" target="_blank" rel="noopener" class="btn btn--ghost">
+                        Follow on Facebook
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 5.5: LATEST VIDEOS (YOUTUBE SLIDER)
+        ============================================================ -->
+        <section class="latest-videos-section" id="latest-videos" aria-labelledby="latest-videos-heading">
+            <div class="container">
+                <div class="videos-header">
+                    <span class="videos-eyebrow">OFFICIAL YOUTUBE CHANNEL &bull; @EDULOGIX</span>
+                    <h2 class="videos-title" id="latest-videos-heading">LATEST VIDEOS</h2>
+                    <p class="videos-subtext">
+                        Watch recent tutorials, exam preparation breakdowns, and immigration success strategies from <strong>EdulogiX-By Jesin Joy</strong>.
+                    </p>
+                </div>
+
+                <!-- Slider Container with navigation -->
+                <div class="yt-slider-wrapper">
+                    <button class="yt-slider-arrow yt-slider-prev" id="ytPrevBtn" aria-label="Previous Videos">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+
+                    <div class="yt-slider-viewport" id="ytSliderViewport">
+                        <div class="yt-slider-track" id="ytSliderTrack">
+                            <!-- Video Card 1 -->
+                            <div class="yt-card" data-video-id="hnCvyvvjfDk">
+                                <div class="yt-card__inner">
+                                    <div class="yt-card__header">
+                                        <img src="assets/images/image.png" alt="EdulogiX-By Jesin Joy" class="yt-card__avatar">
+                                        <div class="yt-card__meta">
+                                            <span class="yt-card__title">Skip NCLEX and get Your Australian Nursing License</span>
+                                            <span class="yt-card__author">EdulogiX-By Jesin Joy</span>
+                                        </div>
+                                    </div>
+                                    <div class="yt-card__thumb-wrap">
+                                        <img src="https://img.youtube.com/vi/hnCvyvvjfDk/hqdefault.jpg" alt="Skip NCLEX and get Your Australian Nursing License" class="yt-card__thumb" loading="lazy">
+                                        <button class="yt-card__play" aria-label="Play Video">
+                                            <svg viewBox="0 0 24 24" width="48" height="48" fill="#ff0000">
+                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="yt-card__footer">
+                                        <span class="yt-card__action" title="Share">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                                        </span>
+                                        <span class="yt-card__action" title="Watch Later">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        </span>
+                                        <span class="yt-card__brand">Watch on <span style="font-weight:700; color:#fff;">YouTube</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video Card 2 -->
+                            <div class="yt-card" data-video-id="5BbNH75GLQ8">
+                                <div class="yt-card__inner">
+                                    <div class="yt-card__header">
+                                        <img src="assets/images/image.png" alt="EdulogiX-By Jesin Joy" class="yt-card__avatar">
+                                        <div class="yt-card__meta">
+                                            <span class="yt-card__title">How to become a nurse in New Zealand - 2025 update</span>
+                                            <span class="yt-card__author">EdulogiX-By Jesin Joy</span>
+                                        </div>
+                                    </div>
+                                    <div class="yt-card__thumb-wrap">
+                                        <img src="https://img.youtube.com/vi/5BbNH75GLQ8/hqdefault.jpg" alt="How to become a nurse in New Zealand" class="yt-card__thumb" loading="lazy">
+                                        <button class="yt-card__play" aria-label="Play Video">
+                                            <svg viewBox="0 0 24 24" width="48" height="48" fill="#ff0000">
+                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="yt-card__footer">
+                                        <span class="yt-card__action" title="Share">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                                        </span>
+                                        <span class="yt-card__action" title="Watch Later">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        </span>
+                                        <span class="yt-card__brand">Watch on <span style="font-weight:700; color:#fff;">YouTube</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video Card 3 -->
+                            <div class="yt-card" data-video-id="u0rn-DgVxRc">
+                                <div class="yt-card__inner">
+                                    <div class="yt-card__header">
+                                        <img src="assets/images/image.png" alt="EdulogiX-By Jesin Joy" class="yt-card__avatar">
+                                        <div class="yt-card__meta">
+                                            <span class="yt-card__title">Next Steps After Failing OSCE / Visa Rejection</span>
+                                            <span class="yt-card__author">EdulogiX-By Jesin Joy</span>
+                                        </div>
+                                    </div>
+                                    <div class="yt-card__thumb-wrap">
+                                        <img src="https://img.youtube.com/vi/u0rn-DgVxRc/hqdefault.jpg" alt="Next Steps After Failing OSCE" class="yt-card__thumb" loading="lazy">
+                                        <button class="yt-card__play" aria-label="Play Video">
+                                            <svg viewBox="0 0 24 24" width="48" height="48" fill="#ff0000">
+                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="yt-card__footer">
+                                        <span class="yt-card__action" title="Share">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                                        </span>
+                                        <span class="yt-card__action" title="Watch Later">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        </span>
+                                        <span class="yt-card__brand">Watch on <span style="font-weight:700; color:#fff;">YouTube</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video Card 4 -->
+                            <div class="yt-card" data-video-id="IKHfFPrNbBI">
+                                <div class="yt-card__inner">
+                                    <div class="yt-card__header">
+                                        <img src="assets/images/image.png" alt="EdulogiX-By Jesin Joy" class="yt-card__avatar">
+                                        <div class="yt-card__meta">
+                                            <span class="yt-card__title">How to move to Australia as a Registered Nurse from UK, Ireland</span>
+                                            <span class="yt-card__author">EdulogiX-By Jesin Joy</span>
+                                        </div>
+                                    </div>
+                                    <div class="yt-card__thumb-wrap">
+                                        <img src="https://img.youtube.com/vi/IKHfFPrNbBI/hqdefault.jpg" alt="How to move to Australia as a Registered Nurse" class="yt-card__thumb" loading="lazy">
+                                        <button class="yt-card__play" aria-label="Play Video">
+                                            <svg viewBox="0 0 24 24" width="48" height="48" fill="#ff0000">
+                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="yt-card__footer">
+                                        <span class="yt-card__action" title="Share">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                                        </span>
+                                        <span class="yt-card__action" title="Watch Later">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        </span>
+                                        <span class="yt-card__brand">Watch on <span style="font-weight:700; color:#fff;">YouTube</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video Card 5 -->
+                            <div class="yt-card" data-video-id="BrHpaOE0ud4">
+                                <div class="yt-card__inner">
+                                    <div class="yt-card__header">
+                                        <img src="assets/images/image.png" alt="EdulogiX-By Jesin Joy" class="yt-card__avatar">
+                                        <div class="yt-card__meta">
+                                            <span class="yt-card__title">NCLEX Next Generation Exam / Top 5 tips to Pass NCLEX First Time</span>
+                                            <span class="yt-card__author">EdulogiX-By Jesin Joy</span>
+                                        </div>
+                                    </div>
+                                    <div class="yt-card__thumb-wrap">
+                                        <img src="https://img.youtube.com/vi/BrHpaOE0ud4/hqdefault.jpg" alt="NCLEX Next Generation Exam" class="yt-card__thumb" loading="lazy">
+                                        <button class="yt-card__play" aria-label="Play Video">
+                                            <svg viewBox="0 0 24 24" width="48" height="48" fill="#ff0000">
+                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="yt-card__footer">
+                                        <span class="yt-card__action" title="Share">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                                        </span>
+                                        <span class="yt-card__action" title="Watch Later">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        </span>
+                                        <span class="yt-card__brand">Watch on <span style="font-weight:700; color:#fff;">YouTube</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video Card 6 -->
+                            <div class="yt-card" data-video-id="j1KSXu2sJv0">
+                                <div class="yt-card__inner">
+                                    <div class="yt-card__header">
+                                        <img src="assets/images/image.png" alt="EdulogiX-By Jesin Joy" class="yt-card__avatar">
+                                        <div class="yt-card__meta">
+                                            <span class="yt-card__title">How to become a Registered Nurse in Canada?</span>
+                                            <span class="yt-card__author">EdulogiX-By Jesin Joy</span>
+                                        </div>
+                                    </div>
+                                    <div class="yt-card__thumb-wrap">
+                                        <img src="https://img.youtube.com/vi/j1KSXu2sJv0/hqdefault.jpg" alt="How to become a Registered Nurse in Canada" class="yt-card__thumb" loading="lazy">
+                                        <button class="yt-card__play" aria-label="Play Video">
+                                            <svg viewBox="0 0 24 24" width="48" height="48" fill="#ff0000">
+                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="yt-card__footer">
+                                        <span class="yt-card__action" title="Share">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                                        </span>
+                                        <span class="yt-card__action" title="Watch Later">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        </span>
+                                        <span class="yt-card__brand">Watch on <span style="font-weight:700; color:#fff;">YouTube</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="yt-slider-arrow yt-slider-next" id="ytNextBtn" aria-label="Next Videos">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+
+                <!-- Slider Indicators & YouTube Link -->
+                <div class="videos-footer-row">
+                    <div class="yt-slider-dots" id="ytSliderDots"></div>
+                    <a href="https://www.youtube.com/c/edulogix?sub_confirmation=1" target="_blank" rel="noopener" class="yt-channel-cta">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        <span>Subscribe to @Edulogix on YouTube</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- YouTube Video Lightbox Modal -->
+            <div class="yt-modal" id="ytModal" aria-hidden="true">
+                <div class="yt-modal-backdrop" id="ytModalBackdrop"></div>
+                <div class="yt-modal-content">
+                    <button class="yt-modal-close" id="ytModalClose" aria-label="Close video player">&times;</button>
+                    <div class="yt-modal-iframe-wrap">
+                        <iframe id="ytModalIframe" src="" title="EdulogiX YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 6: WHAT OUR STUDENTS SAY (9 REAL TESTIMONIALS)
+        ============================================================ -->
+        <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="testimonials__top">
+                    <!-- Left: Google Review Badge & Carousel Nav -->
+                    <div class="testimonials__left">
+                        <h2 class="testimonials__title" id="testimonials-heading">
+                            What our<br>
+                            <span class="testimonials__title--orange">Students Say About</span><br>
+                            EdulogiX
+                        </h2>
+                        <a href="https://www.google.com/search?hl=en-IN&gl=in&q=Edulogix,+level+49/10+Darcy+St,+Parramatta+NSW+2150,+Australia&ludocid=3501347073362049824&lsig=AB86z5VpdF7JBBuZHnpf7g22QGw6#lrd=0x6b129b95cdcc78bb:0x3097489cbf193b20,1"
+                            target="_blank" rel="noopener" class="testimonials__google-badge" id="google-rating">
+                            <div class="google-badge__icon">
+                                <svg width="24" height="24" viewBox="0 0 48 48">
+                                    <path fill="#4285F4" d="M24 9.5c3.2 0 5.9 1.1 8.1 3.2l6-6C34.3 3.2 29.5 1 24 1 15 1 7.4 6.3 4 13.8l7 5.4C12.9 13.4 18 9.5 24 9.5z" />
+                                    <path fill="#34A853" d="M46.1 24.6c0-1.6-.1-2.7-.4-3.9H24v7.4h12.5c-.5 2.7-2.1 5-4.5 6.5l7 5.4c4.1-3.8 6.5-9.4 6.5-15.4z" />
+                                    <path fill="#FBBC05" d="M11 28.2c-.5-1.5-.8-3-.8-4.7s.3-3.2.8-4.7L4 13.8C2.3 17.2 1.4 20.9 1.4 24.7s.9 7.5 2.6 10.9l7-7.4z" />
+                                    <path fill="#EA4335" d="M24 47c5.5 0 10.2-1.8 13.6-4.9l-7-5.4c-1.8 1.2-4.1 2-6.6 2-5.9 0-10.9-4-12.7-9.5l-7 7.4C7.4 41.7 15 47 24 47z" />
+                                </svg>
+                            </div>
+                            <div class="google-badge__content">
+                                <div class="google-badge__score">4.9 <span class="stars">★★★★★</span></div>
+                                <div class="google-badge__label">Google Verified Reviews</div>
+                                <div class="google-badge__count">169+ Reviews</div>
+                            </div>
+                        </a>
+                        <div class="testimonials__nav">
+                            <button class="tcard-btn" id="testimonial-prev" aria-label="Previous Testimonial">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button class="tcard-btn" id="testimonial-next" aria-label="Next Testimonial">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Testimonial Cards Track -->
+                    <div class="testimonials__cards-wrapper">
+                        <div class="testimonials__cards" id="testimonials-track" role="region" aria-label="Student testimonials">
+
+                            <!-- Review 1: Jasbir Kaur -->
+                            <blockquote class="tcard" id="testi-jasbir">
+                                <div class="tcard__quote-mark" aria-hidden="true">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H15.017C15.5693 5 16.017 4.55228 16.017 4C16.017 3.44772 15.5693 3 15.017 3H14.017C10.7033 3 8.01697 5.68629 8.01697 9V15C8.01697 18.3137 10.7033 21 14.017 21ZM6.01697 21L6.01697 18C6.01697 16.8954 6.91241 16 8.01697 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.01697C6.46468 8 6.01697 8.44772 6.01697 9V12C6.01697 12.5523 5.56926 13 5.01697 13H3.01697C2.46468 13 2.01697 12.5523 2.01697 12V9C2.01697 6.79086 3.80783 5 6.01697 5H7.01697C7.56926 5 8.01697 4.55228 8.01697 4C8.01697 3.44772 7.56926 3 7.01697 3H6.01697C2.70327 3 0.0169678 5.68629 0.0169678 9V15C0.0169678 18.3137 2.70327 21 6.01697 21Z" />
+                                    </svg>
+                                </div>
+                                <p class="tcard__text">
+                                    "I came to Australia without a clue on how to start my nursing career. Edulogix helped me in getting admission in Master of nursing leading to registration. Forever grateful."
+                                </p>
+                                <footer class="tcard__footer">
+                                    <img src="assets/images/testimonial-jasbirkaur.jpg" alt="Jasbir Kaur" class="tcard__avatar">
+                                    <div>
+                                        <cite class="tcard__name">Jasbir Kaur</cite>
+                                        <div class="tcard__stars" aria-label="5 stars">★★★★★</div>
+                                    </div>
+                                </footer>
+                            </blockquote>
+
+                            <!-- Review 2: Hemangini Patel -->
+                            <blockquote class="tcard" id="testi-hemangini">
+                                <div class="tcard__quote-mark" aria-hidden="true">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H15.017C15.5693 5 16.017 4.55228 16.017 4C16.017 3.44772 15.5693 3 15.017 3H14.017C10.7033 3 8.01697 5.68629 8.01697 9V15C8.01697 18.3137 10.7033 21 14.017 21ZM6.01697 21L6.01697 18C6.01697 16.8954 6.91241 16 8.01697 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.01697C6.46468 8 6.01697 8.44772 6.01697 9V12C6.01697 12.5523 5.56926 13 5.01697 13H3.01697C2.46468 13 2.01697 12.5523 2.01697 12V9C2.01697 6.79086 3.80783 5 6.01697 5H7.01697C7.56926 5 8.01697 4.55228 8.01697 4C8.01697 3.44772 7.56926 3 7.01697 3H6.01697C2.70327 3 0.0169678 5.68629 0.0169678 9V15C0.0169678 18.3137 2.70327 21 6.01697 21Z" /></svg>
+                                </div>
+                                <p class="tcard__text">
+                                    "I passed my NCLEX in 1st attempt. Excellent teaching and resources helped me achieve this. Highly recommended to any nurse planning to migrate to Australia!"
+                                </p>
+                                <footer class="tcard__footer">
+                                    <img src="assets/images/hero-nurse.png" alt="Hemangini Patel" class="tcard__avatar">
+                                    <div>
+                                        <cite class="tcard__name">Hemangini Patel</cite>
+                                        <div class="tcard__stars" aria-label="5 stars">★★★★★</div>
+                                    </div>
+                                </footer>
+                            </blockquote>
+
+                            <!-- Review 3: Dhrasti Patel -->
+                            <blockquote class="tcard" id="testi-dhrasti">
+                                <div class="tcard__quote-mark" aria-hidden="true">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H15.017C15.5693 5 16.017 4.55228 16.017 4C16.017 3.44772 15.5693 3 15.017 3H14.017C10.7033 3 8.01697 5.68629 8.01697 9V15C8.01697 18.3137 10.7033 21 14.017 21ZM6.01697 21L6.01697 18C6.01697 16.8954 6.91241 16 8.01697 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.01697C6.46468 8 6.01697 8.44772 6.01697 9V12C6.01697 12.5523 5.56926 13 5.01697 13H3.01697C2.46468 13 2.01697 12.5523 2.01697 12V9C2.01697 6.79086 3.80783 5 6.01697 5H7.01697C7.56926 5 8.01697 4.55228 8.01697 4C8.01697 3.44772 7.56926 3 7.01697 3H6.01697C2.70327 3 0.0169678 5.68629 0.0169678 9V15C0.0169678 18.3137 2.70327 21 6.01697 21Z" /></svg>
+                                </div>
+                                <p class="tcard__text">
+                                    "Guidance for my AHPRA application was smooth and NCLEX coaching provided by teachers helped me pass it in 1st attempt. Thanks, Team Edulogix, for your support."
+                                </p>
+                                <footer class="tcard__footer">
+                                    <img src="assets/images/testimonial-amandeep.jpg" alt="Dhrasti Patel" class="tcard__avatar">
+                                    <div>
+                                        <cite class="tcard__name">Dhrasti Patel</cite>
+                                        <div class="tcard__stars" aria-label="5 stars">★★★★★</div>
+                                    </div>
+                                </footer>
+                            </blockquote>
+
+                            <!-- Review 4: Arvind Choudhary -->
+                            <blockquote class="tcard" id="testi-arvind">
+                                <div class="tcard__quote-mark" aria-hidden="true">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H15.017C15.5693 5 16.017 4.55228 16.017 4C16.017 3.44772 15.5693 3 15.017 3H14.017C10.7033 3 8.01697 5.68629 8.01697 9V15C8.01697 18.3137 10.7033 21 14.017 21ZM6.01697 21L6.01697 18C6.01697 16.8954 6.91241 16 8.01697 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.01697C6.46468 8 6.01697 8.44772 6.01697 9V12C6.01697 12.5523 5.56926 13 5.01697 13H3.01697C2.46468 13 2.01697 12.5523 2.01697 12V9C2.01697 6.79086 3.80783 5 6.01697 5H7.01697C7.56926 5 8.01697 4.55228 8.01697 4C8.01697 3.44772 7.56926 3 7.01697 3H6.01697C2.70327 3 0.0169678 5.68629 0.0169678 9V15C0.0169678 18.3137 2.70327 21 6.01697 21Z" /></svg>
+                                </div>
+                                <p class="tcard__text">
+                                    "After my NCLEX, Jesin Mam suggested the right OSCE institute. Because of her guidance I passed OSCE and now have finally become a registered nurse in Australia."
+                                </p>
+                                <footer class="tcard__footer">
+                                    <img src="assets/images/hero-nurse.png" alt="Arvind Choudhary" class="tcard__avatar">
+                                    <div>
+                                        <cite class="tcard__name">Arvind Choudhary</cite>
+                                        <div class="tcard__stars" aria-label="5 stars">★★★★★</div>
+                                    </div>
+                                </footer>
+                            </blockquote>
+
+                            <!-- Review 5: Sheila Ali -->
+                            <blockquote class="tcard" id="testi-sheila">
+                                <div class="tcard__quote-mark" aria-hidden="true">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H15.017C15.5693 5 16.017 4.55228 16.017 4C16.017 3.44772 15.5693 3 15.017 3H14.017C10.7033 3 8.01697 5.68629 8.01697 9V15C8.01697 18.3137 10.7033 21 14.017 21ZM6.01697 21L6.01697 18C6.01697 16.8954 6.91241 16 8.01697 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.01697C6.46468 8 6.01697 8.44772 6.01697 9V12C6.01697 12.5523 5.56926 13 5.01697 13H3.01697C2.46468 13 2.01697 12.5523 2.01697 12V9C2.01697 6.79086 3.80783 5 6.01697 5H7.01697C7.56926 5 8.01697 4.55228 8.01697 4C8.01697 3.44772 7.56926 3 7.01697 3H6.01697C2.70327 3 0.0169678 5.68629 0.0169678 9V15C0.0169678 18.3137 2.70327 21 6.01697 21Z" /></svg>
+                                </div>
+                                <p class="tcard__text">
+                                    "Edulogix helped me secure admission in Bachelor of Nursing (Graduate entry) 2 yrs leading to registration. I am now on track to become an Australian RN soon. Thanks!"
+                                </p>
+                                <footer class="tcard__footer">
+                                    <img src="assets/images/testimonial-jasbirkaur.jpg" alt="Sheila Ali" class="tcard__avatar">
+                                    <div>
+                                        <cite class="tcard__name">Sheila Ali</cite>
+                                        <div class="tcard__stars" aria-label="5 stars">★★★★★</div>
+                                    </div>
+                                </footer>
+                            </blockquote>
+
+                            <!-- Review 6: Jhanvi Darji -->
+                            <blockquote class="tcard" id="testi-jhanvi">
+                                <div class="tcard__quote-mark" aria-hidden="true">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H15.017C15.5693 5 16.017 4.55228 16.017 4C16.017 3.44772 15.5693 3 15.017 3H14.017C10.7033 3 8.01697 5.68629 8.01697 9V15C8.01697 18.3137 10.7033 21 14.017 21ZM6.01697 21L6.01697 18C6.01697 16.8954 6.91241 16 8.01697 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.01697C6.46468 8 6.01697 8.44772 6.01697 9V12C6.01697 12.5523 5.56926 13 5.01697 13H3.01697C2.46468 13 2.01697 12.5523 2.01697 12V9C2.01697 6.79086 3.80783 5 6.01697 5H7.01697C7.56926 5 8.01697 4.55228 8.01697 4C8.01697 3.44772 7.56926 3 7.01697 3H6.01697C2.70327 3 0.0169678 5.68629 0.0169678 9V15C0.0169678 18.3137 2.70327 21 6.01697 21Z" /></svg>
+                                </div>
+                                <p class="tcard__text">
+                                    "From the orientation sessions, AHPRA portfolio prep, and every detail — your constant support made this dream reality. Special thanks to Hema Ma’am and Jesin Mam!"
+                                </p>
+                                <footer class="tcard__footer">
+                                    <img src="assets/images/testimonial-amandeep.jpg" alt="Jhanvi Darji" class="tcard__avatar">
+                                    <div>
+                                        <cite class="tcard__name">Jhanvi Darji</cite>
+                                        <div class="tcard__stars" aria-label="5 stars">★★★★★</div>
+                                    </div>
+                                </footer>
+                            </blockquote>
+
+                            <!-- Review 7: Amber Mughal -->
+                            <blockquote class="tcard" id="testi-amber">
+                                <div class="tcard__quote-mark" aria-hidden="true">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H15.017C15.5693 5 16.017 4.55228 16.017 4C16.017 3.44772 15.5693 3 15.017 3H14.017C10.7033 3 8.01697 5.68629 8.01697 9V15C8.01697 18.3137 10.7033 21 14.017 21ZM6.01697 21L6.01697 18C6.01697 16.8954 6.91241 16 8.01697 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.01697C6.46468 8 6.01697 8.44772 6.01697 9V12C6.01697 12.5523 5.56926 13 5.01697 13H3.01697C2.46468 13 2.01697 12.5523 2.01697 12V9C2.01697 6.79086 3.80783 5 6.01697 5H7.01697C7.56926 5 8.01697 4.55228 8.01697 4C8.01697 3.44772 7.56926 3 7.01697 3H6.01697C2.70327 3 0.0169678 5.68629 0.0169678 9V15C0.0169678 18.3137 2.70327 21 6.01697 21Z" /></svg>
+                                </div>
+                                <p class="tcard__text">
+                                    "I passed my NCLEX on first go and completed my AHPRA registration with Edulogix! When I felt confused, their skillful team didn't give up on me. Highly recommend!"
+                                </p>
+                                <footer class="tcard__footer">
+                                    <img src="assets/images/hero-nurse.png" alt="Amber Mughal" class="tcard__avatar">
+                                    <div>
+                                        <cite class="tcard__name">Amber Mughal</cite>
+                                        <div class="tcard__stars" aria-label="5 stars">★★★★★</div>
+                                    </div>
+                                </footer>
+                            </blockquote>
+
+                            <!-- Review 8: Rie Sasaki -->
+                            <blockquote class="tcard" id="testi-rie">
+                                <div class="tcard__quote-mark" aria-hidden="true">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H15.017C15.5693 5 16.017 4.55228 16.017 4C16.017 3.44772 15.5693 3 15.017 3H14.017C10.7033 3 8.01697 5.68629 8.01697 9V15C8.01697 18.3137 10.7033 21 14.017 21ZM6.01697 21L6.01697 18C6.01697 16.8954 6.91241 16 8.01697 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.01697C6.46468 8 6.01697 8.44772 6.01697 9V12C6.01697 12.5523 5.56926 13 5.01697 13H3.01697C2.46468 13 2.01697 12.5523 2.01697 12V9C2.01697 6.79086 3.80783 5 6.01697 5H7.01697C7.56926 5 8.01697 4.55228 8.01697 4C8.01697 3.44772 7.56926 3 7.01697 3H6.01697C2.70327 3 0.0169678 5.68629 0.0169678 9V15C0.0169678 18.3137 2.70327 21 6.01697 21Z" /></svg>
+                                </div>
+                                <p class="tcard__text">
+                                    "The teachers at Edulogix were very supportive and always provided quick responses and helpful advice. I wouldn’t have been able to pass without them."
+                                </p>
+                                <footer class="tcard__footer">
+                                    <img src="assets/images/testimonial-jasbirkaur.jpg" alt="Rie Sasaki" class="tcard__avatar">
+                                    <div>
+                                        <cite class="tcard__name">Rie Sasaki</cite>
+                                        <div class="tcard__stars" aria-label="5 stars">★★★★★</div>
+                                    </div>
+                                </footer>
+                            </blockquote>
+
+                            <!-- Review 9: Rinsith Kousathulla -->
+                            <blockquote class="tcard" id="testi-rinsith">
+                                <div class="tcard__quote-mark" aria-hidden="true">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H15.017C15.5693 5 16.017 4.55228 16.017 4C16.017 3.44772 15.5693 3 15.017 3H14.017C10.7033 3 8.01697 5.68629 8.01697 9V15C8.01697 18.3137 10.7033 21 14.017 21ZM6.01697 21L6.01697 18C6.01697 16.8954 6.91241 16 8.01697 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.01697C6.46468 8 6.01697 8.44772 6.01697 9V12C6.01697 12.5523 5.56926 13 5.01697 13H3.01697C2.46468 13 2.01697 12.5523 2.01697 12V9C2.01697 6.79086 3.80783 5 6.01697 5H7.01697C7.56926 5 8.01697 4.55228 8.01697 4C8.01697 3.44772 7.56926 3 7.01697 3H6.01697C2.70327 3 0.0169678 5.68629 0.0169678 9V15C0.0169678 18.3137 2.70327 21 6.01697 21Z" /></svg>
+                                </div>
+                                <p class="tcard__text">
+                                    "I passed my NCLEX exam! I couldn’t have done it without your incredible support and guidance. Your teaching methods boosted my confidence throughout the entire process."
+                                </p>
+                                <footer class="tcard__footer">
+                                    <img src="assets/images/testimonial-amandeep.jpg" alt="Rinsith Kousathulla" class="tcard__avatar">
+                                    <div>
+                                        <cite class="tcard__name">Rinsith Kousathulla</cite>
+                                        <div class="tcard__stars" aria-label="5 stars">★★★★★</div>
+                                    </div>
+                                </footer>
+                            </blockquote>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 7: LATEST BLOGS (FROM LIVE SITE)
+        ============================================================ -->
+        <section class="blog-section" id="blog" aria-labelledby="blog-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="blog-heading">Latest Blogs &amp; Insights</h2>
+                    <p class="section-subtitle">
+                        Stay informed with the latest updates on overseas nurse migration, Australian immigration rules, exam scoring methodologies, and healthcare trends.
+                    </p>
+                </div>
+
+                <div class="blog-grid">
+                    <!-- Blog 1 -->
+                    <article class="blog-card">
+                        <div class="blog-card__img-wrap">
+                            <img src="https://www.edulogix.com.au/blog/wp-content/uploads/2026/07/Blog-Banners-16-768x432.png" alt="Nursing Jobs in Australia" class="blog-card__img" loading="lazy">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">Admin &bull; July 20, 2026</div>
+                            <h3 class="blog-card__title">How to Find Nursing Jobs in Australia Before You Even Arrive</h3>
+                            <div class="blog-card__footer">
+                                <a href="https://www.edulogix.com.au/blog/how-to-find-nursing-jobs-in-australia/" target="_blank" rel="noopener" class="country-card__link">Read Full Article &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog 2 -->
+                    <article class="blog-card">
+                        <div class="blog-card__img-wrap">
+                            <img src="https://www.edulogix.com.au/blog/wp-content/uploads/2026/06/Blog-Banners-15-768x432.png" alt="AI in Nursing" class="blog-card__img" loading="lazy">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">Admin &bull; June 22, 2026</div>
+                            <h3 class="blog-card__title">Will AI Replace Nurses? The Reality and Career Impacts in 2026</h3>
+                            <div class="blog-card__footer">
+                                <a href="https://www.edulogix.com.au/blog/ai-and-the-future-of-nursing/" target="_blank" rel="noopener" class="country-card__link">Read Full Article &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog 3 -->
+                    <article class="blog-card">
+                        <div class="blog-card__img-wrap">
+                            <img src="https://www.edulogix.com.au/blog/wp-content/uploads/2026/05/Blog-Banners-14-1-1-768x432.png" alt="Move to Australia" class="blog-card__img" loading="lazy">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">Admin &bull; May 19, 2026</div>
+                            <h3 class="blog-card__title">Why 2026 Might Be Your LAST Chance to Move to Australia as a Nurse</h3>
+                            <div class="blog-card__footer">
+                                <a href="https://www.edulogix.com.au/blog/nurses-last-chance-to-move-to-australia/" target="_blank" rel="noopener" class="country-card__link">Read Full Article &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog 4 -->
+                    <article class="blog-card">
+                        <div class="blog-card__img-wrap">
+                            <img src="https://www.edulogix.com.au/blog/wp-content/uploads/2026/04/Blog-Banners-12-1-1-768x432.png" alt="AHPRA English Test Update" class="blog-card__img" loading="lazy">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">Admin &bull; April 27, 2026</div>
+                            <h3 class="blog-card__title">AHPRA English Test Requirements Update 2026: What Has Changed</h3>
+                            <div class="blog-card__footer">
+                                <a href="https://www.edulogix.com.au/blog/ahpra-english-test-update-april-2026/" target="_blank" rel="noopener" class="country-card__link">Read Full Article &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog 5 -->
+                    <article class="blog-card">
+                        <div class="blog-card__img-wrap">
+                            <img src="https://www.edulogix.com.au/blog/wp-content/uploads/2026/03/Blog-Banners-11-1-768x432.png" alt="Nurse Salary Gap" class="blog-card__img" loading="lazy">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">Admin &bull; March 27, 2026</div>
+                            <h3 class="blog-card__title">The Shocking Salary Gap: India vs Australia Nurse Salary Comparison</h3>
+                            <div class="blog-card__footer">
+                                <a href="https://www.edulogix.com.au/blog/india-vs-australia-nurse-salary-2026/" target="_blank" rel="noopener" class="country-card__link">Read Full Article &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog 6 -->
+                    <article class="blog-card">
+                        <div class="blog-card__img-wrap">
+                            <img src="assets/images/service-jobs.jpg" alt="NCLEX Scoring Explained" class="blog-card__img" loading="lazy">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">Admin &bull; March 5, 2026</div>
+                            <h3 class="blog-card__title">NCLEX Scoring Explained: What Does It Really Take to Pass the Exam?</h3>
+                            <div class="blog-card__footer">
+                                <a href="https://www.edulogix.com.au/blog/nclex-scoring-explained-pass-score/" target="_blank" rel="noopener" class="country-card__link">Read Full Article &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 8: CONTACT FORM ("GET IN TOUCH WITH US TODAY")
+        ============================================================ -->
+        <!-- ============================================================
+             SECTION 8: CONTACT US (MODERN MACOS DESKTOP CANVAS FORM)
+        ============================================================ -->
+        <section class="mac-contact-section" id="contact" aria-labelledby="contact-heading">
+            <div id="enquire"></div>
+            <div class="container">
+                <!-- Section Header Matching Reference -->
+                <div class="mac-contact-head">
+                    <div class="mac-contact-brand-bar">
+                        <span class="mac-contact-logo-text">EDULOGIX</span>
+                        <span class="mac-contact-badge-dot">● AUSTRALIA</span>
+                    </div>
+                    <h2 class="mac-contact-title" id="contact-heading">Contact Us</h2>
+                </div>
+
+                <!-- macOS Desktop Scenic Window Frame -->
+                <div class="mac-desktop-container">
+
+                    <!-- Scenic Canvas Wallpaper with Centered Frosted Form -->
+                    <div class="mac-desktop-canvas" style="background-image: url('assets/images/contact-desktop-bg.jpg');">
+                        <div class="mac-canvas-ambient"></div>
+
+                        <!-- Frosted Window Form Card -->
+                        <div class="mac-glass-window">
+                            <!-- Window Titlebar with Traffic Light Dots -->
+                            <div class="mac-window-topbar">
+                                <div class="mac-traffic-lights">
+                                    <span class="mac-dot mac-dot--red"></span>
+                                    <span class="mac-dot mac-dot--yellow"></span>
+                                    <span class="mac-dot mac-dot--green"></span>
+                                </div>
+                            </div>
+
+                            <!-- Success feedback message -->
+                            <div id="c_messages" class="mac-alert-success" role="alert" style="display: none;">
+                                <div class="mac-alert-icon">✓</div>
+                                <div class="mac-alert-text">
+                                    <strong>Enquiry Sent Successfully!</strong><br>
+                                    An Edulogix advisor will review your profile and contact you within 24 hours.
+                                </div>
+                            </div>
+
+                            <!-- Form with Edulogix Values & Content -->
+                            <form id="home_contact_us_form" class="mac-form-body">
+                                <!-- Recipient row -->
+                                <div class="mac-field-row mac-field-row--to">
+                                    <span class="mac-field-label">To:</span>
+                                    <span class="mac-to-email">info@edulogix.com.au</span>
+                                </div>
+
+                                <!-- Full Name -->
+                                <div class="mac-field-row">
+                                    <label for="contact-name" class="mac-field-label">Full Name:</label>
+                                    <input type="text" name="name" id="contact-name" class="mac-field-input" placeholder="Your full name" required>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="mac-field-row">
+                                    <label for="contact-phone" class="mac-field-label">Phone:</label>
+                                    <input type="tel" name="phone" id="contact-phone" class="mac-field-input" placeholder="+61 478 498 913 (with country code)" required>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="mac-field-row">
+                                    <label for="contact-email" class="mac-field-label">Email:</label>
+                                    <input type="email" name="email" id="contact-email" class="mac-field-input" placeholder="name@example.com" required>
+                                </div>
+
+                                <!-- Topic / Course -->
+                                <div class="mac-field-row mac-field-row--select">
+                                    <label for="contact-interest" class="mac-field-label">Topic:</label>
+                                    <div class="mac-select-wrapper">
+                                        <select name="area_of_interest" id="contact-interest" class="mac-field-select" required>
+                                            <option value="" disabled selected>Select course or nursing service...</option>
+                                            <option value="NCLEX ASSURED - Premium NCLEX Coaching">NCLEX ASSURED — Premium Pass Coaching</option>
+                                            <option value="NCLEX RN (National Council Licensure Examination)- Instructor Led">NCLEX-RN — Instructor Led Mentorship</option>
+                                            <option value="NCLEX RN (National Council Licensure Examination)- Self Paced">NCLEX-RN — Self Paced Program</option>
+                                            <option value="OSCE(Objective Structured Clinical Examination)">OSCE Training — Australian Clinical Practical</option>
+                                            <option value="MCQ Exam - New Zealand for International Nurses (Self-Paced Program)">MCQ Exam — New Zealand Registration Pathway</option>
+                                            <option value="Nursing Registration Assistance">Nursing Registration Assistance (AHPRA / NNAS / NCNZ)</option>
+                                            <option value="Others">General Consultation &amp; Eligibility Check</option>
+                                        </select>
+                                        <svg class="mac-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                    </div>
+                                </div>
+
+                                <!-- Message -->
+                                <div class="mac-field-row mac-field-row--textarea">
+                                    <div class="mac-label-split">
+                                        <label for="contact-query" class="mac-field-label">Message:</label>
+                                        <span class="mac-field-optional">(optional)</span>
+                                    </div>
+                                    <textarea name="Query" id="contact-query" class="mac-field-textarea" rows="3" placeholder="Tell us about your nursing education, experience, or any questions..."></textarea>
+                                </div>
+
+                                <!-- Action Button & Privacy Note -->
+                                <div class="mac-action-box">
+                                    <button type="submit" id="contact-submit-btn" class="mac-submit-button">
+                                        Send message
+                                    </button>
+                                    <p class="mac-privacy-notice">
+                                        No spam. No data shared.
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Inspiration Card Matching Reference Bottom -->
+                <div class="mac-bottom-card">
+                    <div class="mbc-inner">
+                        <div class="mbc-text-col">
+                            <span class="mbc-brand">EDULOGIX</span>
+                            <h3 class="mbc-quote">When everything feels unclear, make your nursing pathway simple again.</h3>
+                            <p class="mbc-sub">Over 5,000+ international nurses guided with 90%+ first-attempt pass rates across Australia, Canada, and New Zealand.</p>
+                            <div class="mbc-actions">
+                                <a href="tel:+61478498913" class="mbc-pill-btn">📞 +61 478 498 913</a>
+                                <a href="mailto:info@edulogix.com.au" class="mbc-ghost-btn">✉️ info@edulogix.com.au</a>
+                            </div>
+                        </div>
+                        <div class="mbc-img-col">
+                            <img src="assets/images/hero-nurse.png" alt="Edulogix Nurse Mentor" class="mbc-portrait">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 9: ACKNOWLEDGEMENT OF COUNTRY
+        ============================================================ -->
+        <section class="acknowledgement-section" aria-label="Acknowledgement of Country">
+            <div class="container">
+                <div class="acknowledgement-box">
+                    <h3 class="acknowledgement-title">
+                        <span>🕊️</span> Acknowledgement of Country
+                    </h3>
+                    <p class="acknowledgement-text">
+                        Edulogix acknowledges the traditional owners of country throughout Australia and recognizes their connection to land, water, and culture. We pay our respects to the Elders past, present and emerging.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         SECTION 10: COMPREHENSIVE FOOTER
+    ============================================================ -->
+    <footer class="footer" id="footer-main">
+        <div class="container">
+            <div class="footer__grid">
+
+                <!-- Col 1: Brand & Contact -->
+                <div class="footer__col footer__col--brand">
+                    <img src="assets/images/logo edu.png" alt="EdulogiX" class="footer__logo">
+                    <p class="footer__tagline">
+                        Australia's premier education and career support platform for international nurses.
+                    </p>
+                    <p style="font-size:0.88rem; color:#cbd5e1; margin-top:0.8rem; line-height: 1.8;">
+                        📞 <a href="tel:+61478498913" style="color:var(--white); font-weight:600;">+61-478 498 913</a><br>
+                        ✉️ <a href="mailto:info@edulogix.com.au" style="color:var(--white); font-weight:600;">info@edulogix.com.au</a>
+                    </p>
+                    <div class="footer__socials" style="margin-top:1rem;">
+                        <a href="https://www.facebook.com/edulogix.au" target="_blank" rel="noopener" class="footer__social-icon" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/edulogix.au/" target="_blank" rel="noopener" class="footer__social-icon" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/c/edulogix" target="_blank" rel="noopener" class="footer__social-icon" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="/" class="footer__link">Home</a></li>
+                        <li><a href="https://www.edulogix.com.au/about-us/who-we-are" class="footer__link">Who We Are</a></li>
+                        <li><a href="https://www.edulogix.com.au/our-team/" class="footer__link">Our Team</a></li>
+                        <li><a href="https://www.edulogix.com.au/terms-and-conditions/" class="footer__link">Terms &amp; Conditions</a></li>
+                        <li><a href="https://www.edulogix.com.au/privacy-policy/" class="footer__link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Our Services -->
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Our Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="https://www.edulogix.com.au/service-category/nursing-registration-assistance/" class="footer__link">Nursing Registration Assistance</a></li>
+                        <li><a href="https://www.edulogix.com.au/services/australia/" class="footer__link">Australia (AHPRA)</a></li>
+                        <li><a href="https://www.edulogix.com.au/services/canada/" class="footer__link">Canada (NNAS)</a></li>
+                        <li><a href="https://www.edulogix.com.au/services/new-zealand/" class="footer__link">New Zealand (NCNZ)</a></li>
+                        <li><a href="https://www.edulogix.com.au/services/new-streamlined-assessment-pathway-2025/" class="footer__link">Streamlined Assessment 2025/2026</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Our Courses -->
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Our Courses</h4>
+                    <ul class="footer__links">
+                        <li><a href="#course-nclex-assured" class="footer__link">NCLEX ASSURED (Premium)</a></li>
+                        <li><a href="#course-nclex-instructor" class="footer__link">NCLEX-RN (Instructor-Led)</a></li>
+                        <li><a href="#course-nclex-self" class="footer__link">NCLEX-RN (Self-Paced)</a></li>
+                        <li><a href="#course-osce" class="footer__link">OSCE Clinical Coaching</a></li>
+                        <li><a href="#course-mcq-nz" class="footer__link">MCQ Exam - New Zealand</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; Copyright 2026 Edulogix Pty Ltd (ACN 653 241 108). All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Module -->
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
