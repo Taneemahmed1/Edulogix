@@ -117,29 +117,6 @@
 
             <!-- RIGHT: Actions -->
             <div class="navbar__actions">
-                <!-- Portal -->
-                <a href="https://www.edulogix.com.au/login/" target="_blank" rel="noopener" class="navbar__icon-link" title="Portal" id="nav-portal-btn">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="1.8">
-                        <circle cx="12" cy="8" r="4" />
-                        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-                    </svg>
-                    <span>Portal</span>
-                </a>
-                <!-- Cart -->
-                <a href="#courses" class="navbar__icon-link" title="Cart" id="nav-cart-btn">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="1.8">
-                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
-                        <line x1="3" y1="6" x2="21" y2="6" />
-                        <path d="M16 10a4 4 0 01-8 0" />
-                    </svg>
-                    <span>Cart</span>
-                </a>
-                <!-- Currency -->
-                <button class="navbar__currency" id="currency-btn" aria-label="Select Currency">
-                    &#x1F1E6;&#x1F1FA; AUD &#9662;
-                </button>
                 <!-- Enquire / Immigration CTA -->
                 <a href="#migration" class="navbar__enquire navbar__immigration-btn" id="nav-enquire-btn" aria-label="Immigration Services">
                     <span class="nav-plane-track" aria-hidden="true">
@@ -187,8 +164,9 @@
 
             <!-- Video Background -->
             <video class="hero__video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
-                <source src="Animating_hospital_image_loop_20260917163232.mp4" type="video/mp4">
-                <source src="assets/video/Animating_hospital_image_loop.mp4" type="video/mp4">
+                <source src="assets/video/Website_hero_background_video.mp4" type="video/mp4">
+                <source src="Website_hero_background_video.mp4" type="video/mp4">
+                <source src="Website_hero_background_video_an…_20260921152257.mp4" type="video/mp4">
             </video>
             <div class="hero__overlay" aria-hidden="true"></div>
 
@@ -220,12 +198,14 @@
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
                     </a>
-                    <a href="#migration" class="hero__btn-migration" id="hero-migration-btn">
+                    <a href="#migration" class="hero__btn-migration hero__btn-migration--flying" id="hero-migration-btn">
                         <span>Explore Migration</span>
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
+                        <span class="hero-plane-wrap" aria-hidden="true">
+                            <svg class="hero-plane-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                            </svg>
+                            <span class="hero-plane-jet-trail"></span>
+                        </span>
                     </a>
                 </div>
             </div>
