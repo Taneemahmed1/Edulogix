@@ -3177,19 +3177,19 @@ ul { list-style: none; }
   object-fit: cover;
   z-index: 1;
   pointer-events: none;
-  filter: brightness(0.85) contrast(1.08);
+  filter: brightness(1.02) contrast(1.04);
 }
 
-/* Cinematic Overlays for Depth and Legibility */
+/* Cinematic Lighter Overlays for Maximum Video Clarity and Text Legibility */
 .hero--redesign .hero__overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
   background: 
-    radial-gradient(ellipse at 50% 42%, rgba(3, 14, 36, 0.3) 0%, rgba(2, 8, 22, 0.78) 85%),
-    linear-gradient(to bottom, rgba(2, 10, 28, 0.6) 0%, transparent 18%, transparent 75%, rgba(2, 9, 25, 0.92) 100%),
-    linear-gradient(to right, rgba(2, 10, 28, 0.65) 0%, transparent 22%, transparent 78%, rgba(2, 10, 28, 0.65) 100%);
+    radial-gradient(ellipse at 50% 45%, rgba(2, 10, 26, 0.08) 0%, rgba(2, 10, 24, 0.42) 85%),
+    linear-gradient(to bottom, rgba(2, 10, 28, 0.32) 0%, transparent 22%, transparent 76%, rgba(2, 10, 28, 0.58) 100%),
+    linear-gradient(to right, rgba(2, 10, 28, 0.35) 0%, transparent 26%, transparent 74%, rgba(2, 10, 28, 0.35) 100%);
 }
 
 /* Left Stacked Slogan: "BETTER NURSES BRIGHTER TOMORROW" */
@@ -3352,12 +3352,12 @@ ul { list-style: none; }
   transform: translateX(5px) !important;
 }
 
-/* Ghost outlined button — Explore Migration with always-flying airplane */
+/* Ghost outlined button — Explore Migration with always-flying airplane swoosh / swipe */
 .hero--redesign .hero__btn-migration {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 0.85rem !important;
+  gap: 0.95rem !important;
   background: rgba(12, 28, 56, 0.65) !important;
   color: #ffffff !important;
   padding: 1.05rem 2.4rem !important;
@@ -3366,12 +3366,48 @@ ul { list-style: none; }
   text-decoration: none !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 0 15px rgba(82, 182, 255, 0.2) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 0 15px rgba(82, 182, 255, 0.25) !important;
   transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
   cursor: pointer !important;
   position: relative !important;
+  overflow: hidden !important;
 }
+
+/* Supersonic Light / Radar Swoosh Swipe across the button */
+.hero--redesign .hero__btn-migration::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -120%;
+  width: 50%;
+  height: 220%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 20%,
+    rgba(82, 182, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.8) 58%,
+    rgba(82, 182, 255, 0.3) 70%,
+    transparent 100%
+  );
+  transform: rotate(28deg);
+  animation: buttonSwooshSwipe 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes buttonSwooshSwipe {
+  0% {
+    left: -120%;
+  }
+  35%, 100% {
+    left: 200%;
+  }
+}
+
 .hero--redesign .hero__btn-migration > span:first-child {
+  position: relative;
+  z-index: 2;
   display: inline-block !important;
   color: #ffffff !important;
   font-size: 1.22rem !important;
@@ -3380,73 +3416,126 @@ ul { list-style: none; }
   letter-spacing: 0.015em !important;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35) !important;
 }
+
 .hero-plane-wrap {
   position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
 }
+
 .hero-plane-svg {
   width: 22px !important;
   height: 22px !important;
   fill: #52b6ff !important;
   color: #52b6ff !important;
-  filter: drop-shadow(0 0 8px rgba(82, 182, 255, 0.85));
+  filter: drop-shadow(0 0 8px rgba(82, 182, 255, 0.9));
   display: block;
   transform-origin: center center;
-  animation: heroPlaneAlwaysFly 2.6s ease-in-out infinite;
+  animation: airplaneSwooshLoop 3.2s cubic-bezier(0.35, 0.05, 0.2, 1) infinite;
 }
+
 .hero-plane-jet-trail {
   position: absolute;
-  bottom: 1px;
-  left: 1px;
+  bottom: 0px;
+  left: -2px;
   width: 14px;
   height: 2.5px;
-  background: linear-gradient(270deg, rgba(82, 182, 255, 0.95), transparent);
-  border-radius: 2px;
-  transform: rotate(45deg) translate(-5px, 5px);
-  animation: heroPlaneJetTrail 1.3s ease-in-out infinite alternate;
+  background: linear-gradient(270deg, #52b6ff, rgba(82, 182, 255, 0.5), transparent);
+  border-radius: 3px;
+  transform: rotate(45deg);
+  animation: planeContrailSwoosh 3.2s cubic-bezier(0.35, 0.05, 0.2, 1) infinite;
   pointer-events: none;
 }
-@keyframes heroPlaneAlwaysFly {
+
+@keyframes airplaneSwooshLoop {
   0% {
-    transform: rotate(45deg) translate(0px, 0px) scale(1);
-  }
-  25% {
-    transform: rotate(40deg) translate(3px, -3px) scale(1.06);
-  }
-  50% {
-    transform: rotate(48deg) translate(6px, -6px) scale(1.12);
-  }
-  75% {
-    transform: rotate(43deg) translate(3px, -2px) scale(1.04);
-  }
-  100% {
-    transform: rotate(45deg) translate(0px, 0px) scale(1);
-  }
-}
-@keyframes heroPlaneJetTrail {
-  0% {
-    opacity: 0.35;
-    width: 8px;
-  }
-  100% {
+    transform: rotate(45deg) translate(0, 0) scale(1);
     opacity: 1;
-    width: 16px;
+  }
+  14% {
+    /* Slight bank before throttle up */
+    transform: rotate(38deg) translate(-2px, 2px) scale(0.95);
+  }
+  28% {
+    /* High velocity SWOOSH forward */
+    transform: rotate(50deg) translate(8px, -8px) scale(1.18);
+    filter: drop-shadow(0 0 14px #ffffff) drop-shadow(0 0 22px #52b6ff);
+  }
+  40% {
+    /* Swooshes beyond the wrap */
+    transform: rotate(52deg) translate(28px, -28px) scale(0.85);
+    opacity: 0;
+  }
+  41% {
+    /* Wrap around to lower-left */
+    transform: rotate(45deg) translate(-24px, 24px) scale(0.8);
+    opacity: 0;
+  }
+  52% {
+    /* Glides back smoothly with deceleration */
+    transform: rotate(43deg) translate(-3px, 3px) scale(0.96);
+    opacity: 1;
+  }
+  68% {
+    transform: rotate(47deg) translate(2px, -1px) scale(1.04);
+  }
+  84% {
+    transform: rotate(44deg) translate(0px, 0px) scale(1);
+  }
+  100% {
+    transform: rotate(45deg) translate(0, 0) scale(1);
+    opacity: 1;
   }
 }
+
+@keyframes planeContrailSwoosh {
+  0% {
+    opacity: 0.3;
+    width: 10px;
+    transform: rotate(45deg) translate(0, 0);
+  }
+  14% {
+    opacity: 0.4;
+    width: 12px;
+  }
+  28% {
+    /* Long supersonic vapor trail during swoosh */
+    opacity: 1;
+    width: 28px;
+    filter: drop-shadow(0 0 6px #52b6ff);
+  }
+  40% {
+    opacity: 0;
+    width: 4px;
+  }
+  41% {
+    opacity: 0;
+  }
+  52% {
+    opacity: 0.6;
+    width: 14px;
+  }
+  100% {
+    opacity: 0.3;
+    width: 10px;
+    transform: rotate(45deg) translate(0, 0);
+  }
+}
+
 .hero--redesign .hero__btn-migration:hover {
   background: rgba(20, 48, 92, 0.88) !important;
   border-color: #ffffff !important;
   transform: translateY(-2px) scale(1.03) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 25px rgba(82, 182, 255, 0.45) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 25px rgba(82, 182, 255, 0.5) !important;
 }
 .hero--redesign .hero__btn-migration:hover .hero-plane-svg {
-  animation-duration: 1.6s;
-  filter: drop-shadow(0 0 12px #ffffff);
+  animation-duration: 1.8s;
+  filter: drop-shadow(0 0 14px #ffffff);
 }
 
 /* Course Selector Capsule */
@@ -4932,6 +5021,18 @@ ul { list-style: none; }
   background: #38bdf8;
   box-shadow: 0 0 10px #38bdf8;
   display: inline-block;
+  animation: eyebrowPulse 2s ease-in-out infinite;
+}
+
+@keyframes eyebrowPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #38bdf8;
+  }
+  50% {
+    transform: scale(1.35);
+    box-shadow: 0 0 20px #38bdf8, 0 0 30px rgba(56, 189, 248, 0.6);
+  }
 }
 
 .migration__title {
@@ -4944,9 +5045,20 @@ ul { list-style: none; }
 }
 
 .migration__title-gradient {
-  background: linear-gradient(135deg, #ffffff 40%, #93c5fd 80%, #38bdf8 100%);
+  background: linear-gradient(135deg, #ffffff 15%, #93c5fd 40%, #38bdf8 65%, #60a5fa 85%, #ffffff 100%);
+  background-size: 240% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: titleTextGradientShift 5s ease-in-out infinite alternate;
+}
+
+@keyframes titleTextGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .migration__subtitle {
@@ -4963,6 +5075,16 @@ ul { list-style: none; }
   overflow: hidden;
   box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
   height: 290px;
+  animation: nurseCardAmbientGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes nurseCardAmbientGlow {
+  0% {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  }
+  100% {
+    box-shadow: 0 24px 48px -8px rgba(0, 0, 0, 0.65), 0 0 24px rgba(56, 189, 248, 0.25), 0 0 0 1px rgba(56, 189, 248, 0.4);
+  }
 }
 
 .migration__hero-img {
@@ -5055,10 +5177,29 @@ ul { list-style: none; }
   top: 2.6rem;
   left: 4.5rem;
   right: 4.5rem;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(56, 189, 248, 0.25) 0%, rgba(56, 189, 248, 0.5) 60%, rgba(232, 119, 34, 0.6) 80%, rgba(56, 189, 248, 0.25) 100%);
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(56, 189, 248, 0.2) 0%,
+    rgba(56, 189, 248, 0.95) 45%,
+    #ffffff 50%,
+    rgba(232, 119, 34, 0.95) 55%,
+    rgba(56, 189, 248, 0.2) 100%
+  );
+  background-size: 200% 100%;
+  animation: journeyLineStream 3.5s linear infinite;
   z-index: 1;
   pointer-events: none;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.45);
+}
+
+@keyframes journeyLineStream {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .migration__step {
@@ -5074,7 +5215,7 @@ ul { list-style: none; }
 }
 
 .migration__step:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 .migration__step-icon-wrap {
@@ -5088,14 +5229,30 @@ ul { list-style: none; }
   justify-content: center;
   color: #38bdf8;
   margin-bottom: 0.75rem;
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.15);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.2);
   transition: all 0.25s ease;
+  animation: stepIconFloat 3.6s ease-in-out infinite;
+}
+
+.migration__step:nth-child(2) .migration__step-icon-wrap { animation-delay: 0.25s; }
+.migration__step:nth-child(3) .migration__step-icon-wrap { animation-delay: 0.5s; }
+.migration__step:nth-child(4) .migration__step-icon-wrap { animation-delay: 0.75s; }
+.migration__step:nth-child(5) .migration__step-icon-wrap { animation-delay: 1.0s; }
+
+@keyframes stepIconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 22px rgba(56, 189, 248, 0.45);
+  }
 }
 
 .migration__step:hover .migration__step-icon-wrap {
   border-color: #38bdf8;
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
-  transform: scale(1.08);
+  box-shadow: 0 0 24px rgba(56, 189, 248, 0.6);
+  transform: scale(1.1);
 }
 
 .migration__step--highlight .migration__step-icon-wrap {
@@ -5103,6 +5260,22 @@ ul { list-style: none; }
   border-color: #38bdf8;
   color: #ffffff;
   box-shadow: 0 0 22px rgba(56, 189, 248, 0.5);
+  animation: highlightStepPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes highlightStepPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.65), 0 0 20px rgba(56, 189, 248, 0.4);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(56, 189, 248, 0), 0 0 26px rgba(56, 189, 248, 0.6);
+    transform: translateY(-4px) scale(1.04);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0), 0 0 20px rgba(56, 189, 248, 0.4);
+    transform: translateY(0);
+  }
 }
 
 .migration__step-number {
@@ -5134,6 +5307,19 @@ ul { list-style: none; }
   color: rgba(56, 189, 248, 0.4);
   font-weight: 300;
   pointer-events: none;
+  animation: journeyArrowSlide 2s ease-in-out infinite;
+}
+
+@keyframes journeyArrowSlide {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(5px);
+    opacity: 0.95;
+    color: #38bdf8;
+  }
 }
 
 /* Country Destination Cards Grid */
@@ -5151,7 +5337,7 @@ ul { list-style: none; }
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -5160,10 +5346,36 @@ ul { list-style: none; }
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
+/* Diagonal glass sheen sweep on card hover */
+.country-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.04) 30%,
+    rgba(56, 189, 248, 0.15) 50%,
+    rgba(255, 255, 255, 0.25) 60%,
+    transparent 100%
+  );
+  transform: skewX(-22deg);
+  pointer-events: none;
+  z-index: 2;
+  transition: left 0.75s ease-in-out;
+}
+
+.country-card:hover::before {
+  left: 190%;
+}
+
 .country-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 24px 48px -10px rgba(0, 0, 0, 0.7), 0 0 28px rgba(2, 132, 199, 0.2);
+  transform: translateY(-10px);
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 26px 50px -10px rgba(0, 0, 0, 0.75), 0 0 32px rgba(2, 132, 199, 0.3);
 }
 
 .country-card__overlay {
@@ -5194,6 +5406,20 @@ ul { list-style: none; }
   color: #38bdf8;
   text-transform: uppercase;
   margin-bottom: 0.85rem;
+  padding: 0.25rem 0.65rem;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.15);
+  transition: all 0.25s ease;
+}
+
+.country-card:hover .country-card__badge {
+  background: rgba(56, 189, 248, 0.22);
+  border-color: #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
 
 .country-card__title {
