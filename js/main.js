@@ -34,11 +34,21 @@ document.addEventListener('DOMContentLoaded', () => {
     drawer.setAttribute('aria-hidden', !isOpen);
   });
 
-  drawer?.querySelectorAll('.navbar__mobile-link, .navbar__enquire').forEach(link => {
+  // Close drawer when a plain mobile link is clicked
+  drawer?.querySelectorAll('.navbar__mobile-link, .navbar__enquire, .navbar__mobile-sublink').forEach(link => {
     link.addEventListener('click', () => {
       drawer.classList.remove('is-open');
       hamburger.classList.remove('is-active');
       hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Mobile accordion toggle
+  drawer?.querySelectorAll('.navbar__mobile-accordion-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const acc = btn.closest('.navbar__mobile-accordion');
+      const isExpanded = acc.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isExpanded);
     });
   });
 
@@ -557,3 +567,455 @@ window.prefillCourse = function (courseName) {
     }
   }
 };
+
+
+/* ============================================================
+   CONSULTATION BOOKING MULTI-STEP MODAL HANDLER
+   ============================================================ */
+(function initConsultationModal() {
+  document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('consult-modal-overlay');
+    const closeBtn = document.getElementById('consult-modal-close');
+    if (!overlay) return;
+
+    // State
+    let state = {
+      step: 1,
+      service: {
+        name: 'Quick eligibility call',
+        price: 'Free',
+        duration: '15 min',
+        fee: 0
+      },
+      date: new Date(2026, 8, 26), // Default Saturday 26 Sept 2026
+      time: '9:30 am',
+      viewMonth: new Date(2026, 8, 1) // September 2026
+    };
+
+    // Stepper Elements
+    const stepIndicators = [
+      document.getElementById('step-indicator-1'),
+      document.getElementById('step-indicator-2'),
+      document.getElementById('step-indicator-3')
+    ];
+    const stepLines = [
+      document.getElementById('step-line-1'),
+      document.getElementById('step-line-2')
+    ];
+
+    // Views
+    const view1 = document.getElementById('consult-view-1');
+    const view2 = document.getElementById('consult-view-2');
+    const view3 = document.getElementById('consult-view-3');
+    const viewSuccess = document.getElementById('consult-view-success');
+
+    // Sidebar Elements
+    const sidebarPrompt = document.getElementById('consult-sidebar-prompt');
+    const sidebarDetails = document.getElementById('consult-sidebar-details');
+    const sidebarTitle = document.getElementById('sidebar-service-title');
+    const sidebarDuration = document.getElementById('sidebar-duration');
+    const sidebarPrice = document.getElementById('sidebar-price');
+    const sidebarPriceIcon = document.getElementById('sidebar-price-icon');
+    const sidebarSlotCard = document.getElementById('sidebar-slot-card');
+    const sidebarSlotDate = document.getElementById('sidebar-slot-date');
+    const sidebarSlotTime = document.getElementById('sidebar-slot-time');
+
+    // Open modal
+    window.openConsultationModal = function (preselectedServiceName) {
+      overlay.classList.add('is-active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+
+      if (preselectedServiceName) {
+        const cards = document.querySelectorAll('.consult-service-card');
+        for (let card of cards) {
+          const sName = card.getAttribute('data-service') || '';
+          if (sName.toLowerCase().includes(preselectedServiceName.toLowerCase())) {
+            selectServiceCard(card);
+            setStep(2);
+            return;
+          }
+        }
+      }
+      setStep(1);
+    };
+
+    // Close modal
+    function closeModal() {
+      overlay.classList.remove('is-active');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn?.addEventListener('click', closeModal);
+    overlay?.addEventListener('click', (e) => {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('is-active')) {
+        closeModal();
+      }
+    });
+
+    // Attach triggers across document
+    function bindTriggers() {
+      // Desktop nav book button
+      const bookNavBtn = document.getElementById('nav-book-btn');
+      bookNavBtn?.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.openConsultationModal();
+      });
+
+      // Mobile nav book button
+      document.querySelectorAll('.navbar__mobile-btn-book').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.openConsultationModal();
+        });
+      });
+
+      // Migration Advisor CTA
+      document.querySelectorAll('.migration__advisor-cta').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.openConsultationModal('Quick eligibility call');
+        });
+      });
+
+      // Australian Visa Section - "CHECK YOUR ELIGIBILITY"
+      document.querySelectorAll('.visa-card__btn-accent').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.openConsultationModal('Quick eligibility call');
+        });
+      });
+
+      // Any button/link with data-open-consultation
+      document.querySelectorAll('[data-open-consultation]').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          const service = el.getAttribute('data-open-consultation');
+          window.openConsultationModal(service);
+        });
+      });
+
+      // Any link with href="#consultation" or href="#booking"
+      document.querySelectorAll('a[href="#consultation"], a[href="#booking"]').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.openConsultationModal();
+        });
+      });
+    }
+
+    bindTriggers();
+
+    // Set Step
+    function setStep(stepNum) {
+      state.step = stepNum;
+
+      // Hide all views
+      [view1, view2, view3, viewSuccess].forEach(v => {
+        if (v) v.style.display = 'none';
+      });
+
+      // Update Indicators
+      stepIndicators.forEach((ind, i) => {
+        if (!ind) return;
+        const num = i + 1;
+        ind.classList.remove('consult-step--active', 'consult-step--done');
+        const numEl = ind.querySelector('.step-num');
+        if (num === stepNum) {
+          ind.classList.add('consult-step--active');
+          if (numEl) numEl.textContent = num;
+        } else if (num < stepNum) {
+          ind.classList.add('consult-step--done');
+          if (numEl) numEl.textContent = '✓';
+        } else {
+          if (numEl) numEl.textContent = num;
+        }
+      });
+
+      stepLines.forEach((line, i) => {
+        if (line) line.classList.toggle('step-line--done', i + 1 < stepNum);
+      });
+
+      // Update Sidebar & Views
+      if (stepNum === 1) {
+        if (sidebarPrompt) sidebarPrompt.style.display = 'block';
+        if (sidebarDetails) sidebarDetails.style.display = 'none';
+        if (view1) view1.style.display = 'block';
+      } else if (stepNum === 2) {
+        if (sidebarPrompt) sidebarPrompt.style.display = 'none';
+        if (sidebarDetails) sidebarDetails.style.display = 'block';
+        updateSidebarService();
+        if (view2) view2.style.display = 'block';
+        renderCalendar();
+        renderTimeSlots();
+      } else if (stepNum === 3) {
+        if (sidebarPrompt) sidebarPrompt.style.display = 'none';
+        if (sidebarDetails) sidebarDetails.style.display = 'block';
+        updateSidebarService();
+        updateSidebarSlot();
+        if (view3) view3.style.display = 'block';
+
+        // Update Submit button text
+        const submitBtn = document.getElementById('consult-submit-btn');
+        if (submitBtn) {
+          if (state.service.price.toLowerCase() === 'free') {
+            submitBtn.textContent = 'Book Free Consultation →';
+          } else {
+            submitBtn.textContent = `Confirm & Pay ${state.service.price} AUD →`;
+          }
+        }
+      }
+    }
+
+    function updateSidebarService() {
+      if (sidebarTitle) sidebarTitle.textContent = state.service.name;
+      if (sidebarDuration) sidebarDuration.textContent = state.service.duration;
+      if (sidebarPrice) sidebarPrice.textContent = state.service.price;
+      if (sidebarPriceIcon) {
+        sidebarPriceIcon.textContent = state.service.price.toLowerCase() === 'free' ? '🆓' : '💳';
+      }
+      updateSidebarSlot();
+    }
+
+    function updateSidebarSlot() {
+      if (state.date && state.time && state.step >= 2) {
+        if (sidebarSlotCard) sidebarSlotCard.style.display = 'block';
+        const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+        const str = `${dayNames[state.date.getDay()]}, ${state.date.getDate()} ${monthNames[state.date.getMonth()]} ${state.date.getFullYear()}`;
+        if (sidebarSlotDate) sidebarSlotDate.textContent = str;
+        if (sidebarSlotTime) sidebarSlotTime.textContent = `${state.time} AEST`;
+      } else {
+        if (sidebarSlotCard) sidebarSlotCard.style.display = 'none';
+      }
+    }
+
+    // Step 1: Service Cards Selection
+    function selectServiceCard(card) {
+      document.querySelectorAll('.consult-service-card').forEach(c => c.classList.remove('is-selected'));
+      card.classList.add('is-selected');
+
+      state.service = {
+        name: card.getAttribute('data-service') || 'Quick eligibility call',
+        price: card.getAttribute('data-price') || 'Free',
+        duration: card.getAttribute('data-duration') || '15 min',
+        fee: parseFloat(card.getAttribute('data-fee') || '0')
+      };
+
+      updateSidebarService();
+    }
+
+    document.querySelectorAll('.consult-service-card').forEach(card => {
+      card.addEventListener('click', () => {
+        selectServiceCard(card);
+        setStep(2);
+      });
+    });
+
+    // Step 2: Back Button
+    document.getElementById('consult-back-to-1')?.addEventListener('click', () => {
+      setStep(1);
+    });
+
+    // Step 3: Back Button
+    document.getElementById('consult-back-to-2')?.addEventListener('click', () => {
+      setStep(2);
+    });
+
+    // Calendar Engine
+    const monthLabel = document.getElementById('calendar-month-label');
+    const daysGrid = document.getElementById('calendar-days-grid');
+    const prevMonthBtn = document.getElementById('calendar-prev-month');
+    const nextMonthBtn = document.getElementById('calendar-next-month');
+
+    prevMonthBtn?.addEventListener('click', () => {
+      state.viewMonth.setMonth(state.viewMonth.getMonth() - 1);
+      renderCalendar();
+    });
+
+    nextMonthBtn?.addEventListener('click', () => {
+      state.viewMonth.setMonth(state.viewMonth.getMonth() + 1);
+      renderCalendar();
+    });
+
+    function renderCalendar() {
+      if (!daysGrid || !monthLabel) return;
+
+      const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+      const year = state.viewMonth.getFullYear();
+      const month = state.viewMonth.getMonth();
+
+      monthLabel.textContent = `${monthNames[month]} ${year}`;
+      daysGrid.innerHTML = '';
+
+      // First day of month (Mon=0, Sun=6)
+      const firstDay = new Date(year, month, 1).getDay();
+      const startOffset = (firstDay + 6) % 7;
+      const totalDays = new Date(year, month + 1, 0).getDate();
+
+      // Empty lead cells
+      for (let i = 0; i < startOffset; i++) {
+        const emptyCell = document.createElement('div');
+        emptyCell.className = 'cal-day-cell cal-day--empty';
+        daysGrid.appendChild(emptyCell);
+      }
+
+      // Day cells
+      for (let day = 1; day <= totalDays; day++) {
+        const cell = document.createElement('button');
+        cell.type = 'button';
+        cell.className = 'cal-day-cell cal-day--available';
+        cell.textContent = day;
+
+        // Dim earlier days of Sept 2026 to mirror reference screenshot
+        if (day < 21 && month === 8 && year === 2026) {
+          cell.className = 'cal-day-cell cal-day--disabled';
+        }
+
+        // Selected date highlight
+        if (state.date && state.date.getFullYear() === year && state.date.getMonth() === month && state.date.getDate() === day) {
+          cell.classList.add('cal-day--selected');
+        }
+
+        cell.addEventListener('click', () => {
+          state.date = new Date(year, month, day);
+          renderCalendar();
+          renderTimeSlots();
+          updateSidebarSlot();
+        });
+
+        daysGrid.appendChild(cell);
+      }
+    }
+
+    // Time Slots Engine
+    const slotsScrollList = document.getElementById('slots-scroll-list');
+    const slotsHeaderDate = document.getElementById('slots-header-date');
+    const confirmSlotBtn = document.getElementById('consult-confirm-slot-btn');
+
+    const availableSlots = [
+      '9:30 am', '10:00 am', '10:30 am', '11:00 am', '11:30 am',
+      '12:00 pm', '12:30 pm', '2:00 pm', '2:30 pm', '3:00 pm'
+    ];
+
+    function renderTimeSlots() {
+      if (!slotsScrollList || !slotsHeaderDate) return;
+
+      if (!state.date) {
+        slotsHeaderDate.textContent = 'SELECT A DATE';
+        slotsScrollList.innerHTML = '<p style="font-size:0.8rem;color:#94a3b8;padding:0.5rem 0;">Please select a date on the calendar.</p>';
+        if (confirmSlotBtn) confirmSlotBtn.disabled = true;
+        return;
+      }
+
+      const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+      const monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEPT', 'OCT', 'NOV', 'DEC'];
+      slotsHeaderDate.textContent = `${dayNames[state.date.getDay()]}, ${state.date.getDate()} ${monthNames[state.date.getMonth()]} ${state.date.getFullYear()}`;
+
+      slotsScrollList.innerHTML = '';
+      availableSlots.forEach(slotTime => {
+        const slotBtn = document.createElement('button');
+        slotBtn.type = 'button';
+        slotBtn.className = 'slot-btn';
+        if (state.time === slotTime) slotBtn.classList.add('is-selected');
+        slotBtn.textContent = slotTime;
+
+        slotBtn.addEventListener('click', () => {
+          document.querySelectorAll('.slot-btn').forEach(b => b.classList.remove('is-selected'));
+          slotBtn.classList.add('is-selected');
+          state.time = slotTime;
+          updateSidebarSlot();
+          if (confirmSlotBtn) {
+            confirmSlotBtn.disabled = false;
+            confirmSlotBtn.textContent = `Confirm ${slotTime} →`;
+          }
+        });
+
+        slotsScrollList.appendChild(slotBtn);
+      });
+
+      if (confirmSlotBtn) {
+        confirmSlotBtn.disabled = !state.time;
+        confirmSlotBtn.textContent = state.time ? `Confirm ${state.time} →` : 'Select a Time';
+      }
+    }
+
+    confirmSlotBtn?.addEventListener('click', () => {
+      if (state.date && state.time) {
+        setStep(3);
+      }
+    });
+
+    // Step 3: Form Submission
+    const detailsForm = document.getElementById('consult-details-form');
+    detailsForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const submitBtn = document.getElementById('consult-submit-btn');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Securing Appointment...';
+      }
+
+      setTimeout(() => {
+        const refCode = '#EDL-' + Math.floor(1000 + Math.random() * 9000);
+        const mode = document.getElementById('c-mode')?.value || 'Video';
+
+        // Update success screen
+        const successRef = document.getElementById('success-ref');
+        const successService = document.getElementById('success-service');
+        const successDatetime = document.getElementById('success-datetime');
+        const successFormat = document.getElementById('success-format');
+
+        if (successRef) successRef.textContent = refCode;
+        if (successService) successService.textContent = state.service.name;
+
+        if (successDatetime && state.date) {
+          const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+          const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+          successDatetime.textContent = `${dayNames[state.date.getDay()]}, ${state.date.getDate()} ${monthNames[state.date.getMonth()]} ${state.date.getFullYear()} at ${state.time} AEST`;
+        }
+
+        if (successFormat) {
+          successFormat.textContent = `${mode} Consultation (${mode === 'Video' ? 'Google Meet / Zoom link emailed' : 'Our advisor will call your mobile'})`;
+        }
+
+        // Hide views, show success
+        [view1, view2, view3].forEach(v => {
+          if (v) v.style.display = 'none';
+        });
+        if (viewSuccess) viewSuccess.style.display = 'block';
+
+        // Mark all steps as complete
+        stepIndicators.forEach(ind => {
+          if (!ind) return;
+          ind.classList.remove('consult-step--active');
+          ind.classList.add('consult-step--done');
+          const numEl = ind.querySelector('.step-num');
+          if (numEl) numEl.textContent = '✓';
+        });
+        stepLines.forEach(l => l?.classList.add('step-line--done'));
+
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Book Consultation →';
+        }
+
+        detailsForm.reset();
+      }, 700);
+    });
+
+    document.getElementById('consult-done-btn')?.addEventListener('click', () => {
+      closeModal();
+      setTimeout(() => setStep(1), 400);
+    });
+  });
+})();
+

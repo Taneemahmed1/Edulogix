@@ -777,6 +777,357 @@
         </div>
     </footer>
 
+    <!-- ============================================================
+         BOOKING CONSULTATION MULTI-STEP MODAL
+    ============================================================ -->
+    <div class="consult-modal-overlay" id="consult-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="consult-modal-title">
+        <div class="consult-modal" id="consult-modal">
+            
+            <!-- Modal Top Bar -->
+            <div class="consult-modal__header">
+                <div class="consult-modal__title-group">
+                    <span class="consult-modal__eyebrow">BOOK CONSULTATION</span>
+                    <h3 class="consult-modal__title" id="consult-modal-title">Choose a service, time and pay securely</h3>
+                </div>
+                <button type="button" class="consult-modal__close-btn" id="consult-modal-close" aria-label="Close modal">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Modal Body Container (Split 2-Column Layout) -->
+            <div class="consult-modal__body">
+
+                <!-- LEFT SIDEBAR: SUMMARY & AGENT CREDENTIALS -->
+                <aside class="consult-modal__sidebar">
+                    <div class="consult-sidebar__header">
+                        <div class="consult-sidebar__brand">Nanak Migration Group</div>
+                        <div class="consult-sidebar__badge">BOOK A CONSULTATION &bull; MARN 2619467</div>
+                    </div>
+
+                    <!-- Dynamic Service / Booking Summary in Sidebar -->
+                    <div class="consult-sidebar__summary" id="consult-sidebar-summary">
+                        <!-- Default State: Step 1 -->
+                        <div class="consult-sidebar__prompt" id="consult-sidebar-prompt">
+                            <h4>Choose a consultation to begin</h4>
+                        </div>
+
+                        <!-- Selected State (Steps 2 & 3) -->
+                        <div class="consult-sidebar__selected-details" id="consult-sidebar-details" style="display: none;">
+                            <h4 class="consult-sidebar__service-title" id="sidebar-service-title">Quick eligibility call</h4>
+                            <div class="consult-sidebar__meta-list">
+                                <div class="consult-sidebar__meta-item">
+                                    <span class="meta-icon">⏱</span>
+                                    <span id="sidebar-duration">15 min</span>
+                                </div>
+                                <div class="consult-sidebar__meta-item">
+                                    <span class="meta-icon" id="sidebar-price-icon">🆓</span>
+                                    <span id="sidebar-price">Free</span>
+                                </div>
+                                <div class="consult-sidebar__meta-item">
+                                    <span class="meta-icon">📞</span>
+                                    <span id="sidebar-type">Video consultation</span>
+                                </div>
+                            </div>
+
+                            <!-- Date/Time Slot Box (appears when date & time selected) -->
+                            <div class="consult-sidebar__slot-card" id="sidebar-slot-card" style="display: none;">
+                                <div class="slot-card__date" id="sidebar-slot-date">Sat, 26 Sept 2026</div>
+                                <div class="slot-card__time" id="sidebar-slot-time">9:30 am AEST</div>
+                            </div>
+
+                            <div class="consult-sidebar__intake-note">with Intake desk</div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Trust Points -->
+                    <div class="consult-sidebar__footer">
+                        <div class="consult-sidebar__review-line">
+                            Read reviews on Google &bull; Leave a review after we work together
+                        </div>
+                        <ul class="consult-sidebar__checklist">
+                            <li><span class="chk">✓</span> Registered Migration Agent</li>
+                            <li><span class="chk">✓</span> 5 offices &bull; Punjabi &bull; Hindi &bull; English &bull; Nepali</li>
+                            <li><span class="chk">✓</span> Confirmation in seconds, reminders built in</li>
+                        </ul>
+                        <div class="consult-sidebar__agent-footnote">
+                            Navpreet Aulakh &bull; Registered Migration Agent &bull; MARN 2619467
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- RIGHT CONTENT AREA -->
+                <div class="consult-modal__main">
+
+                    <!-- STEP PROGRESS BAR -->
+                    <div class="consult-stepper" aria-label="Booking steps">
+                        <div class="consult-step consult-step--active" id="step-indicator-1">
+                            <span class="step-num">1</span>
+                            <span class="step-label">SERVICE</span>
+                        </div>
+                        <div class="step-line" id="step-line-1"></div>
+                        <div class="consult-step" id="step-indicator-2">
+                            <span class="step-num">2</span>
+                            <span class="step-label">TIME</span>
+                        </div>
+                        <div class="step-line" id="step-line-2"></div>
+                        <div class="consult-step" id="step-indicator-3">
+                            <span class="step-num">3</span>
+                            <span class="step-label">DETAILS</span>
+                        </div>
+                    </div>
+
+                    <!-- ================= STEP 1: SERVICE SELECTION ================= -->
+                    <div class="consult-view" id="consult-view-1">
+                        <h4 class="consult-view__title">Select a consultation</h4>
+
+                        <div class="consult-services-grid">
+
+                            <!-- Service 1 -->
+                            <div class="consult-service-card" data-service="Quick eligibility call" data-price="Free" data-duration="15 min" data-fee="0">
+                                <div class="service-card__top">
+                                    <h5 class="service-card__title">Quick eligibility call</h5>
+                                    <span class="service-card__badge service-card__badge--free">Free</span>
+                                </div>
+                                <p class="service-card__desc">Free 15 minutes to confirm whether a paid consult is worth your money. No advice given.</p>
+                                <div class="service-card__arrow">›</div>
+                            </div>
+
+                            <!-- Service 2 -->
+                            <div class="consult-service-card" data-service="PR Pathway Consultation" data-price="$75" data-duration="45 min" data-fee="75">
+                                <div class="service-card__top">
+                                    <div class="service-card__title-row">
+                                        <h5 class="service-card__title">PR Pathway Consultation</h5>
+                                        <span class="service-card__pill-tag">MOST BOOKED</span>
+                                    </div>
+                                    <span class="service-card__badge">$75</span>
+                                </div>
+                                <p class="service-card__desc">189 / 190 / 491 and your realistic route to permanent residence.</p>
+                                <div class="service-card__arrow">›</div>
+                            </div>
+
+                            <!-- Service 3 -->
+                            <div class="consult-service-card" data-service="Family Visa – Parent / Partner" data-price="$75" data-duration="45 min" data-fee="75">
+                                <div class="service-card__top">
+                                    <h5 class="service-card__title">Family Visa – Parent / Partner</h5>
+                                    <span class="service-card__badge">$75</span>
+                                </div>
+                                <p class="service-card__desc">Partner (820/801/309/100) and parent visa options and evidence.</p>
+                                <div class="service-card__arrow">›</div>
+                            </div>
+
+                            <!-- Service 4 -->
+                            <div class="consult-service-card" data-service="Temporary Residency Visas" data-price="$75" data-duration="45 min" data-fee="75">
+                                <div class="service-card__top">
+                                    <h5 class="service-card__title">Temporary Residency Visas</h5>
+                                    <span class="service-card__badge">$75</span>
+                                </div>
+                                <p class="service-card__desc">485, 482, 407 and other temporary visas — conditions, timing, next steps.</p>
+                                <div class="service-card__arrow">›</div>
+                            </div>
+
+                            <!-- Service 5 -->
+                            <div class="consult-service-card" data-service="Student Visa" data-price="$55" data-duration="30 min" data-fee="55">
+                                <div class="service-card__top">
+                                    <h5 class="service-card__title">Student Visa</h5>
+                                    <span class="service-card__badge">$55</span>
+                                </div>
+                                <p class="service-card__desc">New applications, extensions, course changes and condition questions.</p>
+                                <div class="service-card__arrow">›</div>
+                            </div>
+
+                            <!-- Service 6 -->
+                            <div class="consult-service-card" data-service="Visitor Visa – Australia" data-price="$75" data-duration="30 min" data-fee="75">
+                                <div class="service-card__top">
+                                    <h5 class="service-card__title">Visitor Visa – Australia</h5>
+                                    <span class="service-card__badge">$75</span>
+                                </div>
+                                <p class="service-card__desc">Visitor and sponsored family visitor applications.</p>
+                                <div class="service-card__arrow">›</div>
+                            </div>
+
+                            <!-- Service 7 -->
+                            <div class="consult-service-card" data-service="Employer Sponsored Visa" data-price="Free" data-duration="20 min" data-fee="0">
+                                <div class="service-card__top">
+                                    <h5 class="service-card__title">Employer Sponsored Visa</h5>
+                                    <span class="service-card__badge service-card__badge--free">Free</span>
+                                </div>
+                                <p class="service-card__desc">For businesses: sponsorship costs, obligations and timelines. Free discovery call.</p>
+                                <div class="service-card__arrow">›</div>
+                            </div>
+
+                            <!-- Service 8 -->
+                            <div class="consult-service-card" data-service="ART / Tribunal Appeal" data-price="$75" data-duration="45 min" data-fee="75">
+                                <div class="service-card__top">
+                                    <h5 class="service-card__title">ART / Tribunal Appeal</h5>
+                                    <span class="service-card__badge">$75</span>
+                                </div>
+                                <p class="service-card__desc">Refusals and cancellations — review options and strict deadlines.</p>
+                                <div class="service-card__arrow">›</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ================= STEP 2: DATE & TIME SELECTION ================= -->
+                    <div class="consult-view" id="consult-view-2" style="display: none;">
+                        <button type="button" class="consult-back-btn" id="consult-back-to-1">
+                            ‹ Back
+                        </button>
+                        <h4 class="consult-view__title">Pick a date &amp; time</h4>
+
+                        <div class="consult-datetime-layout">
+                            <!-- Calendar Box -->
+                            <div class="consult-calendar-box">
+                                <div class="calendar-nav-bar">
+                                    <button type="button" class="calendar-arrow-btn" id="calendar-prev-month" aria-label="Previous month">‹</button>
+                                    <span class="calendar-current-month" id="calendar-month-label">September 2026</span>
+                                    <button type="button" class="calendar-arrow-btn" id="calendar-next-month" aria-label="Next month">›</button>
+                                </div>
+
+                                <div class="calendar-table-wrap">
+                                    <div class="calendar-weekdays">
+                                        <span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+                                    </div>
+                                    <div class="calendar-days-grid" id="calendar-days-grid">
+                                        <!-- Populated by JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Time Slots Box (Shown when a date is selected) -->
+                            <div class="consult-slots-box" id="consult-slots-box">
+                                <div class="slots-header" id="slots-header-date">SAT, 26 SEPT 2026</div>
+                                <div class="slots-scroll-list" id="slots-scroll-list">
+                                    <!-- Populated by JS -->
+                                </div>
+                                <button type="button" class="consult-btn-primary" id="consult-confirm-slot-btn" disabled>
+                                    Confirm 9:30 am &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= STEP 3: DETAILS FORM ================= -->
+                    <div class="consult-view" id="consult-view-3" style="display: none;">
+                        <button type="button" class="consult-back-btn" id="consult-back-to-2">
+                            ‹ Back
+                        </button>
+                        <h4 class="consult-view__title">Your details</h4>
+
+                        <form class="consult-details-form" id="consult-details-form">
+                            <div class="consult-form-grid">
+                                <!-- Full name -->
+                                <div class="consult-field">
+                                    <label for="c-fullname">Full name *</label>
+                                    <input type="text" id="c-fullname" name="fullname" required placeholder="John Doe">
+                                </div>
+
+                                <!-- Mobile -->
+                                <div class="consult-field">
+                                    <label for="c-mobile">Mobile *</label>
+                                    <input type="tel" id="c-mobile" name="mobile" required placeholder="+61 400 000 000">
+                                </div>
+
+                                <!-- Email (full width) -->
+                                <div class="consult-field consult-field--full">
+                                    <label for="c-email">Email *</label>
+                                    <input type="email" id="c-email" name="email" required placeholder="john@example.com">
+                                </div>
+
+                                <!-- Phone or video? -->
+                                <div class="consult-field">
+                                    <label for="c-mode">Phone or video?</label>
+                                    <select id="c-mode" name="mode">
+                                        <option value="Video" selected>Video</option>
+                                        <option value="Phone call">Phone call</option>
+                                    </select>
+                                </div>
+
+                                <!-- Office to look after you -->
+                                <div class="consult-field">
+                                    <label for="c-office">Office to look after you</label>
+                                    <select id="c-office" name="office">
+                                        <option value="Truganina" selected>Truganina</option>
+                                        <option value="Melbourne CBD">Melbourne CBD</option>
+                                        <option value="Sydney">Sydney</option>
+                                        <option value="Online / Remote">Online / Remote</option>
+                                    </select>
+                                </div>
+
+                                <!-- What is it about? -->
+                                <div class="consult-field consult-field--full">
+                                    <label for="c-topic">What is it about?</label>
+                                    <input type="text" id="c-topic" name="topic" placeholder="e.g. 485 ending in 3 months / Nursing PR pathway">
+                                </div>
+
+                                <!-- How did you hear about us? -->
+                                <div class="consult-field consult-field--full">
+                                    <label for="c-source">How did you hear about us?</label>
+                                    <select id="c-source" name="source">
+                                        <option value="" disabled selected>Select...</option>
+                                        <option value="Google Search">Google Search</option>
+                                        <option value="Instagram / TikTok">Instagram / TikTok</option>
+                                        <option value="Friend or Colleague Referral">Friend or Colleague Referral</option>
+                                        <option value="Nursing Forum / Group">Nursing Forum / Group</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <!-- Checkbox consent -->
+                                <div class="consult-field consult-field--full consult-field--checkbox">
+                                    <label class="consult-checkbox-label">
+                                        <input type="checkbox" id="c-consent" name="consent" required>
+                                        <span>I consent to a VEVO check of my visa status before the consultation, and I'll have my passport, visa grant letter and CV ready. General information only &mdash; not migration advice.</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="consult-btn-primary" id="consult-submit-btn">
+                                Book Consultation &rarr;
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- ================= SUCCESS CONFIRMATION ================= -->
+                    <div class="consult-view" id="consult-view-success" style="display: none;">
+                        <div class="consult-success-wrap">
+                            <div class="consult-success-icon">✓</div>
+                            <h4 class="consult-success-title">Consultation Confirmed!</h4>
+                            <p class="consult-success-sub">A calendar invite and preparation guide have been sent to your email.</p>
+                            
+                            <div class="consult-success-card">
+                                <div class="success-row">
+                                    <span class="s-label">Booking Reference:</span>
+                                    <strong class="s-val" id="success-ref">#EDL-9482</strong>
+                                </div>
+                                <div class="success-row">
+                                    <span class="s-label">Consultation:</span>
+                                    <strong class="s-val" id="success-service">Quick eligibility call</strong>
+                                </div>
+                                <div class="success-row">
+                                    <span class="s-label">Scheduled For:</span>
+                                    <strong class="s-val" id="success-datetime">Sat, 26 Sept 2026 at 9:30 am AEST</strong>
+                                </div>
+                                <div class="success-row">
+                                    <span class="s-label">Format:</span>
+                                    <strong class="s-val" id="success-format">Video Consultation (Google Meet link attached)</strong>
+                                </div>
+                            </div>
+
+                            <div class="consult-success-actions">
+                                <button type="button" class="consult-btn-primary" id="consult-done-btn">Done</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main JS -->
     <script src="js/main.js" defer></script>
 
