@@ -283,24 +283,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const pathwayData = {
     australia: {
       tag: "Primary Healthcare Pathway",
-      title: "Registration, Made Clear<br>and Simple",
-      desc: "An overview of how intuitive guidance, ANMAC portfolio assessment, and dedicated RN mentorship remove friction from Australian nursing registration.",
+      title: "Australia (AHPRA)",
+      desc: "Navigate strict AHPRA registration requirements with our expert guidance, complete ANMAC skills assessment support, and dedicated RN mentorship",
       img: "assets/images/nursing-registration.png",
       link: "https://www.edulogix.com.au/services/australia/",
       btnText: "View Full Pathway"
     },
-    canada: {
-      tag: "Canadian Healthcare Pathway",
-      title: "Canadian Licensing,<br>Made Clear and Simple",
-      desc: "Streamlined document verification, NNAS advisory reports, and provincial nursing board registration across British Columbia, Alberta, and Ontario.",
-      img: "assets/images/service-nursing.jpg",
-      link: "https://www.edulogix.com.au/services/canada/",
-      btnText: "View Canada Pathway"
-    },
     "new-zealand": {
       tag: "Direct Pacific Pathway",
-      title: "New Zealand Pathway,<br>Made Clear and Simple",
-      desc: "End-to-end guidance with NCNZ requirements, competence assessment, MCQ examination prep, and direct nursing registration issuance.",
+      title: "The New Zealand Stepping Stone to Australia.",
+      desc: "Use the NCNZ pathway to gain your initial registration, which can unlock fast-tracked Australian AHPRA registration under the new Streamlined Assessment Pathway. We guide you through competence assessments, MCQ prep, and eventual visa lodgement.",
       img: "assets/images/service-education.jpg",
       link: "https://www.edulogix.com.au/services/new-zealand/",
       btnText: "View NZ Pathway"

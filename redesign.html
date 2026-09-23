@@ -154,20 +154,14 @@
 
             <!-- RIGHT: Actions -->
             <div class="navbar__actions">
-                <!-- Book Your Appointment -->
-                <a href="#contact" class="navbar__btn-book" id="nav-book-btn">
-                    <span>BOOK YOUR APPOINTMENT</span>
+                <!-- Book Consultation (Primary Orange) -->
+                <a href="#booking" class="navbar__btn-book--orange" id="nav-book-btn" data-open-consultation="General Consultation">
+                    <span>Book Consultation</span>
                 </a>
 
-                <!-- Migrate / Immigration CTA -->
-                <a href="#migration" class="navbar__enquire navbar__immigration-btn" id="nav-enquire-btn" aria-label="Immigration Services">
-                    <span class="nav-plane-track" aria-hidden="true">
-                        <svg class="nav-plane-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-                        </svg>
-                        <span class="nav-plane-trail"></span>
-                    </span>
-                    <span class="nav-immigration-text">MIGRATE</span>
+                <!-- Contact (Secondary White) -->
+                <a href="#contact" class="navbar__btn-contact" id="nav-contact-btn">
+                    <span>Contact</span>
                 </a>
             </div>
 
@@ -224,16 +218,8 @@
             <a href="#blog" class="navbar__mobile-link">Blog</a>
 
             <div class="navbar__mobile-actions">
-                <a href="#contact" class="navbar__mobile-btn-book">BOOK YOUR APPOINTMENT</a>
-                <a href="#migration" class="navbar__enquire navbar__immigration-btn">
-                    <span class="nav-plane-track" aria-hidden="true">
-                        <svg class="nav-plane-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-                        </svg>
-                        <span class="nav-plane-trail"></span>
-                    </span>
-                    <span class="nav-immigration-text">MIGRATE</span>
-                </a>
+                <a href="#booking" class="navbar__btn-book--orange" style="width: 100%; text-align: center;" data-open-consultation="General Consultation">Book Consultation</a>
+                <a href="#contact" class="navbar__mobile-btn-contact">Contact</a>
             </div>
         </div>
     </header>
@@ -265,12 +251,17 @@
 
                 <!-- Subheading with bullet separators -->
                 <p class="hero__descriptor-p">
-                    Migration Support &nbsp;|&nbsp; Nursing Courses &nbsp;|&nbsp; Nursing Registration
+                    Australian Visas &bull; Education Pathways &bull; Professional Registration
                 </p>
+                <div class="hero__omara-pill">
+                    <span class="omara-icon-shield">🛡️</span>
+                    <span>Registered with OMARA (MARN: 2619467)</span>
+                </div>
 
                 <!-- Primary CTA Buttons -->
                 <div class="hero__cta-row">
-                    <a href="#migration" class="hero__btn-migration hero__btn-migration--flying" id="hero-migration-btn">
+                    <!-- Explore Migration: Solid Orange Button -->
+                    <a href="#migration" class="hero__btn-migration--solid-orange" id="hero-migration-btn">
                         <span>Explore Migration</span>
                         <span class="hero-plane-wrap" aria-hidden="true">
                             <svg class="hero-plane-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -279,7 +270,8 @@
                             <span class="hero-plane-jet-trail"></span>
                         </span>
                     </a>
-                    <a href="#courses" class="hero__btn-explore" id="hero-explore-btn">
+                    <!-- Explore Courses: Outline / Transparent Button -->
+                    <a href="#courses" class="hero__btn-explore--outline" id="hero-explore-btn">
                         <span>Explore Courses</span>
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.8">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -289,77 +281,9 @@
                 </div>
             </div>
 
-
-            <!-- Bottom Stats Bar -->
-            <div class="hero__bottom-bar">
-                <div class="hero__stats-row" aria-label="Key statistics">
-                    <!-- Stat 1 -->
-                    <div class="stat-box">
-                        <div class="stat-box__icon" aria-hidden="true">
-                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                        </div>
-                        <div class="stat-box__content">
-                            <span class="stat-box__value" data-counter="true" data-target="5000" data-suffix="+">5,000+</span>
-                            <span class="stat-box__label">Nurses Trained</span>
-                        </div>
-                    </div>
-
-                    <div class="stat-box__divider" aria-hidden="true"></div>
-
-                    <!-- Stat 2 -->
-                    <div class="stat-box">
-                        <div class="stat-box__icon" aria-hidden="true">
-                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
-                                <path d="M18 20V10M12 20V4M6 20v-6"></path>
-                            </svg>
-                        </div>
-                        <div class="stat-box__content">
-                            <span class="stat-box__value" data-counter="true" data-target="90" data-suffix="%+">90%+</span>
-                            <span class="stat-box__label">Pass Rate</span>
-                        </div>
-                    </div>
-
-                    <div class="stat-box__divider" aria-hidden="true"></div>
-
-                    <!-- Stat 3 -->
-                    <div class="stat-box">
-                        <div class="stat-box__icon" aria-hidden="true">
-                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                            </svg>
-                        </div>
-                        <div class="stat-box__content">
-                            <span class="stat-box__value" data-counter="true" data-target="4" data-suffix="+">4+</span>
-                            <span class="stat-box__label">Countries Supported</span>
-                        </div>
-                    </div>
-
-                    <div class="stat-box__divider" aria-hidden="true"></div>
-
-                    <!-- Stat 4 -->
-                    <div class="stat-box">
-                        <div class="stat-box__icon" aria-hidden="true">
-                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                        </div>
-                        <div class="stat-box__content">
-                            <span class="stat-box__value" data-counter="true" data-target="10" data-suffix="+ Years">10+ Years</span>
-                            <span class="stat-box__label">Industry Experience</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bottom Scroll Explore Indicator -->
-                <a href="#about" class="hero__scroll-explore" aria-label="Scroll to explore">
+            <!-- Bottom Scroll Explore Indicator (Stats removed from here) -->
+            <div class="hero__bottom-bar" style="padding-top: 1rem; border-top: none;">
+                <a href="#why-us" class="hero__scroll-explore" aria-label="Scroll to explore">
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
@@ -370,40 +294,110 @@
 
 
         <!-- ============================================================
-             ALWAYS MOVING WHITE TICKER SLIDER
+             RUNNING BANNER / ALWAYS MOVING WHITE TICKER SLIDER
         ============================================================ -->
         <div class="hero-ticker-slider" aria-label="Services slider">
             <div class="hero-ticker-slider__track">
                 <div class="hero-ticker-slider__group">
-                    <span class="hero-ticker-item">Migration Support</span>
+                    <span class="hero-ticker-item">Australian Visas</span>
                     <span class="hero-ticker-dot" aria-hidden="true">•</span>
-                    <span class="hero-ticker-item">Nursing Courses</span>
+                    <span class="hero-ticker-item">Education Pathways</span>
                     <span class="hero-ticker-dot" aria-hidden="true">•</span>
-                    <span class="hero-ticker-item">Nursing Registration</span>
+                    <span class="hero-ticker-item">Professional Registration</span>
                     <span class="hero-ticker-dot" aria-hidden="true">•</span>
-                    <span class="hero-ticker-item">Migration Support</span>
+                    <span class="hero-ticker-item">Australian Visas</span>
                     <span class="hero-ticker-dot" aria-hidden="true">•</span>
-                    <span class="hero-ticker-item">Nursing Courses</span>
+                    <span class="hero-ticker-item">Education Pathways</span>
                     <span class="hero-ticker-dot" aria-hidden="true">•</span>
-                    <span class="hero-ticker-item">Nursing Registration</span>
+                    <span class="hero-ticker-item">Professional Registration</span>
                     <span class="hero-ticker-dot" aria-hidden="true">•</span>
                 </div>
                 <div class="hero-ticker-slider__group" aria-hidden="true">
-                    <span class="hero-ticker-item">Migration Support</span>
+                    <span class="hero-ticker-item">Australian Visas</span>
                     <span class="hero-ticker-dot">•</span>
-                    <span class="hero-ticker-item">Nursing Courses</span>
+                    <span class="hero-ticker-item">Education Pathways</span>
                     <span class="hero-ticker-dot">•</span>
-                    <span class="hero-ticker-item">Nursing Registration</span>
+                    <span class="hero-ticker-item">Professional Registration</span>
                     <span class="hero-ticker-dot">•</span>
-                    <span class="hero-ticker-item">Migration Support</span>
+                    <span class="hero-ticker-item">Australian Visas</span>
                     <span class="hero-ticker-dot">•</span>
-                    <span class="hero-ticker-item">Nursing Courses</span>
+                    <span class="hero-ticker-item">Education Pathways</span>
                     <span class="hero-ticker-dot">•</span>
-                    <span class="hero-ticker-item">Nursing Registration</span>
+                    <span class="hero-ticker-item">Professional Registration</span>
                     <span class="hero-ticker-dot">•</span>
                 </div>
             </div>
         </div>
+
+
+        <!-- ============================================================
+             SECTION 2: WHY CHOOSE EDULOGIX (STATIC 4-CARD SHOWCASE - MOVED UP)
+        ============================================================ -->
+        <section class="why-us-static-section" id="why-us" aria-labelledby="why-us-heading">
+            <div class="container container--wide">
+                <div class="why-static__header">
+                    <span class="why-static__eyebrow">WHY CHOOSE EDULOGIX</span>
+                    <h2 class="why-static__title" id="why-us-heading">
+                        Strategic Guidance.<br>
+                        <span class="why-static__title-highlight">Guaranteed Compliance.</span>
+                    </h2>
+                </div>
+
+                <div class="why-static__grid">
+                    <!-- Card 1 -->
+                    <div class="why-card">
+                        <div class="why-card__num">01</div>
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">EXPERT STRATEGY</h3>
+                        <p class="why-card__desc">We design tailored migration and education pathways based on your unique background and goals.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="why-card">
+                        <div class="why-card__num">02</div>
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">SEAMLESS LICENSING</h3>
+                        <p class="why-card__desc">We navigate your professional registration and complex skills assessments before lodging your visa.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="why-card">
+                        <div class="why-card__num">03</div>
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">END-TO-END SUPPORT</h3>
+                        <p class="why-card__desc">From course admission to final visa lodgement, we manage the paperwork and regulatory compliance.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="why-card">
+                        <div class="why-card__num">04</div>
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">REGULATED ADVICE</h3>
+                        <p class="why-card__desc">Operating strictly under the OMARA Code of Conduct, we deliver transparent and honest assessments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
         <!-- ============================================================
@@ -425,7 +419,7 @@
                             <span class="migration__title-gradient">Multiple Pathways</span>
                         </h2>
                         <p class="migration__subtitle">
-                            Your pathway to Australia may look different from someone else's. That's why Edulogix helps you understand your options before you take the next step.
+                            Your pathway to Australia may look different from someone else's. That's why our registered migration agents help you understand your options before you take the next step.
                         </p>
                     </div>
 
@@ -470,7 +464,7 @@
                         </div>
                         <div class="migration__step-info">
                             <span class="migration__step-number">01 &mdash; ASSESS</span>
-                            <p class="migration__step-text">Understand your eligibility, qualifications and available pathways.</p>
+                            <p class="migration__step-text">Review your individual circumstances, eligibility, and strategic visa pathways.</p>
                         </div>
                         <span class="migration__step-arrow" aria-hidden="true">&rsaquo;</span>
                     </div>
@@ -479,13 +473,13 @@
                     <div class="migration__step">
                         <div class="migration__step-icon-wrap">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
                             </svg>
                         </div>
                         <div class="migration__step-info">
-                            <span class="migration__step-number">02 &mdash; PREPARE</span>
-                            <p class="migration__step-text">Complete the required exams, assessments or education pathway.</p>
+                            <span class="migration__step-number">02 &mdash; STRATEGISE</span>
+                            <p class="migration__step-text">Create a tailored roadmap, covering prerequisites, criteria, and documentation.</p>
                         </div>
                         <span class="migration__step-arrow" aria-hidden="true">&rsaquo;</span>
                     </div>
@@ -494,13 +488,13 @@
                     <div class="migration__step">
                         <div class="migration__step-icon-wrap">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                <polyline points="9 12 11 14 15 10"></polyline>
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
                             </svg>
                         </div>
                         <div class="migration__step-info">
-                            <span class="migration__step-number">03 &mdash; REGISTER</span>
-                            <p class="migration__step-text">Navigate the relevant nursing registration requirements.</p>
+                            <span class="migration__step-number">03 &mdash; PREPARE</span>
+                            <p class="migration__step-text">Compile comprehensive evidence and prepare a decision-ready application file.</p>
                         </div>
                         <span class="migration__step-arrow" aria-hidden="true">&rsaquo;</span>
                     </div>
@@ -513,8 +507,8 @@
                             </svg>
                         </div>
                         <div class="migration__step-info">
-                            <span class="migration__step-number">04 &mdash; MIGRATE</span>
-                            <p class="migration__step-text">Explore visa pathways suited to your circumstances.</p>
+                            <span class="migration__step-number">04 &mdash; LODGE</span>
+                            <p class="migration__step-text">Submit your official visa application to the Department of Home Affairs.</p>
                         </div>
                         <span class="migration__step-arrow" aria-hidden="true">&rsaquo;</span>
                     </div>
@@ -523,13 +517,13 @@
                     <div class="migration__step">
                         <div class="migration__step-icon-wrap">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
                             </svg>
                         </div>
                         <div class="migration__step-info">
-                            <span class="migration__step-number">05 &mdash; BUILD YOUR CAREER</span>
-                            <p class="migration__step-text">Prepare for your next chapter in Australia.</p>
+                            <span class="migration__step-number">05 &mdash; SUCCEED</span>
+                            <p class="migration__step-text">Manage ongoing compliance, post-lodgement updates, and your transition in Australia.</p>
                         </div>
                     </div>
                 </div>
@@ -562,14 +556,8 @@
                             <img src="assets/images/advisor-3.png" alt="Migration Advisor Priya" class="migration__avatar">
                             <span class="migration__avatar-status" title="Online now"></span>
                         </div>
-                        <span class="migration__team-note">Our advisors are here to help you!</span>
+                        <span class="migration__team-note" style="font-weight:600;">In partnership with Registered Migration Agents (MARN: 2619467)</span>
                     </div>
-                </div>
-
-                <!-- Section Sub-Footer Microbar -->
-                <div class="migration__sub-footer">
-                    <span class="sub-footer__tag">GLOBAL NURSING CAREERS. BRIGHTER FUTURES.</span>
-                    <span class="sub-footer__brand">EDULOGIX</span>
                 </div>
 
             </div>
@@ -700,7 +688,6 @@
                 <!-- Header matching reference design -->
                 <div class="courses-header-split">
                     <div class="courses-header-left">
-                        <span class="courses-eyebrow">Our Product</span>
                         <h2 class="courses-display-title" id="courses-heading">
                             SPECIALIST COURSES<br>
                             <span class="courses-title-accent">FOR GLOBAL NURSES</span>
@@ -1002,149 +989,91 @@
         </section>
 
         <!-- ============================================================
-             SECTION 3: WHY CHOOSE EDULOGIX (INFINITE MOVING SLIDER)
+             RELOCATED STATS BANNER (AFTER NCLEX & SPECIALIST COURSES)
         ============================================================ -->
-        <section class="promise" id="about" aria-labelledby="promise-heading">
-            <div class="container">
-                <div class="promise__header">
-                    <h2 class="promise__title" id="promise-heading">
-                        Why Choose <span class="promise__title--orange">EdulogiX</span>
-                    </h2>
-                    <p class="promise__sub">
-                        All our courses are created by healthcare educators and veteran registered nurses who have successfully walked the path.
-                    </p>
-                    <div class="promise__divider" aria-hidden="true">
-                        <span></span><span class="promise__divider-dot"></span><span></span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Full-width Always Moving Ticker / Slider Banner -->
-            <div class="why-slider-wrapper" aria-label="Why Choose Edulogix Highlights">
-                <div class="why-slider-track">
-                    <!-- Item 1: Expertly Created -->
-                    <div class="why-slider-item">
-                        <div class="why-icon-box" aria-hidden="true">
-                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="8" r="6"></circle>
-                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                                <polygon points="12 5.5 13.09 7.71 15.53 8.06 13.77 9.77 14.18 12.2 12 11.05 9.82 12.2 10.23 9.77 8.47 8.06 10.91 7.71 12 5.5" fill="currentColor"></polygon>
+        <section class="courses-stats-banner" aria-label="Key Achievements">
+            <div class="container container--wide">
+                <div class="hero__stats-row" aria-label="Key statistics">
+                    <!-- Stat 1 -->
+                    <div class="stat-box">
+                        <div class="stat-box__icon" aria-hidden="true">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                             </svg>
                         </div>
-                        <h3 class="why-item-title">EXPERTLY CREATED</h3>
-                        <p class="why-item-desc">All our courses are created by experts. Our content is made by nurses, for nurses.</p>
+                        <div class="stat-box__content">
+                            <span class="stat-box__value" data-counter="true" data-target="1000" data-suffix="+">1,000+</span>
+                            <span class="stat-box__label">Nurses Guided</span>
+                        </div>
                     </div>
 
-                    <!-- Item 2: Flexible Learning -->
-                    <div class="why-slider-item">
-                        <div class="why-icon-box" aria-hidden="true">
-                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="4" width="18" height="12" rx="2"></rect>
-                                <line x1="2" y1="20" x2="22" y2="20"></line>
-                                <path d="M7 10h4M7 8h2M13 10h4M13 8h4"></path>
-                                <path d="M12 6v6"></path>
+                    <div class="stat-box__divider" aria-hidden="true"></div>
+
+                    <!-- Stat 2 -->
+                    <div class="stat-box">
+                        <div class="stat-box__icon" aria-hidden="true">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
+                                <path d="M18 20V10M12 20V4M6 20v-6"></path>
                             </svg>
                         </div>
-                        <h3 class="why-item-title">FLEXIBLE LEARNING</h3>
-                        <p class="why-item-desc">We offer you the choice between live online learning and distance courses.</p>
+                        <div class="stat-box__content">
+                            <span class="stat-box__value" data-counter="true" data-target="90" data-suffix="%+">90%+</span>
+                            <span class="stat-box__label">Pass Rate</span>
+                        </div>
                     </div>
 
-                    <!-- Item 3: High Success Rate -->
-                    <div class="why-slider-item">
-                        <div class="why-icon-box" aria-hidden="true">
-                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="18" y1="20" x2="18" y2="10"></line>
-                                <line x1="12" y1="20" x2="12" y2="4"></line>
-                                <line x1="6" y1="20" x2="6" y2="14"></line>
-                                <polyline points="6 10 12 4 18 10"></polyline>
+                    <div class="stat-box__divider" aria-hidden="true"></div>
+
+                    <!-- Stat 3 -->
+                    <div class="stat-box">
+                        <div class="stat-box__icon" aria-hidden="true">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                             </svg>
                         </div>
-                        <h3 class="why-item-title">HIGH SUCCESS RATE</h3>
-                        <p class="why-item-desc">Our NCLEX RN and OSCE success rate is above 90%.</p>
+                        <div class="stat-box__content">
+                            <span class="stat-box__value" data-counter="true" data-target="4" data-suffix="+">4+</span>
+                            <span class="stat-box__label">Countries Supported</span>
+                        </div>
                     </div>
 
-                    <!-- Item 4: Admission Support -->
-                    <div class="why-slider-item">
-                        <div class="why-icon-box" aria-hidden="true">
-                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-                                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
-                                <circle cx="12" cy="13" r="2"></circle>
-                                <path d="M12 9v2M12 15v2M8 13h2M14 13h2"></path>
-                            </svg>
-                        </div>
-                        <h3 class="why-item-title">ADMISSION SUPPORT</h3>
-                        <p class="why-item-desc">Our qualified education counsellors provides personal support and guidance.</p>
-                    </div>
+                    <div class="stat-box__divider" aria-hidden="true"></div>
 
-                    <!-- Cloned Set for Seamless Infinite Moving Loop -->
-                    <div class="why-slider-item" aria-hidden="true">
-                        <div class="why-icon-box">
-                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="8" r="6"></circle>
-                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                                <polygon points="12 5.5 13.09 7.71 15.53 8.06 13.77 9.77 14.18 12.2 12 11.05 9.82 12.2 10.23 9.77 8.47 8.06 10.91 7.71 12 5.5" fill="currentColor"></polygon>
+                    <!-- Stat 4 -->
+                    <div class="stat-box">
+                        <div class="stat-box__icon" aria-hidden="true">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#52B6FF" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
                         </div>
-                        <h3 class="why-item-title">EXPERTLY CREATED</h3>
-                        <p class="why-item-desc">All our courses are created by experts. Our content is made by nurses, for nurses.</p>
-                    </div>
-
-                    <div class="why-slider-item" aria-hidden="true">
-                        <div class="why-icon-box">
-                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="4" width="18" height="12" rx="2"></rect>
-                                <line x1="2" y1="20" x2="22" y2="20"></line>
-                                <path d="M7 10h4M7 8h2M13 10h4M13 8h4"></path>
-                                <path d="M12 6v6"></path>
-                            </svg>
+                        <div class="stat-box__content">
+                            <span class="stat-box__value" data-counter="true" data-target="10" data-suffix="+ Years">10+ Years</span>
+                            <span class="stat-box__label">Industry Experience</span>
                         </div>
-                        <h3 class="why-item-title">FLEXIBLE LEARNING</h3>
-                        <p class="why-item-desc">We offer you the choice between live online learning and distance courses.</p>
-                    </div>
-
-                    <div class="why-slider-item" aria-hidden="true">
-                        <div class="why-icon-box">
-                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="18" y1="20" x2="18" y2="10"></line>
-                                <line x1="12" y1="20" x2="12" y2="4"></line>
-                                <line x1="6" y1="20" x2="6" y2="14"></line>
-                                <polyline points="6 10 12 4 18 10"></polyline>
-                            </svg>
-                        </div>
-                        <h3 class="why-item-title">HIGH SUCCESS RATE</h3>
-                        <p class="why-item-desc">Our NCLEX RN and OSCE success rate is above 90%.</p>
-                    </div>
-
-                    <div class="why-slider-item" aria-hidden="true">
-                        <div class="why-icon-box">
-                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-                                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
-                                <circle cx="12" cy="13" r="2"></circle>
-                                <path d="M12 9v2M12 15v2M8 13h2M14 13h2"></path>
-                            </svg>
-                        </div>
-                        <h3 class="why-item-title">ADMISSION SUPPORT</h3>
-                        <p class="why-item-desc">Our qualified education counsellors provides personal support and guidance.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ==============================================        <!-- ============================================================
-             SECTION 4: EXPLORE OUR SERVICES (MODERN SPLIT SHOWCASE CARD)
+
+        <!-- ============================================================
+             SECTION 4: HEALTHCARE SERVICES — NURSING REGISTRATION ASSISTANCE
         ============================================================ -->
         <section class="registration-service" id="services" aria-labelledby="services-heading">
             <div class="container container--wide">
                 <!-- Section Header -->
                 <div class="services-header-wrap">
-                    <span class="services__eyebrow">Explore Our Services</span>
                     <h2 class="services__display-title" id="services-heading">
                         Nursing Registration <span class="services-title-accent">Assistance</span>
                     </h2>
                     <p class="services__intro-p">
-                        Your complete, stress-free pathway to practicing as a Registered Nurse in Australia, Canada, and New Zealand.
+                        Your complete, stress-free pathway to practicing as a Registered Nurse in Australia and New Zealand.
                     </p>
                 </div>
 
@@ -1157,9 +1086,6 @@
                             <nav class="msc-nav-list" aria-label="Registration Pathways Navigation">
                                 <button class="msc-nav-item is-active" data-pathway="australia" type="button" aria-current="true">
                                     <span class="msc-item-title">Australia (AHPRA)</span>
-                                </button>
-                                <button class="msc-nav-item" data-pathway="canada" type="button">
-                                    <span class="msc-item-title">Canada (NNAS)</span>
                                 </button>
                                 <button class="msc-nav-item" data-pathway="new-zealand" type="button">
                                     <span class="msc-item-title">New Zealand (NCNZ)</span>
@@ -1195,13 +1121,13 @@
                             <div class="msc-body-top">
                                 <span class="msc-showcase-tag" id="mscTag">Primary Healthcare Pathway</span>
                                 <h3 class="msc-showcase-title" id="mscTitle">
-                                    Registration, Made Clear<br>and Simple
+                                    Australia (AHPRA)
                                 </h3>
                             </div>
 
                             <div class="msc-body-bottom">
                                 <p class="msc-showcase-desc" id="mscDesc">
-                                    An overview of how intuitive guidance, ANMAC portfolio assessment, and dedicated RN mentorship remove friction from Australian nursing registration.
+                                    Navigate strict AHPRA registration requirements with our expert guidance, complete ANMAC skills assessment support, and dedicated RN mentorship
                                 </p>
                                 <div class="msc-action-row">
                                     <a href="https://www.edulogix.com.au/services/australia/" target="_blank" rel="noopener" class="msc-link-more" id="mscLink">
@@ -1226,13 +1152,16 @@
                 <img src="assets/images/community-hero.png" alt="A Community of Faith, Learning and Life" class="community__img">
             </div>
             <div class="community__content-col">
-                <h2 class="community__title" id="community-heading">A Community of Faith, Learning and Life</h2>
+                <h2 class="community__title" id="community-heading">Join a Thriving Global Community</h2>
                 <p class="community__desc">
-                    Edulogix has built a community of thousands of nurses and health professionals across the world through our committed social media platforms such as YouTube, Facebook, and Instagram. This community has been created with a goal of providing well researched information to health professionals to help them in their career.
+                    Whether you are a registered nurse, a skilled tradesperson, or an international student, you are not alone. Edulogix has built a network of thousands of professionals worldwide across YouTube, Facebook, and Instagram, providing the trusted insights and latest migration updates you need to build your future in Australia.
                 </p>
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
-                    <a href="https://www.youtube.com/c/edulogix" target="_blank" rel="noopener" class="btn btn--primary" style="background:#cc0000;">
+                    <a href="https://www.youtube.com/c/edulogix" target="_blank" rel="noopener" class="btn btn--primary" style="background:#cc0000; color:#fff;">
                         Join Our YouTube Channel
+                    </a>
+                    <a href="https://www.instagram.com/jesin_joy/" target="_blank" rel="noopener" class="btn" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #ffffff; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; padding: 0.75rem 1.4rem; border-radius: 6px;">
+                        Follow on Instagram
                     </a>
                     <a href="https://www.facebook.com/edulogix.au" target="_blank" rel="noopener" class="btn btn--ghost">
                         Follow on Facebook
@@ -1482,7 +1411,7 @@
                     <div class="testimonials__left">
                         <h2 class="testimonials__title" id="testimonials-heading">
                             What our<br>
-                            <span class="testimonials__title--orange">Students Say About</span><br>
+                            <span class="testimonials__title--orange">Clients Say About</span><br>
                             EdulogiX
                         </h2>
                         <a href="https://www.google.com/search?hl=en-IN&gl=in&q=Edulogix,+level+49/10+Darcy+St,+Parramatta+NSW+2150,+Australia&ludocid=3501347073362049824&lsig=AB86z5VpdF7JBBuZHnpf7g22QGw6#lrd=0x6b129b95cdcc78bb:0x3097489cbf193b20,1"
@@ -1853,17 +1782,18 @@
 
                                 <!-- Topic / Course -->
                                 <div class="mac-field-row mac-field-row--select">
-                                    <label for="contact-interest" class="mac-field-label">Topic:</label>
+                                    <label for="contact-interest" class="mac-field-label">I am looking for:</label>
                                     <div class="mac-select-wrapper">
                                         <select name="area_of_interest" id="contact-interest" class="mac-field-select" required>
-                                            <option value="" disabled selected>Select course or nursing service...</option>
-                                            <option value="NCLEX ASSURED - Premium NCLEX Coaching">NCLEX ASSURED — Premium Pass Coaching</option>
-                                            <option value="NCLEX RN (National Council Licensure Examination)- Instructor Led">NCLEX-RN — Instructor Led Mentorship</option>
-                                            <option value="NCLEX RN (National Council Licensure Examination)- Self Paced">NCLEX-RN — Self Paced Program</option>
-                                            <option value="OSCE(Objective Structured Clinical Examination)">OSCE Training — Australian Clinical Practical</option>
-                                            <option value="MCQ Exam - New Zealand for International Nurses (Self-Paced Program)">MCQ Exam — New Zealand Registration Pathway</option>
-                                            <option value="Nursing Registration Assistance">Nursing Registration Assistance (AHPRA / NNAS / NCNZ)</option>
-                                            <option value="Others">General Consultation &amp; Eligibility Check</option>
+                                            <option value="" disabled selected>Select a service...</option>
+                                            <option value="Skilled Migration">Skilled Migration</option>
+                                            <option value="Partner, Family or Student Visas">Partner, Family or Student Visas</option>
+                                            <option value="Employer Sponsored Visas">Employer Sponsored Visas</option>
+                                            <option value="Nursing Registration (AHPRA / NCNZ)">Nursing Registration (AHPRA / NCNZ)</option>
+                                            <option value="NCLEX Preparation Course">NCLEX Preparation Course</option>
+                                            <option value="OSCE Preparation Course">OSCE Preparation Course</option>
+                                            <option value="MCQ New Zealand">MCQ New Zealand</option>
+                                            <option value="General Enquiry / Other">General Enquiry / Other</option>
                                         </select>
                                         <svg class="mac-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                     </div>
@@ -1888,24 +1818,6 @@
                                     </p>
                                 </div>
                             </form>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Secondary Inspiration Card Matching Reference Bottom -->
-                <div class="mac-bottom-card">
-                    <div class="mbc-inner">
-                        <div class="mbc-text-col">
-                            <span class="mbc-brand">EDULOGIX</span>
-                            <h3 class="mbc-quote">When everything feels unclear, make your nursing pathway simple again.</h3>
-                            <p class="mbc-sub">Over 5,000+ international nurses guided with 90%+ first-attempt pass rates across Australia, Canada, and New Zealand.</p>
-                            <div class="mbc-actions">
-                                <a href="tel:+61478498913" class="mbc-pill-btn">📞 +61 478 498 913</a>
-                                <a href="mailto:info@edulogix.com.au" class="mbc-ghost-btn">✉️ info@edulogix.com.au</a>
-                            </div>
-                        </div>
-                        <div class="mbc-img-col">
-                            <img src="assets/images/hero-nurse.png" alt="Edulogix Nurse Mentor" class="mbc-portrait">
                         </div>
                     </div>
                 </div>
@@ -1941,11 +1853,15 @@
                 <!-- Col 1: Brand & Contact -->
                 <div class="footer__col footer__col--brand">
                     <img src="assets/images/logo-footer.png" alt="EdulogiX" class="footer__logo">
-                    <p class="footer__tagline">
-                        Australia's premier education and career support platform for international nurses.
+                    <p class="footer__tagline" style="font-weight: 500; color: #f1f5f9; margin-bottom: 0.5rem;">
+                        Australian Visas • Education Pathways • Professional Registration
                     </p>
-                    <p style="font-size:0.88rem; color:#cbd5e1; margin-top:0.8rem; line-height: 1.8;">
-                        📞 <a href="tel:+61478498913" style="color:var(--white); font-weight:600;">+61-478 498 913</a><br>
+                    <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(249, 115, 22, 0.15); border: 1px solid rgba(249, 115, 22, 0.35); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.76rem; color: #fed7aa; font-weight: 600; margin-bottom: 0.75rem;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        Registered with OMARA (MARN: 2619467)
+                    </div>
+                    <p style="font-size:0.88rem; color:#cbd5e1; line-height: 1.8;">
+                        💬 <a href="https://wa.me/61478498913" target="_blank" rel="noopener" style="color:var(--white); font-weight:600;">WhatsApp: +61 478 498 913</a><br>
                         ✉️ <a href="mailto:info@edulogix.com.au" style="color:var(--white); font-weight:600;">info@edulogix.com.au</a>
                     </p>
                     <div class="footer__socials" style="margin-top:1rem;">
@@ -1961,39 +1877,41 @@
                     </div>
                 </div>
 
-                <!-- Col 2: Quick Links -->
+                <!-- Col 2: Migration Services -->
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Migration Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="#migration-support" class="footer__link">GSM (189, 190, 491)</a></li>
+                        <li><a href="#migration-support" class="footer__link">Employer Sponsored (482, 186, 494)</a></li>
+                        <li><a href="#migration-support" class="footer__link">Partner &amp; Family Visas</a></li>
+                        <li><a href="#migration-support" class="footer__link">Student &amp; Graduate Visas</a></li>
+                        <li><a href="#migration-support" class="footer__link">Skills Assessment Guidance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Healthcare & Education -->
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Healthcare &amp; Education</h4>
+                    <ul class="footer__links">
+                        <li><a href="#services" class="footer__link">Nursing Registration (AHPRA)</a></li>
+                        <li><a href="#services" class="footer__link">New Zealand Pathway (NCNZ)</a></li>
+                        <li><a href="#courses" class="footer__link">NCLEX-RN Coaching</a></li>
+                        <li><a href="#courses" class="footer__link">OSCE Clinical Training</a></li>
+                        <li><a href="#courses" class="footer__link">Course Admissions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Quick Links -->
                 <div class="footer__col">
                     <h4 class="footer__col-title">Quick Links</h4>
                     <ul class="footer__links">
-                        <li><a href="/" class="footer__link">Home</a></li>
-                        <li><a href="https://www.edulogix.com.au/about-us/who-we-are" class="footer__link">Who We Are</a></li>
+                        <li><a href="#" class="footer__link">Home</a></li>
+                        <li><a href="https://www.edulogix.com.au/about-us/who-we-are" class="footer__link">About Us</a></li>
                         <li><a href="https://www.edulogix.com.au/our-team/" class="footer__link">Our Team</a></li>
-                        <li><a href="https://www.edulogix.com.au/terms-and-conditions/" class="footer__link">Terms &amp; Conditions</a></li>
+                        <li><a href="#book-consultation" class="footer__link open-consult-modal">Book Consultation</a></li>
+                        <li><a href="#contact" class="footer__link">Contact Us</a></li>
                         <li><a href="https://www.edulogix.com.au/privacy-policy/" class="footer__link">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 3: Our Services -->
-                <div class="footer__col">
-                    <h4 class="footer__col-title">Our Services</h4>
-                    <ul class="footer__links">
-                        <li><a href="https://www.edulogix.com.au/service-category/nursing-registration-assistance/" class="footer__link">Nursing Registration Assistance</a></li>
-                        <li><a href="https://www.edulogix.com.au/services/australia/" class="footer__link">Australia (AHPRA)</a></li>
-                        <li><a href="https://www.edulogix.com.au/services/canada/" class="footer__link">Canada (NNAS)</a></li>
-                        <li><a href="https://www.edulogix.com.au/services/new-zealand/" class="footer__link">New Zealand (NCNZ)</a></li>
-                        <li><a href="https://www.edulogix.com.au/services/new-streamlined-assessment-pathway-2025/" class="footer__link">Streamlined Assessment 2025/2026</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 4: Our Courses -->
-                <div class="footer__col">
-                    <h4 class="footer__col-title">Our Courses</h4>
-                    <ul class="footer__links">
-                        <li><a href="#course-nclex-assured" class="footer__link">NCLEX ASSURED (Premium)</a></li>
-                        <li><a href="#course-nclex-instructor" class="footer__link">NCLEX-RN (Instructor-Led)</a></li>
-                        <li><a href="#course-nclex-self" class="footer__link">NCLEX-RN (Self-Paced)</a></li>
-                        <li><a href="#course-osce" class="footer__link">OSCE Clinical Coaching</a></li>
-                        <li><a href="#course-mcq-nz" class="footer__link">MCQ Exam - New Zealand</a></li>
+                        <li><a href="https://www.edulogix.com.au/terms-and-conditions/" class="footer__link">Terms &amp; Conditions</a></li>
                     </ul>
                 </div>
 
@@ -2001,7 +1919,7 @@
 
             <div class="footer__bottom">
                 <p class="footer__copyright">
-                    &copy; Copyright 2026 Edulogix Pty Ltd (ACN 653 241 108). All Rights Reserved.
+                    &copy; 2026 Edulogix Pty Ltd. All rights reserved. In partnership with Registered Migration Agents (MARN: 2619467).
                 </p>
             </div>
         </div>
