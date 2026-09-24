@@ -170,6 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   contactForm?.addEventListener('submit', (e) => {
     e.preventDefault();
+    const gotcha = contactForm.querySelector('input[name="_gotcha"]');
+    if (gotcha && gotcha.value) {
+      return; // Silent discard of bot submission
+    }
     const submitBtn = document.getElementById('contact-submit-btn');
 
     if (submitBtn) {
