@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 260" fill="none" width="100%" height="100%">
+  <!-- Soft Aura Backdrop -->
+  <path d="M70,160 C50,110 90,50 140,45 C190,40 220,90 200,150 C180,210 100,210 70,160 Z" fill="#e0f2fe" opacity="0.7" />
+  <path d="M190,130 C220,100 270,110 280,150 C290,190 230,220 200,180 Z" fill="#ffedd5" opacity="0.6" />
+
+  <!-- Sun in Sky -->
+  <circle cx="270" cy="45" r="16" fill="#f59e0b" />
+
+  <!-- Distant Birds -->
+  <path d="M225,95 Q230,90 235,95 Q240,90 245,95" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" fill="none" />
+  <path d="M245,115 Q250,110 255,115 Q260,110 265,115" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round" fill="none" />
+
+  <!-- Ground Line -->
+  <path d="M50,230 C90,228 140,230 190,230" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Foliage / Plants at Base of Stairs -->
+  <path d="M205,230 C205,205 215,190 225,200 C235,185 248,195 245,230 Z" fill="#003580" />
+  <path d="M220,230 C225,210 238,205 240,230 Z" fill="#0f172a" />
+
+  <!-- Ascending Steps in Edulogix Cyan/Blue -->
+  <path d="M85,230 L115,230 L115,190 L160,190 L160,150 L235,150" 
+        stroke="#0284c7" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+  <!-- Figure: Briefcase in Left Hand -->
+  <rect x="75" y="115" width="28" height="22" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="2.5" />
+  <path d="M84,115 C84,110 94,110 94,115" stroke="#0f172a" stroke-width="2.5" fill="none" />
+
+  <!-- Figure: Body (Torso & Legs in Edulogix Vibrant Orange & Blue) -->
+  <!-- Left Leg stepping on lower level -->
+  <path d="M102,150 L102,190 L92,190" stroke="#E87722" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M102,150 L102,190 L92,190" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+  <!-- Right Leg stepping up onto first stair -->
+  <path d="M112,150 L115,170 L135,170 L135,188" stroke="#E87722" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M112,150 L115,170 L135,170 L135,188" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+  <!-- Torso in Brand Orange -->
+  <path d="M108,85 L108,150" stroke="#E87722" stroke-width="14" stroke-linecap="round" />
+  <path d="M108,85 L108,150" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Left Arm holding Briefcase -->
+  <path d="M104,95 C92,100 88,110 88,118" stroke="#E87722" stroke-width="10" stroke-linecap="round" fill="none" />
+  <path d="M104,95 C92,100 88,110 88,118" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Right Arm holding Spyglass to Eye -->
+  <path d="M112,95 C125,95 136,88 132,70" stroke="#E87722" stroke-width="10" stroke-linecap="round" fill="none" />
+  <path d="M112,95 C125,95 136,88 132,70" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Spyglass / Telescope pointed to Horizon -->
+  <polygon points="128,70 180,68 180,60 128,62" fill="#003580" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round" />
+  <rect x="178" y="58" width="6" height="14" rx="1.5" fill="#f59e0b" stroke="#0f172a" stroke-width="2" />
+
+  <!-- Head & Hair (Profile facing right) -->
+  <!-- Face/Ear/Jaw -->
+  <path d="M108,68 C104,78 116,84 122,78 C126,74 124,66 118,65" fill="#ffffff" stroke="#0f172a" stroke-width="2.5" />
+  <!-- Hair curls -->
+  <path d="M112,62 C106,58 100,64 102,70 C96,70 94,80 102,82" fill="#ffffff" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Eye looking into spyglass -->
+  <circle cx="120" cy="69" r="1.5" fill="#0f172a" />
+</svg>

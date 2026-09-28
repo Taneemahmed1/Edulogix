@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Minimalist Star / Award Ribbon Glyph matching reference -->
+  <path d="M32 10L36.5 22.5L50 23.5L39.5 32.5L43 45.5L32 38.5L21 45.5L24.5 32.5L14 23.5L27.5 22.5L32 10Z" stroke="#003580" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="28" r="4.5" fill="#E87722"/>
+</svg>

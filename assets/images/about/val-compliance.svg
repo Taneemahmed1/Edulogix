@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Minimalist Geometric Shield & Loop Glyph matching reference -->
+  <path d="M32 10L37 15H32V10Z" fill="#003580"/>
+  <path d="M32 12V18" stroke="#003580" stroke-width="4" stroke-linecap="round"/>
+  <path d="M22 48L32 24L42 48C38 52 26 52 22 48Z" stroke="#10b981" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="40" r="3.5" fill="#003580"/>
+</svg>

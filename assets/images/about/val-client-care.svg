@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Minimalist Human / Care Glyph matching reference -->
+  <circle cx="32" cy="14" r="7" fill="#003580"/>
+  <path d="M16 46C16 33.8497 23.1634 26 32 26C40.8366 26 48 33.8497 48 46" stroke="#0284c7" stroke-width="7" stroke-linecap="round"/>
+  <path d="M16 46C16 51 22 53 26 49C29 46 29 40 25 36" stroke="#003580" stroke-width="5" stroke-linecap="round"/>
+</svg>

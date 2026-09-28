@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 260" fill="none" width="100%" height="100%">
+  <!-- Soft Aura Backdrop -->
+  <path d="M70,140 C50,90 90,45 130,55 C170,65 190,110 170,160 C150,210 90,190 70,140 Z" fill="#e0f2fe" opacity="0.6" />
+  <path d="M190,130 C170,70 230,40 270,65 C310,90 300,160 260,180 C220,200 210,190 190,130 Z" fill="#ffedd5" opacity="0.6" />
+
+  <!-- Ground Line -->
+  <path d="M40,230 C120,228 220,228 310,230" stroke="#0f172a" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Tandem Bicycle -->
+  <!-- Rear Wheel -->
+  <circle cx="85" cy="182" r="38" stroke="#0f172a" stroke-width="2.5" fill="none" />
+  <circle cx="85" cy="182" r="3" fill="#0f172a" />
+  <!-- Mudguard -->
+  <path d="M54,175 C56,150 75,138 108,142" stroke="#0f172a" stroke-width="2.5" fill="none" />
+
+  <!-- Front Wheel -->
+  <circle cx="260" cy="182" r="38" stroke="#0f172a" stroke-width="2.5" fill="none" />
+  <circle cx="260" cy="182" r="3" fill="#0f172a" />
+
+  <!-- Bike Frame Structure (Tandem) -->
+  <path d="M85,182 L132,182 L150,130 L108,142 Z" stroke="#0f172a" stroke-width="2.5" stroke-linejoin="round" fill="none" />
+  <path d="M132,182 L210,182 L228,130 L188,142 Z" stroke="#0f172a" stroke-width="2.5" stroke-linejoin="round" fill="none" />
+  <path d="M210,182 L260,182 L248,110 L228,130" stroke="#0f172a" stroke-width="2.5" stroke-linejoin="round" fill="none" />
+  <!-- Handlebars -->
+  <path d="M248,110 L258,102 L246,102" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <!-- Front Seat / Stem -->
+  <path d="M228,130 L225,120" stroke="#0f172a" stroke-width="3" stroke-linecap="round" />
+  <!-- Rear Seat / Stem -->
+  <path d="M150,130 L146,120" stroke="#0f172a" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Pedals -->
+  <circle cx="132" cy="182" r="7" stroke="#0f172a" stroke-width="2" fill="#ffffff" />
+  <circle cx="210" cy="182" r="7" stroke="#0f172a" stroke-width="2" fill="#ffffff" />
+
+  <!-- ================= PERSON 1 (Rear Rider: Colored in Brand Orange) ================= -->
+  <!-- Legs -->
+  <path d="M138,122 C132,142 124,155 128,182" stroke="#E87722" stroke-width="12" stroke-linecap="round" fill="none" />
+  <path d="M138,122 C132,142 124,155 128,182" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <path d="M128,182 L138,182" stroke="#0f172a" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Torso in Brand Orange -->
+  <path d="M138,124 C132,105 136,88 140,82" stroke="#E87722" stroke-width="14" stroke-linecap="round" fill="none" />
+  <path d="M138,124 C132,105 136,88 140,82" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Arms holding rear handlebars -->
+  <path d="M138,92 C146,96 156,104 168,110" stroke="#E87722" stroke-width="8" stroke-linecap="round" fill="none" />
+  <path d="M138,92 C146,96 156,104 168,110" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Head & Hair (Facing forward) -->
+  <path d="M134,68 C132,76 142,82 148,76 C152,72 150,64 144,64" fill="#ffffff" stroke="#0f172a" stroke-width="2.5" />
+  <path d="M136,62 C130,58 126,66 128,74 C122,74 122,82 130,82" fill="#ffffff" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" />
+  <circle cx="144" cy="69" r="1.5" fill="#0f172a" />
+
+
+  <!-- ================= PERSON 2 (Front Rider: Colored in Edulogix Blue #003580) ================= -->
+  <!-- Legs -->
+  <path d="M218,122 C212,142 204,155 208,182" stroke="#003580" stroke-width="12" stroke-linecap="round" fill="none" />
+  <path d="M218,122 C212,142 204,155 208,182" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <path d="M208,182 L218,182" stroke="#0f172a" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Torso in Brand Blue -->
+  <path d="M218,124 C212,105 218,88 222,80" stroke="#003580" stroke-width="14" stroke-linecap="round" fill="none" />
+  <path d="M218,124 C212,105 218,88 222,80" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Left Arm holding front handlebar -->
+  <path d="M218,92 C226,96 238,98 248,102" stroke="#003580" stroke-width="8" stroke-linecap="round" fill="none" />
+  <path d="M218,92 C226,96 238,98 248,102" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Right Arm OUTSTRETCHED POINTING FORWARD (Matching reference!) -->
+  <path d="M222,88 C238,82 258,82 278,75" stroke="#003580" stroke-width="10" stroke-linecap="round" fill="none" />
+  <path d="M222,88 C238,82 258,82 278,75" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <!-- Hand pointing index finger -->
+  <path d="M278,75 L286,72 M278,75 L284,77" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Head & Hair (Wind blowing forward) -->
+  <path d="M216,66 C214,75 224,80 230,74 C234,70 232,62 226,62" fill="#ffffff" stroke="#0f172a" stroke-width="2.5" />
+  <path d="M218,60 C210,56 206,64 208,72 C202,72 204,80 212,80" fill="#ffffff" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Flowing wind curl -->
+  <path d="M228,62 C236,58 242,65 240,70" stroke="#0f172a" stroke-width="2" stroke-linecap="round" fill="none" />
+  <circle cx="226" cy="67" r="1.5" fill="#0f172a" />
+</svg>
