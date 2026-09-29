@@ -1,0 +1,1924 @@
+/* ============================================================
+   CONCORD-INSPIRED FLOATING NAVBAR & FRAMED SKYLINE HERO
+   ============================================================ */
+
+/* Outer Canvas Frame */
+.concord-hero-wrapper {
+  background: #f1f5f9;
+  padding: 1.25rem 1.25rem 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .concord-hero-wrapper {
+    padding: 0.5rem 0.5rem 0;
+  }
+}
+
+.concord-hero-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 640px;
+  background: url('../assets/images/australia-skyline-hero.jpg') center bottom / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .concord-hero-card {
+    border-radius: 20px;
+    min-height: 560px;
+  }
+}
+
+/* Luminous Gradient Mask over the Skyline for high-contrast typography */
+.concord-hero-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.88) 32%,
+    rgba(255, 255, 255, 0.68) 60%,
+    rgba(244, 247, 250, 0.82) 85%,
+    rgba(241, 245, 249, 0.94) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Floating Pill Navbar */
+.concord-nav-wrapper {
+  position: relative;
+  z-index: 20;
+  padding: 1.25rem 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.concord-nav-pill {
+  width: 100%;
+  max-width: 1180px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 9999px;
+  padding: 0.6rem 1rem 0.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.concord-nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.concord-nav-brand img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.concord-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 992px) {
+  .concord-nav-links {
+    display: none;
+  }
+}
+
+.concord-nav-item {
+  position: relative;
+}
+
+.concord-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #1e293b;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0.4rem 0.1rem;
+}
+
+.concord-nav-link:hover {
+  color: #F47C20;
+}
+
+.concord-nav-link .nav-caret {
+  font-size: 0.72rem;
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+.concord-nav-item:hover .nav-caret {
+  transform: rotate(180deg);
+  color: #F47C20;
+}
+
+/* Nav Dropdown Menus */
+.concord-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: #ffffff;
+  border-radius: 16px;
+  min-width: 250px;
+  padding: 0.65rem;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+  border: 1px solid #e2e8f0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+}
+
+.concord-nav-item:hover .concord-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.concord-dropdown-item {
+  display: block;
+  padding: 0.6rem 0.95rem;
+  border-radius: 10px;
+  color: #1e293b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.concord-dropdown-item:hover {
+  background: rgba(244, 124, 32, 0.08);
+  color: #F47C20;
+  transform: translateX(3px);
+}
+
+/* Consultation Action Pill Button */
+.concord-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #F47C20 0%, #e06810 100%);
+  color: #ffffff !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding: 0.72rem 1.6rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(244, 124, 32, 0.35);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.concord-btn-pill:hover {
+  background: linear-gradient(135deg, #ff8c33 0%, #ea7012 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(244, 124, 32, 0.45);
+}
+
+/* Mobile Toggle */
+.concord-hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.concord-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #003580;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 992px) {
+  .concord-hamburger {
+    display: flex;
+  }
+}
+
+/* Hero Center Content */
+.concord-hero-body {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  max-width: 880px;
+  margin: 4.25rem auto 4.5rem;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .concord-hero-body {
+    margin: 2.75rem auto 3.25rem;
+  }
+}
+
+.concord-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(244, 124, 32, 0.12);
+  color: #c95105;
+  border: 1px solid rgba(244, 124, 32, 0.35);
+  padding: 0.4rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.concord-hero__title {
+  font-family: 'Newsreader', 'Fraunces', Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4.3rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #0b1a30;
+  letter-spacing: -0.025em;
+  margin: 0 auto 1.25rem;
+}
+
+.concord-accent-italic {
+  font-style: italic;
+  color: #F47C20;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.concord-hero__sublead {
+  font-size: clamp(1.1rem, 1.8vw, 1.26rem);
+  font-weight: 500;
+  color: #1e293b;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto 2.25rem;
+}
+
+/* Two Center Pill Buttons */
+.concord-hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.15rem;
+  flex-wrap: wrap;
+}
+
+.concord-btn-orange {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: linear-gradient(135deg, #F47C20 0%, #e06810 100%);
+  color: #ffffff !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.95rem 2.25rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 10px 26px rgba(244, 124, 32, 0.38);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.concord-btn-orange:hover {
+  background: linear-gradient(135deg, #ff8c33 0%, #ea7012 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(244, 124, 32, 0.48);
+}
+
+.concord-btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: #ffffff;
+  color: #003580 !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.95rem 2.15rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  border: 1px solid rgba(0, 53, 128, 0.18);
+  box-shadow: 0 8px 20px rgba(0, 53, 128, 0.06);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.concord-btn-white:hover {
+  background: #f8fafc;
+  border-color: #F47C20;
+  color: #F47C20 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 53, 128, 0.12);
+}
+
+/* Bottom Partner / Accreditation Logos Strip */
+.concord-hero-footer {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  padding: 2.5rem 1.5rem 2rem;
+  box-sizing: border-box;
+}
+
+.concord-logos-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.75rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.concord-logo-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  opacity: 0.85;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.concord-logo-item:hover {
+  opacity: 1;
+  color: #ffffff;
+  transform: scale(1.04);
+}
+
+.concord-logo-item svg {
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.concord-logo-item .sub-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #fed7aa;
+  letter-spacing: 0.05em;
+  margin-left: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .concord-logos-strip {
+    gap: 1.5rem;
+  }
+  .concord-logo-item {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Slide-Out Drawer for Concord Nav */
+.concord-mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 85%;
+  max-width: 360px;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 999;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+
+.concord-mobile-drawer.is-open {
+  transform: translateX(0);
+}
+
+.concord-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.concord-drawer-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.concord-drawer-close {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #475569;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.concord-drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.concord-drawer-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* ============================================================
+   HIGH-VISIBILITY ATTRACTIVE "BOOK YOUR CONSULTATION" BUTTON
+   ============================================================ */
+.btn-consult-prominent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #F47C20 0%, #e06810 100%);
+  color: #ffffff !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 1.05rem 2.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(244, 124, 32, 0.45), 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-consult-prominent:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, #ff8c33 0%, #ea7012 100%);
+  box-shadow: 0 16px 36px rgba(244, 124, 32, 0.55);
+}
+
+.btn-consult-prominent .arrow {
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.btn-consult-prominent:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Secondary Action Button [ EXPLORE ... → ] */
+.btn-explore-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: #003580;
+  color: #ffffff !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 53, 128, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-explore-action:hover {
+  background: #0A58CA;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 53, 128, 0.35);
+}
+
+.btn-explore-action .arrow {
+  transition: transform 0.2s ease;
+}
+
+.btn-explore-action:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- SECTION 3: OVERVIEW BANNER (NON-REPETITIVE) ---------- */
+.path-intro-banner {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  border-left: 6px solid #F47C20;
+  border-radius: 20px;
+  padding: 3rem 3.5rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+@media (max-width: 768px) {
+  .path-intro-banner {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.path-intro-title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  font-weight: 900;
+  color: #003580;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.85rem;
+}
+
+.path-intro-lead {
+  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.path-intro-sub {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 1rem;
+  max-width: 900px;
+}
+
+.path-intro-action {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #F47C20;
+  margin: 0;
+}
+
+/* ---------- SECTION 5: EMPLOYER HORIZONTAL TIERS (DISTINCT LAYOUT) ---------- */
+.employer-tiers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.employer-tier-row {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 1.75rem 2.25rem;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  align-items: center;
+  gap: 2rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+@media (max-width: 860px) {
+  .employer-tier-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.5rem;
+  }
+}
+
+.employer-tier-row:hover {
+  transform: translateX(6px);
+  border-color: #003580;
+  box-shadow: 0 10px 30px rgba(0, 53, 128, 0.08);
+}
+
+.employer-tier-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tier-code-badge {
+  background: rgba(0, 53, 128, 0.08);
+  color: #003580;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.tier-name {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.tier-desc {
+  font-size: 0.98rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- SECTION 7: STUDENT VISAS (ASIMMETRIC 2-COL SHOWCASE) ---------- */
+.student-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .student-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.student-card-prominent {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 5px solid #003580;
+  border-radius: 20px;
+  padding: 2.5rem 2.25rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s ease;
+}
+
+.student-card-prominent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 53, 128, 0.09);
+}
+
+.student-card-prominent--teal {
+  border-top-color: #0d9488;
+}
+
+/* ---------- SECTION 8: VISITOR VISAS (TRAVEL STAMP ROW) ---------- */
+.visitor-stamps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.visitor-stamp-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 1.85rem 1.65rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.visitor-stamp-card:hover {
+  transform: translateY(-4px);
+  border-color: #F47C20;
+  box-shadow: 0 12px 28px rgba(244, 124, 32, 0.08);
+}
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.quicknav-link:hover {
+  color: #003580;
+  background: #f1f5f9;
+}
+
+.quicknav-link.is-active {
+  color: #003580;
+  background: rgba(0, 53, 128, 0.08);
+  border-color: rgba(0, 53, 128, 0.2);
+  font-weight: 700;
+}
+
+/* ---------- 3. SECTION INTRO & PILLS ---------- */
+.migrate-section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.migrate-section--alt {
+  background: #f8fafc;
+}
+
+.migrate-section--dark {
+  background: linear-gradient(135deg, #021738 0%, #00255a 50%, #001a40 100%);
+  color: #fff;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 53, 128, 0.06);
+  border: 1px solid rgba(0, 53, 128, 0.15);
+  color: #003580;
+  padding: 0.35rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.migrate-section--dark .section-badge {
+  background: rgba(244, 124, 32, 0.18);
+  border-color: rgba(244, 124, 32, 0.4);
+  color: #fed7aa;
+}
+
+.section-title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.migrate-section--dark .section-title {
+  color: #ffffff;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.65;
+  color: #475569;
+}
+
+.migrate-section--dark .section-subtitle {
+  color: #cbd5e1;
+}
+
+/* ---------- 4. VISA CARDS GRID (SKILLED, EMPLOYER, STUDENT) ---------- */
+.visa-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.visa-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.visa-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 53, 128, 0.3);
+  box-shadow: 0 16px 36px rgba(0, 53, 128, 0.09);
+}
+
+.visa-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.visa-subclass-badge {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #003580 0%, #0A58CA 100%);
+  color: #ffffff;
+  padding: 0.3rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.visa-subclass-badge--gold {
+  background: linear-gradient(135deg, #b45309 0%, var(--orange, #F47C20) 100%);
+}
+
+.visa-subclass-badge--teal {
+  background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+}
+
+.visa-card__tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.visa-card__title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+.visa-card__desc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.visa-card__footer {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.visa-card__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #003580;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.visa-card__action:hover {
+  color: var(--orange, #F47C20);
+  transform: translateX(3px);
+}
+
+/* Video Explainer Card */
+.video-explainer-card {
+  margin-top: 3.5rem;
+  background: linear-gradient(135deg, #021738 0%, #002b66 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 2.5rem;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  box-shadow: 0 16px 40px rgba(2, 23, 56, 0.25);
+}
+
+@media (max-width: 900px) {
+  .video-explainer-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.video-explainer__content h3 {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.65rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.video-explainer__content p {
+  font-size: 0.98rem;
+  color: #cbd5e1;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.video-explainer__preview {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  aspect-ratio: 16 / 9;
+  background: #010c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-explainer__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.video-explainer__preview:hover img {
+  transform: scale(1.04);
+}
+
+.video-play-btn {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(244, 124, 32, 0.95);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 24px rgba(244, 124, 32, 0.5);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-play-btn:hover {
+  transform: scale(1.12);
+  background: #ff8c33;
+}
+
+.video-play-btn svg {
+  margin-left: 4px;
+}
+
+/* ---------- 5. PARTNER & FAMILY VISAS (TABBED/CATEGORIZED) ---------- */
+.family-clusters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.family-cluster-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.cluster-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #003580;
+  background: rgba(0, 53, 128, 0.06);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  margin-bottom: 1.25rem;
+  width: fit-content;
+}
+
+.cluster-card__title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.cluster-card__title svg {
+  color: var(--orange, #F47C20);
+  flex-shrink: 0;
+}
+
+.visa-sublist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.visa-sublist-item {
+  padding: 0.9rem 1rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+}
+
+.visa-sublist-item:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateX(4px);
+}
+
+.visa-sublist-item .item-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.visa-sublist-item .subclass-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #003580;
+  background: rgba(0, 53, 128, 0.08);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.visa-sublist-item .item-desc {
+  font-size: 0.84rem;
+  color: #64748b;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* ---------- 6. CIRCUMSTANCES ASSESSMENT (INTERACTIVE FACTORS) ---------- */
+.circumstances-box {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  margin: 2.5rem 0 3rem;
+}
+
+.factor-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.factor-chip:hover {
+  transform: translateY(-4px);
+  background: #ffffff;
+  border-color: #003580;
+  box-shadow: 0 10px 24px rgba(0, 53, 128, 0.08);
+}
+
+.factor-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 53, 128, 0.06);
+  color: #003580;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.factor-chip:hover .factor-icon-wrap {
+  background: var(--orange, #F47C20);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.factor-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+/* ---------- 7. OCCUPATION-BASED PATHWAYS ---------- */
+.occupation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.occ-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  padding: 2.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.occ-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.09);
+  border-color: rgba(0, 53, 128, 0.25);
+}
+
+.occ-card__top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #003580, var(--orange, #F47C20));
+}
+
+.occ-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #f1f5f9;
+  color: #003580;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.occ-card:hover .occ-card__icon {
+  background: #003580;
+  color: #fff;
+}
+
+.occ-card__title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.occ-card__desc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.occ-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #003580;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.occ-card__btn:hover {
+  color: var(--orange, #F47C20);
+  transform: translateX(4px);
+}
+
+/* ---------- 8. WHY CHOOSE EDULOGIX (PILLARS) ---------- */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.pillar-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.pillar-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(244, 124, 32, 0.5);
+  transform: translateY(-4px);
+}
+
+.pillar-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(244, 124, 32, 0.15);
+  color: var(--orange, #F47C20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.pillar-title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.pillar-desc {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ---------- 9. HOW IT WORKS (5 STEPS) ---------- */
+.steps-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 1024px) {
+  .steps-timeline {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+.step-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  border-color: #003580;
+  box-shadow: 0 12px 28px rgba(0, 53, 128, 0.08);
+}
+
+.step-num-pill {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #003580;
+  background: #f1f5f9;
+  width: fit-content;
+  padding: 0.25rem 0.85rem;
+  border-radius: 9999px;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.step-card:hover .step-num-pill {
+  background: var(--orange, #F47C20);
+  color: #ffffff;
+}
+
+.step-title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.65rem;
+}
+
+.step-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ---------- 10. FAQ ACCORDION ---------- */
+.faq-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: #cbd5e1;
+}
+
+.faq-item.is-active {
+  border-color: #003580;
+  box-shadow: 0 6px 20px rgba(0, 53, 128, 0.06);
+}
+
+.faq-trigger {
+  width: 100%;
+  padding: 1.35rem 1.75rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.faq-trigger:hover {
+  color: #003580;
+}
+
+.faq-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #003580;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.faq-item.is-active .faq-arrow {
+  transform: rotate(180deg);
+  background: #003580;
+  color: #fff;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+  padding: 0 1.75rem;
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.faq-item.is-active .faq-answer {
+  max-height: 350px;
+  padding: 0 1.75rem 1.5rem;
+}
+
+/* ---------- 11. READY BANNER ---------- */
+.ready-banner {
+  background: linear-gradient(135deg, #002252 0%, #003580 50%, #021738 100%);
+  border-radius: 28px;
+  padding: 4.5rem 3rem;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 48px rgba(0, 53, 128, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ready-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 50% 0%, rgba(244, 124, 32, 0.28) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.ready-banner__content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.ready-banner__title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.85rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 1.15rem;
+}
+
+.ready-banner__desc {
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .migrate-hero {
+    padding: 4.5rem 0 3.5rem;
+  }
+  .migrate-hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .migrate-btn-primary, .migrate-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .circumstances-box {
+    padding: 2rem 1.25rem;
+  }
+  .ready-banner {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* ============================================================
+   PROMINENT CONSULTATION CTA & EXPLORE BUTTONS
+   ============================================================ */
+.btn-consult-prominent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: linear-gradient(135deg, #F47C20 0%, #ff8833 50%, #e06810 100%);
+  color: #ffffff !important;
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 1.05rem 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(244, 124, 32, 0.42), 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-consult-prominent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transition: left 0.65s ease;
+}
+
+.btn-consult-prominent:hover::before {
+  left: 100%;
+}
+
+.btn-consult-prominent:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 38px rgba(244, 124, 32, 0.58), 0 4px 12px rgba(0, 0, 0, 0.12);
+  color: #ffffff !important;
+}
+
+.btn-consult-prominent span:last-child {
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.btn-consult-prominent:hover span:last-child {
+  transform: translateX(5px);
+}
+
+.btn-explore-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: #003580;
+  color: #ffffff !important;
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.9rem 2.2rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 53, 128, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 53, 128, 0.16);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-explore-action:hover {
+  background: #002255;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 53, 128, 0.26);
+  color: #ffffff !important;
+}
+
+.btn-explore-action span:last-child {
+  transition: transform 0.2s ease;
+}
+
+.btn-explore-action:hover span:last-child {
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   SECTION 3: EDITORIAL PATHWAY BANNER
+   ============================================================ */
+.path-intro-banner {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 3rem 3.5rem;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .path-intro-banner {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.path-intro-banner__lead {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #003580;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.path-intro-banner__body {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.path-intro-banner__tail {
+  font-size: 1.02rem;
+  color: #1e293b;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION 5: HORIZONTAL EMPLOYER TIERS STACK
+   ============================================================ */
+.employer-tiers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto 2.5rem;
+}
+
+.employer-tier-row {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 1.75rem 2.25rem;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: center;
+  gap: 2rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+@media (max-width: 860px) {
+  .employer-tier-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+.employer-tier-row:hover {
+  transform: translateY(-3px);
+  border-color: #003580;
+  box-shadow: 0 12px 30px rgba(0, 53, 128, 0.08);
+}
+
+.employer-tier-row__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.employer-tier-row__title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.employer-tier-row__badge {
+  display: inline-flex;
+  width: fit-content;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #003580;
+  background: rgba(0, 53, 128, 0.08);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.employer-tier-row__desc {
+  font-size: 0.98rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION 6: 3-COLUMN FAMILY MATRIX DIRECTORY
+   ============================================================ */
+.family-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 992px) {
+  .family-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.family-col {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2.25rem 1.85rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
+  transition: all 0.3s ease;
+}
+
+.family-col:hover {
+  border-color: #003580;
+  box-shadow: 0 12px 30px rgba(0, 53, 128, 0.07);
+}
+
+.family-col__header {
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.family-col__title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.28rem;
+  font-weight: 800;
+  color: #003580;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.family-col__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.family-entry {
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+  padding: 1rem 1.15rem;
+  transition: all 0.2s ease;
+}
+
+.family-entry:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.family-entry__title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.25rem;
+}
+
+.family-entry__subclass {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #F47C20;
+  margin-bottom: 0.4rem;
+}
+
+.family-entry__desc {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION 7: STUDENT VISAS 2-CARD SHOWCASE
+   ============================================================ */
+.student-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .student-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.student-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.student-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #003580, #F47C20);
+}
+
+.student-card:hover {
+  transform: translateY(-4px);
+  border-color: #003580;
+  box-shadow: 0 14px 32px rgba(0, 53, 128, 0.08);
+}
+
+.student-card__title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.85rem;
+}
+
+.student-card__desc {
+  font-size: 0.98rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION 8: VISITOR 4-STAMPS GRID
+   ============================================================ */
+.visitor-stamps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.visitor-stamp-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+}
+
+.visitor-stamp-card:hover {
+  transform: translateY(-4px);
+  border-color: #003580;
+  box-shadow: 0 12px 28px rgba(0, 53, 128, 0.08);
+}
+
+.visitor-stamp-card__title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.visitor-stamp-card__desc {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
