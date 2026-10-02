@@ -5979,21 +5979,23 @@ ul { list-style: none; }
    AUSTRALIAN VISA & MIGRATION SERVICES SECTION
    ============================================================ */
 .visa-services {
-  padding: 6rem 0;
-  background: #020917;
-  color: #ffffff;
+  padding: 5.5rem 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  color: #0f172a;
   position: relative;
   overflow: hidden;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .visa-services::before {
   content: '';
   position: absolute;
-  top: -200px;
-  right: -200px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
+  top: -150px;
+  right: -150px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 53, 128, 0.04) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -6009,9 +6011,9 @@ ul { list-style: none; }
   gap: 0.5rem;
   padding: 0.35rem 0.9rem;
   border-radius: 9999px;
-  background: rgba(249, 115, 22, 0.12);
-  border: 1px solid rgba(249, 115, 22, 0.3);
-  color: #ff9d42;
+  background: rgba(232, 119, 34, 0.1);
+  border: 1px solid rgba(232, 119, 34, 0.28);
+  color: #E87722;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -6023,8 +6025,8 @@ ul { list-style: none; }
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #ff9d42;
-  box-shadow: 0 0 8px #ff9d42;
+  background-color: #E87722;
+  box-shadow: 0 0 8px rgba(232, 119, 34, 0.6);
 }
 
 .visa-services__title {
@@ -6034,81 +6036,96 @@ ul { list-style: none; }
   line-height: 1.2;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: #003580;
 }
 
 .visa-services__title-highlight {
-  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  background: linear-gradient(135deg, #E87722 0%, #f59e0b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .visa-services__subtitle {
   font-size: 1.05rem;
-  color: #94a3b8;
+  color: #64748b;
   line-height: 1.6;
 }
 
-/* Grid */
+/* 5-Card Flexbox Grid (3 cards top row, 2 cards centered bottom row) */
 .visa-services__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Normal Visa Card */
+/* Visa Card */
 .visa-card {
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4));
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 1.25rem;
-  padding: 2rem;
+  padding: 2.25rem 2rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 1 calc(33.333% - 1.25rem);
+  min-width: 310px;
+  max-width: 380px;
+  box-shadow: 0 4px 20px rgba(0, 53, 128, 0.04);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
 .visa-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(56, 189, 248, 0.1);
+  transform: translateY(-5px);
+  border-color: rgba(0, 53, 128, 0.28);
+  box-shadow: 0 16px 36px rgba(0, 53, 128, 0.1);
 }
 
 .visa-card__icon-wrap {
   width: 54px;
   height: 54px;
   border-radius: 12px;
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  color: #38bdf8;
+  background: rgba(0, 53, 128, 0.06);
+  border: 1px solid rgba(0, 53, 128, 0.12);
+  color: #003580;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
+  transition: all 0.25s ease;
+}
+
+.visa-card:hover .visa-card__icon-wrap {
+  background: #003580;
+  color: #ffffff;
+  border-color: #003580;
+  transform: scale(1.05);
 }
 
 .visa-card__sub-label {
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.14em;
-  color: #38bdf8;
+  color: #003580;
   text-transform: uppercase;
   margin-bottom: 0.4rem;
 }
 
 .visa-card__title {
   font-family: 'Satoshi', sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #003580;
   margin-bottom: 0.75rem;
 }
 
 .visa-card__desc {
-  font-size: 0.9rem;
-  color: #94a3b8;
-  line-height: 1.55;
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
@@ -6117,81 +6134,23 @@ ul { list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: #38bdf8;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #E87722;
   text-decoration: none;
   transition: gap 0.2s ease, color 0.2s ease;
 }
 
 .visa-card__link:hover {
   gap: 0.75rem;
-  color: #7dd3fc;
-}
-
-/* Highlighted Card 6 */
-.visa-card--highlight {
-  background: linear-gradient(145deg, rgba(249, 115, 22, 0.15), rgba(15, 23, 42, 0.9));
-  border: 2px solid #ff9d42;
-  box-shadow: 0 0 25px rgba(249, 115, 22, 0.2);
-}
-
-.visa-card--highlight:hover {
-  border-color: #ffb86c;
-  box-shadow: 0 12px 35px rgba(249, 115, 22, 0.35);
-}
-
-.visa-card__highlight-glow {
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(249, 115, 22, 0.3) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.visa-card__badge {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  color: #ff9d42;
-  background: rgba(249, 115, 22, 0.18);
-  padding: 0.25rem 0.65rem;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-}
-
-.visa-card__btn-accent {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  width: 100%;
-  padding: 0.9rem 1.25rem;
-  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-  color: #ffffff;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.35);
-  margin-top: 1rem;
-}
-
-.visa-card__btn-accent:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
-  color: #ffffff;
+  color: #c95f0f;
 }
 
 /* Responsive Grid */
-@media (max-width: 1024px) {
-  .visa-services__grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 992px) {
+  .visa-services__grid .visa-card {
+    flex: 0 1 calc(50% - 1rem);
+    max-width: 440px;
   }
 }
 
@@ -6203,7 +6162,14 @@ ul { list-style: none; }
     font-size: 2rem;
   }
   .visa-services__grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .visa-services__grid .visa-card {
+    flex: 1 1 100%;
+    min-width: unset;
+    max-width: 100%;
   }
 }
 
