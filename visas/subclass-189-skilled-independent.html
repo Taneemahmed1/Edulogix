@@ -519,7 +519,12 @@
     <footer class="footer" style="background: #07101c; color: #cbd5e1; padding: 4rem 1.5rem 2rem;">
         <div class="footer__container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 2rem;">
-                <img src="../assets/images/logo-footer.png" alt="Edulogix Logo" style="height: 36px; width: auto;">
+                <div style="display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;">
+                    <img src="../assets/images/logo-footer.png" alt="Edulogix Logo" style="height: 36px; width: auto;">
+                    <a href="https://www.mara.gov.au" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
+                        <img src="../assets/images/marn-badge.png" alt="OMARA MARN 2619591" style="width: 105px; height: auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.3);">
+                    </a>
+                </div>
                 <p style="margin: 0; font-size: 0.9rem; color: #94a3b8;">
                     OMARA Registered Migration Agent (MARN: 2619591) &bull; ACN: 653 241 108
                 </p>
@@ -564,9 +569,9 @@
                                     <span class="meta-icon">⏱</span>
                                     <span id="sidebar-duration">45 min</span>
                                 </div>
-                                <div class="consult-sidebar__meta-item">
-                                    <span class="meta-icon" id="sidebar-price-icon">&#128178;</span>
-                                    <span id="sidebar-price">$75</span>
+                                <div class="consult-sidebar__meta-item" style="display: none;">
+                                    <span class="meta-icon" id="sidebar-price-icon"></span>
+                                    <span id="sidebar-price"></span>
                                 </div>
                                 <div class="consult-sidebar__meta-item">
                                     <span class="meta-icon">&#128222;</span>
@@ -607,25 +612,25 @@
                     <div class="consult-view" id="consult-view-1">
                         <h4 class="consult-view__title">Select a consultation option</h4>
                         <div class="consult-services-grid">
-                            <!-- Option 1: Free Call (Cal.com 15-Min) -->
-                            <a href="https://cal.com/edulogix-australia-dz17rl/15min" target="_blank" rel="noopener noreferrer" class="consult-service-card is-selected" data-service="Quick eligibility call" data-price="Free" data-duration="15 min" data-fee="0">
+                            <!-- Option 1: 15-Min Call (Cal.com 15-Min) -->
+                            <a href="https://cal.com/edulogix-australia-dz17rl/15min" target="_blank" rel="noopener noreferrer" class="consult-service-card is-selected" data-service="Quick eligibility call" data-price="" data-duration="15 min" data-fee="0">
                                 <div class="service-card__top">
                                     <h5 class="service-card__title">Quick Eligibility Call</h5>
-                                    <span class="service-card__badge service-card__badge--free">Free &bull; 15 min</span>
+                                    <span class="consult-service-badge consult-service-badge--free">15 min</span>
                                 </div>
-                                <p class="service-card__desc">Free 15-minute introductory call to check your basic eligibility and discuss potential pathways. Schedule your time directly on Cal.com.</p>
+                                <p class="service-card__desc">15-minute introductory call to check your basic eligibility and discuss potential pathways. Schedule your time directly on Cal.com.</p>
                                 <div class="service-card__cal-cta">
                                     <span>Schedule on Cal.com &rarr;</span>
                                 </div>
                             </a>
-                            <!-- Option 2: 45-Min Paid Call (Cal.com 45-Min) -->
-                            <a href="https://cal.com/edulogix-australia-dz17rl/45min" target="_blank" rel="noopener noreferrer" class="consult-service-card" data-service="45 Minutes Paid Strategy Consultation" data-price="$99" data-duration="45 min" data-fee="99">
+                            <!-- Option 2: 45-Min Call (Cal.com 45-Min) -->
+                            <a href="https://cal.com/edulogix-australia-dz17rl/45min" target="_blank" rel="noopener noreferrer" class="consult-service-card" data-service="45-Minute Migration Strategy Consultation" data-price="" data-duration="45 min" data-fee="0">
                                 <div class="service-card__top">
                                     <div class="service-card__title-row">
                                         <h5 class="service-card__title">45-Minute Migration Strategy Consultation</h5>
                                         <span class="service-card__pill-tag">RECOMMENDED</span>
                                     </div>
-                                    <span class="service-card__badge">$99 AUD &bull; 45 min</span>
+                                    <span class="consult-service-badge">45 min</span>
                                 </div>
                                 <p class="service-card__desc">Comprehensive 45-minute consultation with a Registered Migration Agent. Deep points assessment, document review, and a tailored migration roadmap. Schedule your time directly on Cal.com.</p>
                                 <div class="service-card__cal-cta">

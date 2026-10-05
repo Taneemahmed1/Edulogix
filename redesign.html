@@ -1755,7 +1755,7 @@
                                         <label for="contact-query" class="mac-field-label">Message:</label>
                                         <span class="mac-field-optional">(optional)</span>
                                     </div>
-                                    <textarea name="Query" id="contact-query" class="mac-field-textarea" rows="3" placeholder="Tell us about your nursing education, experience, or any questions..."></textarea>
+                                    <textarea name="Query" id="contact-query" class="mac-field-textarea" rows="3" placeholder="Tell us about your education, experience, or any questions..."></textarea>
                                 </div>
 
                                 <!-- Action Button & Privacy Note -->
@@ -1806,10 +1806,12 @@
                     <p class="footer__tagline" style="font-weight: 500; color: #f1f5f9; margin-bottom: 0.6rem;">
                         Australia's premier migration, education, and professional licensing firm for global professionals.
                     </p>
-                    <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(249, 115, 22, 0.15); border: 1px solid rgba(249, 115, 22, 0.35); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.76rem; color: #fed7aa; font-weight: 600; margin-bottom: 0.75rem;">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                        MARN: 2619591
-                    </div>
+
+                    <!-- MARN OMARA Registration Badge Image -->
+                    <a href="https://www.mara.gov.au" target="_blank" rel="noopener noreferrer" class="footer__marn-badge-link" aria-label="Verify Registered Migration Agent MARN 2619591 on OMARA">
+                        <img src="assets/images/marn-badge.png" alt="Migration Agents Registration Number: 2619591 - www.mara.gov.au" class="footer__marn-badge-img" loading="lazy">
+                    </a>
+
                     <p style="font-size:0.88rem; color:#cbd5e1; line-height: 1.8;">
                         Whatsapp📞 <a href="https://wa.me/61478498913" target="_blank" rel="noopener noreferrer" style="color:var(--white); font-weight:600;">+61 478 498 913</a><br>
                         ✉️ <a href="mailto:info@edulogix.com.au" style="color:var(--white); font-weight:600;">info@edulogix.com.au</a>
@@ -1920,9 +1922,9 @@
                                     <span class="meta-icon">⏱</span>
                                     <span id="sidebar-duration">15 min</span>
                                 </div>
-                                <div class="consult-sidebar__meta-item">
-                                    <span class="meta-icon" id="sidebar-price-icon">🆓</span>
-                                    <span id="sidebar-price">Free</span>
+                                <div class="consult-sidebar__meta-item" style="display: none;">
+                                    <span class="meta-icon" id="sidebar-price-icon"></span>
+                                    <span id="sidebar-price"></span>
                                 </div>
                                 <div class="consult-sidebar__meta-item">
                                     <span class="meta-icon">📞</span>
@@ -1974,26 +1976,26 @@
 
                         <div class="consult-services-grid">
 
-                            <!-- Option 1: Free Call (Cal.com 15-Min) -->
-                            <a href="https://cal.com/edulogix-australia-dz17rl/15min" target="_blank" rel="noopener noreferrer" class="consult-service-card is-selected" data-service="Quick eligibility call" data-price="Free" data-duration="15 min" data-fee="0">
+                            <!-- Option 1: 15-Min Call (Cal.com 15-Min) -->
+                            <a href="https://cal.com/edulogix-australia-dz17rl/15min" target="_blank" rel="noopener noreferrer" class="consult-service-card is-selected" data-service="Quick eligibility call" data-price="" data-duration="15 min" data-fee="0">
                                 <div class="service-card__top">
                                     <h5 class="service-card__title">Quick Eligibility Call</h5>
-                                    <span class="service-card__badge service-card__badge--free">Free &bull; 15 min</span>
+                                    <span class="consult-service-badge consult-service-badge--free">15 min</span>
                                 </div>
-                                <p class="service-card__desc">Free 15-minute introductory call to check your basic eligibility and discuss potential pathways. Schedule your time directly on Cal.com.</p>
+                                <p class="service-card__desc">15-minute introductory call to check your basic eligibility and discuss potential pathways. Schedule your time directly on Cal.com.</p>
                                 <div class="service-card__cal-cta">
                                     <span>Schedule on Cal.com &rarr;</span>
                                 </div>
                             </a>
 
-                            <!-- Option 2: 45-Min Paid Call (Cal.com 45-Min) -->
-                            <a href="https://cal.com/edulogix-australia-dz17rl/45min" target="_blank" rel="noopener noreferrer" class="consult-service-card" data-service="45 Minutes Paid Strategy Consultation" data-price="$99" data-duration="45 min" data-fee="99">
+                            <!-- Option 2: 45-Min Call (Cal.com 45-Min) -->
+                            <a href="https://cal.com/edulogix-australia-dz17rl/45min" target="_blank" rel="noopener noreferrer" class="consult-service-card" data-service="45-Minute Migration Strategy Consultation" data-price="" data-duration="45 min" data-fee="0">
                                 <div class="service-card__top">
                                     <div class="service-card__title-row">
                                         <h5 class="service-card__title">45-Minute Migration Strategy Consultation</h5>
                                         <span class="service-card__pill-tag">RECOMMENDED</span>
                                     </div>
-                                    <span class="service-card__badge">$99 AUD &bull; 45 min</span>
+                                    <span class="consult-service-badge">45 min</span>
                                 </div>
                                 <p class="service-card__desc">Comprehensive 45-minute consultation with a Registered Migration Agent. Deep points assessment, document review, and tailored roadmap. Schedule your time directly on Cal.com.</p>
                                 <div class="service-card__cal-cta">

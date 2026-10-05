@@ -52,6 +52,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---- 2B. CONCORD MOBILE DRAWER (MIGRATION NAVBAR) ----
+  const concordHamburger = document.getElementById('concord-hamburger');
+  const concordDrawer    = document.getElementById('concord-mobile-drawer');
+  const concordOverlay   = document.getElementById('concord-drawer-overlay');
+  const concordClose     = document.getElementById('concord-drawer-close');
+
+  if (concordHamburger && concordDrawer) {
+    concordHamburger.addEventListener('click', () => {
+      concordDrawer.classList.add('is-open');
+      concordOverlay?.classList.add('is-open');
+    });
+    concordClose?.addEventListener('click', () => {
+      concordDrawer.classList.remove('is-open');
+      concordOverlay?.classList.remove('is-open');
+    });
+    concordOverlay?.addEventListener('click', () => {
+      concordDrawer.classList.remove('is-open');
+      concordOverlay?.classList.remove('is-open');
+    });
+    concordDrawer.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('click', () => {
+        concordDrawer.classList.remove('is-open');
+        concordOverlay?.classList.remove('is-open');
+      });
+    });
+  }
+
   // ---- 3. CART SLIDE-OUT DRAWER ----
   const cartToggleBtn = document.getElementById('cart-toggle-btn');
   const cartDrawer    = document.getElementById('cart-drawer');
@@ -758,11 +785,7 @@ window.prefillCourse = function (courseName) {
         // Update Submit button text
         const submitBtn = document.getElementById('consult-submit-btn');
         if (submitBtn) {
-          if (state.service.price.toLowerCase() === 'free') {
-            submitBtn.textContent = 'Book Free Consultation →';
-          } else {
-            submitBtn.textContent = `Confirm & Pay ${state.service.price} AUD →`;
-          }
+          submitBtn.textContent = 'Book Consultation →';
         }
       }
     }
@@ -770,9 +793,10 @@ window.prefillCourse = function (courseName) {
     function updateSidebarService() {
       if (sidebarTitle) sidebarTitle.textContent = state.service.name;
       if (sidebarDuration) sidebarDuration.textContent = state.service.duration;
-      if (sidebarPrice) sidebarPrice.textContent = state.service.price;
-      if (sidebarPriceIcon) {
-        sidebarPriceIcon.textContent = state.service.price.toLowerCase() === 'free' ? '🆓' : '💳';
+      if (sidebarPrice) {
+        var priceParent = sidebarPrice.closest('.consult-sidebar__meta-item');
+        if (priceParent) priceParent.style.display = 'none';
+        sidebarPrice.textContent = '';
       }
       updateSidebarSlot();
     }

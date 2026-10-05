@@ -37,12 +37,103 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css?v=21">
+    <link rel="stylesheet" href="css/migrate.css?v=3">
+
+    <!-- Migration Nav Source Detection Script (Zero-flicker) -->
+    <script>
+        (function() {
+            try {
+                var params = new URLSearchParams(window.location.search);
+                var fromParam = params.get('from');
+                var isMigrate = fromParam === 'migrate' || (document.referrer && document.referrer.indexOf('migrate.html') !== -1);
+                if (isMigrate) {
+                    document.documentElement.classList.add('nav-from-migrate');
+                    sessionStorage.setItem('edulogix_nav_source', 'migrate');
+                } else if (fromParam === 'home' || (document.referrer && document.referrer.indexOf('index.html') !== -1)) {
+                    sessionStorage.removeItem('edulogix_nav_source');
+                } else if (sessionStorage.getItem('edulogix_nav_source') === 'migrate') {
+                    document.documentElement.classList.add('nav-from-migrate');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 
 <body>
 
     <!-- ============================================================
-         SECTION 1: PRIMARY NAVIGATION
+         MIGRATION CONCORD NAVBAR (Active when navigating from Migrate)
+    ============================================================ -->
+    <div id="concord-migrate-nav">
+        <div class="concord-nav-wrapper concord-nav-wrapper--about">
+            <header class="concord-nav-pill">
+                <!-- Brand Logo -->
+                <a href="migrate.html" class="concord-nav-brand" aria-label="Edulogix Migration Home">
+                    <img src="assets/images/logo edu.png" alt="Edulogix Logo">
+                </a>
+
+                <!-- Nav Links: Visa types, About us, Success stories, Blog -->
+                <ul class="concord-nav-links">
+                    <!-- 1. Visa types -->
+                    <li class="concord-nav-item">
+                        <a href="migrate.html#pathways-overview" class="concord-nav-link">
+                            Visa types <span class="nav-caret">&#9662;</span>
+                        </a>
+                        <div class="concord-dropdown-menu">
+                            <a href="migrate.html#visitor-visas" class="concord-dropdown-item">Visitor &amp; Other Visa Options</a>
+                            <a href="migrate.html#employer-sponsored" class="concord-dropdown-item">Employer Sponsored (482, 186, 494)</a>
+                            <a href="migrate.html#partner-family" class="concord-dropdown-item">Partner &amp; Family Visas</a>
+                            <a href="migrate.html#student-visas" class="concord-dropdown-item">Student &amp; Graduate Visas (500, 485)</a>
+                            <a href="migrate.html#skilled-migration" class="concord-dropdown-item">Skilled Migration (189, 190, 491)</a>
+                        </div>
+                    </li>
+
+                    <!-- 2. About us -->
+                    <li class="concord-nav-item">
+                        <a href="about.html?from=migrate" class="concord-nav-link active" style="color: #F47C20; font-weight: 700;">About us</a>
+                    </li>
+
+                    <!-- 3. Success stories -->
+                    <li class="concord-nav-item">
+                        <a href="index.html#testimonials" class="concord-nav-link">Success stories</a>
+                    </li>
+
+                    <!-- 4. Blog -->
+                    <li class="concord-nav-item">
+                        <a href="https://www.edulogix.com.au/blog/" target="_blank" rel="noopener noreferrer" class="concord-nav-link">Blog</a>
+                    </li>
+                </ul>
+
+                <!-- Action: Book consultation pill button -->
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <button type="button" class="concord-btn-pill" data-open-consultation="Quick eligibility call">
+                        Book consultation
+                    </button>
+                    <button class="concord-hamburger" id="concord-hamburger" aria-label="Open Menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </header>
+        </div>
+
+        <!-- Mobile Slide-Out Drawer -->
+        <div class="concord-drawer-overlay" id="concord-drawer-overlay"></div>
+        <div class="concord-mobile-drawer" id="concord-mobile-drawer">
+            <button type="button" class="concord-drawer-close" id="concord-drawer-close">&times;</button>
+            <div class="concord-drawer-links">
+                <a href="migrate.html#pathways-overview" class="concord-drawer-link">Visa types</a>
+                <a href="about.html?from=migrate" class="concord-drawer-link" style="color: #F47C20; font-weight: 700;">About us</a>
+                <a href="index.html#testimonials" class="concord-drawer-link">Success stories</a>
+                <a href="https://www.edulogix.com.au/blog/" target="_blank" rel="noopener noreferrer" class="concord-drawer-link">Blog</a>
+                <button type="button" class="concord-btn-pill" style="margin-top: 1.5rem; width: 100%;" data-open-consultation="Quick eligibility call">
+                    Book consultation
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         SECTION 1: PRIMARY NAVIGATION (DEFAULT / HOMEPAGE SOURCE)
     ============================================================ -->
     <header class="navbar" id="navbar">
         <div class="navbar__container">
@@ -696,10 +787,12 @@
                     <p class="footer__tagline" style="font-weight: 500; color: #f1f5f9; margin-bottom: 0.6rem;">
                         Empowering Global Talent. Australia's premier migration, nursing registration &amp; specialist healthcare education firm.
                     </p>
-                    <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(249, 115, 22, 0.15); border: 1px solid rgba(249, 115, 22, 0.35); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.76rem; color: #fed7aa; font-weight: 600; margin-bottom: 0.75rem;">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                        MARN: 2619591 &bull; Jesin Joy
-                    </div>
+
+                    <!-- MARN OMARA Registration Badge Image -->
+                    <a href="https://www.mara.gov.au" target="_blank" rel="noopener noreferrer" class="footer__marn-badge-link" aria-label="Verify Registered Migration Agent MARN 2619591 on OMARA">
+                        <img src="assets/images/marn-badge.png" alt="Migration Agents Registration Number: 2619591 - www.mara.gov.au" class="footer__marn-badge-img" loading="lazy">
+                    </a>
+
                     <p style="font-size:0.88rem; color:#cbd5e1; line-height: 1.8;">
                         Whatsapp📞 <a href="https://wa.me/61478498913" target="_blank" rel="noopener noreferrer" style="color:var(--white); font-weight:600;">+61 478 498 913</a><br>
                         ✉️ <a href="mailto:info@edulogix.com.au" style="color:var(--white); font-weight:600;">info@edulogix.com.au</a>
@@ -812,9 +905,9 @@
                                     <span class="meta-icon">⏱</span>
                                     <span id="sidebar-duration">15 min</span>
                                 </div>
-                                <div class="consult-sidebar__meta-item">
-                                    <span class="meta-icon" id="sidebar-price-icon">🆓</span>
-                                    <span id="sidebar-price">Free</span>
+                                <div class="consult-sidebar__meta-item" style="display: none;">
+                                    <span class="meta-icon" id="sidebar-price-icon"></span>
+                                    <span id="sidebar-price"></span>
                                 </div>
                                 <div class="consult-sidebar__meta-item">
                                     <span class="meta-icon">📞</span>
@@ -863,26 +956,26 @@
 
                         <div class="consult-services-grid">
 
-                            <!-- Option 1: Free Call (Cal.com 15-Min) -->
-                            <a href="https://cal.com/edulogix-australia-dz17rl/15min" target="_blank" rel="noopener noreferrer" class="consult-service-card is-selected" data-service="Quick eligibility call" data-price="Free" data-duration="15 min" data-fee="0">
+                            <!-- Option 1: 15-Min Call (Cal.com 15-Min) -->
+                            <a href="https://cal.com/edulogix-australia-dz17rl/15min" target="_blank" rel="noopener noreferrer" class="consult-service-card is-selected" data-service="Quick eligibility call" data-price="" data-duration="15 min" data-fee="0">
                                 <div class="service-card__top">
                                     <h5 class="service-card__title">Quick Eligibility Call</h5>
-                                    <span class="service-card__badge service-card__badge--free">Free &bull; 15 min</span>
+                                    <span class="consult-service-badge consult-service-badge--free">15 min</span>
                                 </div>
-                                <p class="service-card__desc">Free 15-minute introductory call to check your basic eligibility and discuss potential pathways. Schedule your time directly on Cal.com.</p>
+                                <p class="service-card__desc">15-minute introductory call to check your basic eligibility and discuss potential pathways. Schedule your time directly on Cal.com.</p>
                                 <div class="service-card__cal-cta">
                                     <span>Schedule on Cal.com &rarr;</span>
                                 </div>
                             </a>
 
-                            <!-- Option 2: 45-Min Paid Call (Cal.com 45-Min) -->
-                            <a href="https://cal.com/edulogix-australia-dz17rl/45min" target="_blank" rel="noopener noreferrer" class="consult-service-card" data-service="45 Minutes Paid Strategy Consultation" data-price="$99" data-duration="45 min" data-fee="99">
+                            <!-- Option 2: 45-Min Call (Cal.com 45-Min) -->
+                            <a href="https://cal.com/edulogix-australia-dz17rl/45min" target="_blank" rel="noopener noreferrer" class="consult-service-card" data-service="45-Minute Migration Strategy Consultation" data-price="" data-duration="45 min" data-fee="0">
                                 <div class="service-card__top">
                                     <div class="service-card__title-row">
                                         <h5 class="service-card__title">45-Minute Migration Strategy Consultation</h5>
                                         <span class="service-card__pill-tag">RECOMMENDED</span>
                                     </div>
-                                    <span class="service-card__badge">$99 AUD &bull; 45 min</span>
+                                    <span class="consult-service-badge">45 min</span>
                                 </div>
                                 <p class="service-card__desc">Comprehensive 45-minute consultation with a Registered Migration Agent. Deep points assessment, document review, and a tailored migration roadmap. Schedule your time directly on Cal.com.</p>
                                 <div class="service-card__cal-cta">
