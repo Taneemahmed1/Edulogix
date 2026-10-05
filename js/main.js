@@ -628,7 +628,7 @@ window.prefillCourse = function (courseName) {
           const sName = card.getAttribute('data-service') || '';
           if (sName.toLowerCase().includes(preselectedServiceName.toLowerCase())) {
             selectServiceCard(card);
-            setStep(2);
+            setStep(1);
             return;
           }
         }
@@ -790,7 +790,17 @@ window.prefillCourse = function (courseName) {
       }
     }
 
-    // Step 1: Service Cards Selection
+    // Step 1: Service Cards Selection & Direct Cal.com Redirection
+    function getCalUrl(card) {
+      const href = card.getAttribute('href');
+      if (href && href.startsWith('http')) return href;
+      const sName = (card.getAttribute('data-service') || '').toLowerCase();
+      if (sName.includes('45') || sName.includes('strategy') || sName.includes('paid')) {
+        return 'https://cal.com/edulogix-australia-dz17rl/45min';
+      }
+      return 'https://cal.com/edulogix-australia-dz17rl/15min';
+    }
+
     function selectServiceCard(card) {
       document.querySelectorAll('.consult-service-card').forEach(c => c.classList.remove('is-selected'));
       card.classList.add('is-selected');
@@ -806,9 +816,18 @@ window.prefillCourse = function (courseName) {
     }
 
     document.querySelectorAll('.consult-service-card').forEach(card => {
-      card.addEventListener('click', () => {
+      const targetUrl = getCalUrl(card);
+      if (!card.getAttribute('href')) {
+        card.setAttribute('href', targetUrl);
+      }
+      card.setAttribute('target', '_blank');
+      card.setAttribute('rel', 'noopener noreferrer');
+
+      card.addEventListener('click', (e) => {
         selectServiceCard(card);
-        setStep(2);
+        const url = getCalUrl(card);
+        // Direct redirect / open in Cal.com scheduling
+        window.open(url, '_blank', 'noopener,noreferrer');
       });
     });
 

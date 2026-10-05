@@ -1922,3 +1922,341 @@
   margin: 0;
 }
 
+/* ============================================================
+   NEW SECTION: MOVE TO AUSTRALIA — EDITORIAL VISA MATRIX
+   Distinct, premium bento-style design for migrate.html
+   ============================================================ */
+.migrate-matrix-section {
+  position: relative;
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+  overflow: hidden;
+}
+
+.migrate-matrix-section::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(0, 53, 128, 0.05) 0%, rgba(244, 124, 32, 0.04) 50%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.migrate-matrix-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -80px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(244, 124, 32, 0.06) 0%, rgba(0, 53, 128, 0.03) 50%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.matrix-header-wrap {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.matrix-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 53, 128, 0.06);
+  border: 1px solid rgba(0, 53, 128, 0.14);
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #003580;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.matrix-eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #F47C20;
+  box-shadow: 0 0 10px #F47C20;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+.matrix-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #002244;
+  line-height: 1.18;
+  margin-bottom: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.matrix-title-accent {
+  font-style: italic;
+  color: #F47C20;
+}
+
+.matrix-subtitle {
+  font-size: 1.12rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* 2-Tier Bento Matrix Grid */
+.matrix-bento-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+.matrix-row-top {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.75rem;
+}
+
+.matrix-row-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+@media (max-width: 992px) {
+  .matrix-row-top,
+  .matrix-row-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Individual Matrix Card */
+.matrix-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 2.35rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.matrix-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.matrix-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(244, 124, 32, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 35, 80, 0.09), 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Matrix Card Top Border Accent */
+.matrix-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.matrix-card:hover::before {
+  background: linear-gradient(90deg, #F47C20, #003580);
+}
+
+/* Card Header Elements */
+.matrix-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.matrix-card__icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 53, 128, 0.06);
+  color: #003580;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.matrix-card:hover .matrix-card__icon-wrap {
+  transform: scale(1.08);
+}
+
+.matrix-card__category {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.matrix-card__title {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #002244;
+  line-height: 1.25;
+  margin: 0 0 0.85rem;
+}
+
+.matrix-card__desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+/* Subclass Pills Container */
+.matrix-subclass-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.85rem;
+}
+
+.matrix-subclass-pill {
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.matrix-card:hover .matrix-subclass-pill {
+  border-color: #cbd5e1;
+}
+
+/* Card Action Button */
+.matrix-card__action {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem 1.15rem;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #003580;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.matrix-card__action-arrow {
+  transition: transform 0.25s ease;
+}
+
+.matrix-card:hover .matrix-card__action {
+  background: #003580;
+  color: #ffffff;
+  border-color: #003580;
+}
+
+.matrix-card:hover .matrix-card__action-arrow {
+  transform: translateX(4px);
+}
+
+/* Bottom Consultation Bar */
+.matrix-footer-cta {
+  margin-top: 3.5rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.85rem 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+@media (max-width: 768px) {
+  .matrix-footer-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
+
+.matrix-footer-cta__text h4 {
+  font-family: 'Satoshi', var(--font-primary, sans-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #002244;
+  margin: 0 0 0.35rem;
+}
+
+.matrix-footer-cta__text p {
+  font-size: 0.92rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.matrix-footer-cta__btn {
+  flex-shrink: 0;
+  padding: 0.85rem 1.85rem;
+  border-radius: 9999px;
+  background: #F47C20;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(244, 124, 32, 0.28);
+}
+
+.matrix-footer-cta__btn:hover {
+  background: #e0650d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(244, 124, 32, 0.38);
+}
+

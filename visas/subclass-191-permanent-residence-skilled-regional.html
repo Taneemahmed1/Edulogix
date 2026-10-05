@@ -554,48 +554,44 @@
                 </aside>
 
                 <div class="consult-modal__main">
-                    <div class="consult-stepper" aria-label="Booking steps">
-                        <div class="consult-step consult-step--active" id="step-indicator-1">
-                            <span class="step-num">1</span>
-                            <span class="step-label">SERVICE</span>
+                    <div class="consult-direct-banner">
+                        <div class="consult-direct-badge">
+                            <span class="consult-direct-dot"></span> Instant Online Booking
                         </div>
-                        <div class="step-line" id="step-line-1"></div>
-                        <div class="consult-step" id="step-indicator-2">
-                            <span class="step-num">2</span>
-                            <span class="step-label">TIME</span>
-                        </div>
-                        <div class="step-line" id="step-line-2"></div>
-                        <div class="consult-step" id="step-indicator-3">
-                            <span class="step-num">3</span>
-                            <span class="step-label">DETAILS</span>
-                        </div>
+                        <p class="consult-direct-text">
+                            Select an option below to schedule your preferred date and time directly on Cal.com with instant booking confirmation.
+                        </p>
                     </div>
 
-                    <!-- Step 1 -->
+                    <!-- Step 1 (Cal.com Direct Redirect) -->
                     <div class="consult-view" id="consult-view-1">
-                        <h4 class="consult-view__title">Select a consultation</h4>
+                        <h4 class="consult-view__title">Select a consultation option</h4>
                         <div class="consult-services-grid">
-                            <!-- Option 1: Free Call -->
-                            <div class="consult-service-card is-selected" data-service="Quick eligibility call" data-price="Free" data-duration="15 min" data-fee="0">
+                            <!-- Option 1: Free Call (Cal.com 15-Min) -->
+                            <a href="https://cal.com/edulogix-australia-dz17rl/15min" target="_blank" rel="noopener noreferrer" class="consult-service-card is-selected" data-service="Quick eligibility call" data-price="Free" data-duration="15 min" data-fee="0">
                                 <div class="service-card__top">
                                     <h5 class="service-card__title">Quick Eligibility Call</h5>
-                                    <span class="service-card__badge service-card__badge--free">Free</span>
+                                    <span class="service-card__badge service-card__badge--free">Free &bull; 15 min</span>
                                 </div>
-                                <p class="service-card__desc">Free 15-minute introductory call to check your basic eligibility and discuss potential pathways. No formal advice given.</p>
-                                <div class="service-card__arrow">&#8250;</div>
-                            </div>
-                            <!-- Option 2: 45-Min Paid Call (99 AUD) -->
-                            <div class="consult-service-card" data-service="45 Minutes Paid Strategy Consultation" data-price="$99" data-duration="45 min" data-fee="99">
+                                <p class="service-card__desc">Free 15-minute introductory call to check your basic eligibility and discuss potential pathways. Schedule your time directly on Cal.com.</p>
+                                <div class="service-card__cal-cta">
+                                    <span>Schedule on Cal.com &rarr;</span>
+                                </div>
+                            </a>
+                            <!-- Option 2: 45-Min Paid Call (Cal.com 45-Min) -->
+                            <a href="https://cal.com/edulogix-australia-dz17rl/45min" target="_blank" rel="noopener noreferrer" class="consult-service-card" data-service="45 Minutes Paid Strategy Consultation" data-price="$99" data-duration="45 min" data-fee="99">
                                 <div class="service-card__top">
                                     <div class="service-card__title-row">
                                         <h5 class="service-card__title">45-Minute Migration Strategy Consultation</h5>
                                         <span class="service-card__pill-tag">RECOMMENDED</span>
                                     </div>
-                                    <span class="service-card__badge">$99 AUD</span>
+                                    <span class="service-card__badge">$99 AUD &bull; 45 min</span>
                                 </div>
-                                <p class="service-card__desc">Comprehensive 45-minute consultation with a Registered Migration Agent. Deep points assessment, document review, and a tailored migration roadmap.</p>
-                                <div class="service-card__arrow">&#8250;</div>
-                            </div>
+                                <p class="service-card__desc">Comprehensive 45-minute consultation with a Registered Migration Agent. Deep points assessment, document review, and a tailored migration roadmap. Schedule your time directly on Cal.com.</p>
+                                <div class="service-card__cal-cta">
+                                    <span>Schedule on Cal.com &rarr;</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
